@@ -24,8 +24,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ageListCollectionView: UICollectionView!
     
-    
     // MARK: - Local Variables
+    
     private var isMaleSelected = false
     private var isFemaleSelected = false
     
@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         
         setCollectionView()
     }
-
 }
 
 // MARK: - Custom Methods
@@ -88,8 +87,6 @@ extension ViewController {
     func setCollectionView() {
         ageListCollectionView.delegate = self
         ageListCollectionView.dataSource = self
-        
-        ageListCollectionView.register(AgeListCVC.self, forCellWithReuseIdentifier: AgeListCVC.identifier)
     }
 }
 
@@ -152,9 +149,5 @@ extension ViewController: UICollectionViewDataSource {
 // MARK: - UICollectionView DelegateFlowLayout
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = 185
-        let height: CGFloat = 120
-        return CGSize(width: width, height: height)
-    }
+    
 }

@@ -14,7 +14,7 @@ extension UIView {
         backView.layer.borderWidth = 1
         
         layer.masksToBounds = false
-        layer.shadowOpacity = 0.8
+        layer.shadowOpacity = 0.5
         layer.shadowOffset = CGSize(width: -2, height: 2)
         layer.shadowRadius = 3
     }
