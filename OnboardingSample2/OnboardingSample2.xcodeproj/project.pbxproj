@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		924FABF6268C49E10076E7BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924FABF4268C49E10076E7BE /* Main.storyboard */; };
 		924FABF8268C49E30076E7BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924FABF7268C49E30076E7BE /* Assets.xcassets */; };
 		924FABFB268C49E30076E7BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924FABF9268C49E30076E7BE /* LaunchScreen.storyboard */; };
+		92BF879F268CE98700706384 /* BrandListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF879E268CE98700706384 /* BrandListCVC.swift */; };
 		99BF5F9EFB180C67D7B32873 /* Pods_OnboardingSample2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB011414D9AFBC0B9E02D980 /* Pods_OnboardingSample2.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		924FABF7268C49E30076E7BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		924FABFA268C49E30076E7BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		924FABFC268C49E30076E7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92BF879E268CE98700706384 /* BrandListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandListCVC.swift; sourceTree = "<group>"; };
 		BB011414D9AFBC0B9E02D980 /* Pods_OnboardingSample2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnboardingSample2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				924FAC04268C4B280076E7BE /* Resources */,
 				924FAC03268C4B180076E7BE /* Supports */,
 				924FABF2268C49E10076E7BE /* ViewController.swift */,
+				92BF879E268CE98700706384 /* BrandListCVC.swift */,
 			);
 			path = OnboardingSample2;
 			sourceTree = "<group>";
@@ -104,7 +107,6 @@
 				8BB9D7B914FFF38506321C04 /* Pods-OnboardingSample2.debug.xcconfig */,
 				13B36DE2AB6676C897DC1795 /* Pods-OnboardingSample2.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -222,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BF879F268CE98700706384 /* BrandListCVC.swift in Sources */,
 				924FABF3268C49E10076E7BE /* ViewController.swift in Sources */,
 				924FABEF268C49E10076E7BE /* AppDelegate.swift in Sources */,
 				924FABF1268C49E10076E7BE /* SceneDelegate.swift in Sources */,
