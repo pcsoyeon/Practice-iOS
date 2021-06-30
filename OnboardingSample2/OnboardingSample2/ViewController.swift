@@ -8,12 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - UIComponents
+    
+    @IBOutlet weak var brandSelectButtonView: UIView!
+    @IBOutlet weak var lensInputView: UIView!
+    
+    // MARK: - LifeCycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
 }
+
+// MARK: - Custom Methods
+
+extension ViewController {
+    
+}
+
 
