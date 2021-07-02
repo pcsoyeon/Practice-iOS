@@ -13,6 +13,8 @@
 		92D4216F268F241200E988DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D4216D268F241200E988DE /* Main.storyboard */; };
 		92D42171268F241300E988DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D42170268F241300E988DE /* Assets.xcassets */; };
 		92D42174268F241300E988DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D42172268F241300E988DE /* LaunchScreen.storyboard */; };
+		92D4217D268F346700E988DE /* FirstTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D4217B268F346700E988DE /* FirstTVC.swift */; };
+		92D4217E268F346700E988DE /* FirstTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D4217C268F346700E988DE /* FirstTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		92D42170268F241300E988DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92D42173268F241300E988DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92D42175268F241300E988DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92D4217B268F346700E988DE /* FirstTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTVC.swift; sourceTree = "<group>"; };
+		92D4217C268F346700E988DE /* FirstTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				92D42170268F241300E988DE /* Assets.xcassets */,
 				92D42172268F241300E988DE /* LaunchScreen.storyboard */,
 				92D42175268F241300E988DE /* Info.plist */,
+				92D4217B268F346700E988DE /* FirstTVC.swift */,
+				92D4217C268F346700E988DE /* FirstTVC.xib */,
 			);
 			path = MainViewSample;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			files = (
 				92D42174268F241300E988DE /* LaunchScreen.storyboard in Resources */,
 				92D42171268F241300E988DE /* Assets.xcassets in Resources */,
+				92D4217E268F346700E988DE /* FirstTVC.xib in Resources */,
 				92D4216F268F241200E988DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			files = (
 				92D4216C268F241200E988DE /* ViewController.swift in Sources */,
 				92D42168268F241200E988DE /* AppDelegate.swift in Sources */,
+				92D4217D268F346700E988DE /* FirstTVC.swift in Sources */,
 				92D4216A268F241200E988DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
