@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92AEC33A268FAE07001F6158 /* SecondView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AEC339268FAE07001F6158 /* SecondView.storyboard */; };
 		92D42168268F241200E988DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D42167268F241200E988DE /* AppDelegate.swift */; };
 		92D4216A268F241200E988DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D42169268F241200E988DE /* SceneDelegate.swift */; };
 		92D4216C268F241200E988DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D4216B268F241200E988DE /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92AEC339268FAE07001F6158 /* SecondView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondView.storyboard; sourceTree = "<group>"; };
 		92D42164268F241200E988DE /* MainViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D42167268F241200E988DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D42169268F241200E988DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				92D42175268F241300E988DE /* Info.plist */,
 				92D4217B268F346700E988DE /* FirstTVC.swift */,
 				92D4217C268F346700E988DE /* FirstTVC.xib */,
+				92AEC339268FAE07001F6158 /* SecondView.storyboard */,
 			);
 			path = MainViewSample;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 				92D42174268F241300E988DE /* LaunchScreen.storyboard in Resources */,
 				92D42171268F241300E988DE /* Assets.xcassets in Resources */,
 				92D4217E268F346700E988DE /* FirstTVC.xib in Resources */,
+				92AEC33A268FAE07001F6158 /* SecondView.storyboard in Resources */,
 				92D4216F268F241200E988DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
