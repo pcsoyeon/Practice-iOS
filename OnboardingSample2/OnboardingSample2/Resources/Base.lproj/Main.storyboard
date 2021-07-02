@@ -43,11 +43,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MBU-wD-ZPd">
-                                <rect key="frame" x="20" y="325" width="374" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovT-hM-nEJ">
                                 <rect key="frame" x="20" y="424" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -106,6 +101,12 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j09-gU-KMu">
+                                <rect key="frame" x="20" y="345" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.97418586387185602" green="0.97685600564254582" blue="0.98085588406002711" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -118,13 +119,27 @@
                     <navigationItem key="navigationItem" id="a4x-8z-0CD"/>
                     <connections>
                         <outlet property="brandSelectButtonView" destination="s90-jY-hf2" id="qQ0-v2-OYC"/>
-                        <outlet property="lensInputView" destination="MBU-wD-ZPd" id="IB6-Ra-mkZ"/>
                         <outlet property="startButton" destination="CGf-5k-UFR" id="F6B-Ju-j8y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="797.10144927536237" y="0.0"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RcI-4a-5L4">
+            <objects>
+                <viewController id="c81-ac-ZPb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Ae-o4-tBF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="M2O-gr-h1g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mg-SP-2mo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="749"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VHk-2u-clc">

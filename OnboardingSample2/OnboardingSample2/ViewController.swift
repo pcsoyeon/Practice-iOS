@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     // MARK: - UIComponents
     
     @IBOutlet weak var brandSelectButtonView: UIView!
-    @IBOutlet weak var lensInputView: UIView!
     
     @IBOutlet weak var startButton: UIButton!
     
@@ -105,7 +104,7 @@ extension ViewController {
         listView.addSubview(brandListCollectionView)
         
         brandListCollectionView.snp.makeConstraints { make in
-            make.leading.trailing.top.bottom.equalToSuperview()
+            make.leading.trailing.top.bottom.equalToSuperview().inset(10)
         }
     }
     
