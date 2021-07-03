@@ -18,8 +18,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkh-IY-M64">
                                 <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tyn-yo-uRB">
+                                        <rect key="frame" x="196" y="18" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Ind-Qf-nmd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tyn-yo-uRB" secondAttribute="trailing" constant="18" id="2oH-IN-qkB"/>
+                                    <constraint firstItem="tyn-yo-uRB" firstAttribute="top" secondItem="dkh-IY-M64" secondAttribute="top" constant="18" id="Mfk-Dc-nH5"/>
                                     <constraint firstAttribute="height" constant="70" id="fil-pX-GI6"/>
+                                    <constraint firstAttribute="bottom" secondItem="tyn-yo-uRB" secondAttribute="bottom" constant="18" id="lzi-b1-Sbs"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IvC-SZ-uOs">
@@ -42,6 +55,7 @@
                     <connections>
                         <outlet property="headerView" destination="dkh-IY-M64" id="8Xl-jA-1q0"/>
                         <outlet property="mainTableView" destination="IvC-SZ-uOs" id="4qW-7J-v8l"/>
+                        <outlet property="searchView" destination="tyn-yo-uRB" id="It7-P8-hMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

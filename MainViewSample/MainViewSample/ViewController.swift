@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var searchView: UITextField!
+    
     @IBOutlet weak var mainTableView: UITableView!
     
     // MARK: View Life Cycle Methods
@@ -29,16 +31,18 @@ class ViewController: UIViewController {
 extension ViewController {
     func setUI() {
         headerView.backgroundColor = .systemGray6
+        searchView.borderStyle = .line
     }
     
     func setMainTableView() {
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        
     }
     
     func registerNib() {
-        let firstNib = UINib(nibName: FirstTVC.identifier, bundle: nil)
-        mainTableView.register(firstNib, forCellReuseIdentifier: FirstTVC.identifier)
+        let categoryNib = UINib(nibName: CategoryTVC.identifier, bundle: nil)
+        mainTableView.register(categoryNib, forCellReuseIdentifier: CategoryTVC.identifier)
     }
 }
 
@@ -48,7 +52,7 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section{
         case 0:
-            return 387
+            return 74
         case 1,2:
             return 1585
         default:
@@ -72,10 +76,10 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: FirstTVC.identifier) as? FirstTVC else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CategoryTVC.identifier) as? CategoryTVC else {
                 return UITableViewCell()
             }
-            cell.contentView.backgroundColor = .systemRed
+            cell.selectionStyle = .none
             return cell
         case 1:
             return UITableViewCell()

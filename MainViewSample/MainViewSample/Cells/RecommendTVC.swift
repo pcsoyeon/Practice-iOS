@@ -1,14 +1,13 @@
 //
-//  FirstTVC.swift
+//  RecommendTVC.swift
 //  MainViewSample
 //
-//  Created by soyeon on 2021/07/02.
+//  Created by soyeon on 2021/07/03.
 //
 
 import UIKit
 
-class FirstTVC: UITableViewCell {
-    static let identifier = "FirstTVC"
+class RecommendTVC: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

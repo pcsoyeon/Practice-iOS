@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9213E9CD26909347007AAC20 /* CategoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213E9CB26909347007AAC20 /* CategoryTVC.swift */; };
+		9213E9CE26909347007AAC20 /* CategoryTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9213E9CC26909347007AAC20 /* CategoryTVC.xib */; };
+		9213E9D526909510007AAC20 /* CategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213E9D326909510007AAC20 /* CategoryCVC.swift */; };
+		9213E9D626909510007AAC20 /* CategoryCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9213E9D426909510007AAC20 /* CategoryCVC.xib */; };
+		9213E9D926909C81007AAC20 /* RecommendTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213E9D726909C81007AAC20 /* RecommendTVC.swift */; };
+		9213E9DA26909C81007AAC20 /* RecommendTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9213E9D826909C81007AAC20 /* RecommendTVC.xib */; };
+		9213E9DD26909C97007AAC20 /* RecommendCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213E9DB26909C97007AAC20 /* RecommendCVC.swift */; };
+		9213E9DE26909C97007AAC20 /* RecommendCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9213E9DC26909C97007AAC20 /* RecommendCVC.xib */; };
 		92AEC33A268FAE07001F6158 /* SecondView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AEC339268FAE07001F6158 /* SecondView.storyboard */; };
 		92D42168268F241200E988DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D42167268F241200E988DE /* AppDelegate.swift */; };
 		92D4216A268F241200E988DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D42169268F241200E988DE /* SceneDelegate.swift */; };
@@ -14,11 +22,17 @@
 		92D4216F268F241200E988DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D4216D268F241200E988DE /* Main.storyboard */; };
 		92D42171268F241300E988DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D42170268F241300E988DE /* Assets.xcassets */; };
 		92D42174268F241300E988DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D42172268F241300E988DE /* LaunchScreen.storyboard */; };
-		92D4217D268F346700E988DE /* FirstTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D4217B268F346700E988DE /* FirstTVC.swift */; };
-		92D4217E268F346700E988DE /* FirstTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D4217C268F346700E988DE /* FirstTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9213E9CB26909347007AAC20 /* CategoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTVC.swift; sourceTree = "<group>"; };
+		9213E9CC26909347007AAC20 /* CategoryTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTVC.xib; sourceTree = "<group>"; };
+		9213E9D326909510007AAC20 /* CategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCVC.swift; sourceTree = "<group>"; };
+		9213E9D426909510007AAC20 /* CategoryCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCVC.xib; sourceTree = "<group>"; };
+		9213E9D726909C81007AAC20 /* RecommendTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendTVC.swift; sourceTree = "<group>"; };
+		9213E9D826909C81007AAC20 /* RecommendTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendTVC.xib; sourceTree = "<group>"; };
+		9213E9DB26909C97007AAC20 /* RecommendCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCVC.swift; sourceTree = "<group>"; };
+		9213E9DC26909C97007AAC20 /* RecommendCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCVC.xib; sourceTree = "<group>"; };
 		92AEC339268FAE07001F6158 /* SecondView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondView.storyboard; sourceTree = "<group>"; };
 		92D42164268F241200E988DE /* MainViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D42167268F241200E988DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +42,6 @@
 		92D42170268F241300E988DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92D42173268F241300E988DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92D42175268F241300E988DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92D4217B268F346700E988DE /* FirstTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTVC.swift; sourceTree = "<group>"; };
-		92D4217C268F346700E988DE /* FirstTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9213E9CA2690932A007AAC20 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9213E9E026909CA4007AAC20 /* CVC */,
+				9213E9DF26909C9C007AAC20 /* TVC */,
+				9213E9CB26909347007AAC20 /* CategoryTVC.swift */,
+				9213E9CC26909347007AAC20 /* CategoryTVC.xib */,
+				9213E9D326909510007AAC20 /* CategoryCVC.swift */,
+				9213E9D426909510007AAC20 /* CategoryCVC.xib */,
+				9213E9D726909C81007AAC20 /* RecommendTVC.swift */,
+				9213E9D826909C81007AAC20 /* RecommendTVC.xib */,
+				9213E9DB26909C97007AAC20 /* RecommendCVC.swift */,
+				9213E9DC26909C97007AAC20 /* RecommendCVC.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9213E9DF26909C9C007AAC20 /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
+		9213E9E026909CA4007AAC20 /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
 		92D4215B268F241200E988DE = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +105,7 @@
 		92D42166268F241200E988DE /* MainViewSample */ = {
 			isa = PBXGroup;
 			children = (
+				9213E9CA2690932A007AAC20 /* Cells */,
 				92D42167268F241200E988DE /* AppDelegate.swift */,
 				92D42169268F241200E988DE /* SceneDelegate.swift */,
 				92D4216B268F241200E988DE /* ViewController.swift */,
@@ -69,8 +113,6 @@
 				92D42170268F241300E988DE /* Assets.xcassets */,
 				92D42172268F241300E988DE /* LaunchScreen.storyboard */,
 				92D42175268F241300E988DE /* Info.plist */,
-				92D4217B268F346700E988DE /* FirstTVC.swift */,
-				92D4217C268F346700E988DE /* FirstTVC.xib */,
 				92AEC339268FAE07001F6158 /* SecondView.storyboard */,
 			);
 			path = MainViewSample;
@@ -133,11 +175,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9213E9D626909510007AAC20 /* CategoryCVC.xib in Resources */,
 				92D42174268F241300E988DE /* LaunchScreen.storyboard in Resources */,
 				92D42171268F241300E988DE /* Assets.xcassets in Resources */,
-				92D4217E268F346700E988DE /* FirstTVC.xib in Resources */,
 				92AEC33A268FAE07001F6158 /* SecondView.storyboard in Resources */,
 				92D4216F268F241200E988DE /* Main.storyboard in Resources */,
+				9213E9DA26909C81007AAC20 /* RecommendTVC.xib in Resources */,
+				9213E9CE26909347007AAC20 /* CategoryTVC.xib in Resources */,
+				9213E9DE26909C97007AAC20 /* RecommendCVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,8 +195,11 @@
 			files = (
 				92D4216C268F241200E988DE /* ViewController.swift in Sources */,
 				92D42168268F241200E988DE /* AppDelegate.swift in Sources */,
-				92D4217D268F346700E988DE /* FirstTVC.swift in Sources */,
+				9213E9D926909C81007AAC20 /* RecommendTVC.swift in Sources */,
 				92D4216A268F241200E988DE /* SceneDelegate.swift in Sources */,
+				9213E9DD26909C97007AAC20 /* RecommendCVC.swift in Sources */,
+				9213E9D526909510007AAC20 /* CategoryCVC.swift in Sources */,
+				9213E9CD26909347007AAC20 /* CategoryTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
