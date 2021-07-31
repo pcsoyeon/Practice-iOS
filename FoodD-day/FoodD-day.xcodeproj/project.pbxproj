@@ -23,6 +23,8 @@
 		92CE7AEA26B5AA60005C13BD /* FriendsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE7AE926B5AA60005C13BD /* FriendsDataModel.swift */; };
 		92CE7AED26B5ABD8005C13BD /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE7AEC26B5ABD8005C13BD /* UIColor+.swift */; };
 		92CE7AEF26B5ABE3005C13BD /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE7AEE26B5ABE3005C13BD /* CALayer+.swift */; };
+		92CE7AF226B5D210005C13BD /* SharePopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92CE7AF126B5D210005C13BD /* SharePopup.storyboard */; };
+		92CE7AF426B5D283005C13BD /* SharePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE7AF326B5D283005C13BD /* SharePopupVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		92CE7AE926B5AA60005C13BD /* FriendsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsDataModel.swift; sourceTree = "<group>"; };
 		92CE7AEC26B5ABD8005C13BD /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		92CE7AEE26B5ABE3005C13BD /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
+		92CE7AF126B5D210005C13BD /* SharePopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SharePopup.storyboard; sourceTree = "<group>"; };
+		92CE7AF326B5D283005C13BD /* SharePopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePopupVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +92,11 @@
 		92CE7AD626B58C17005C13BD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				92CE7AF026B5D1D8005C13BD /* Mypage */,
 				92CE7AEB26B5ABC1005C13BD /* Extensions */,
 				92CE7AC826B53547005C13BD /* Main.storyboard */,
 				92CE7ACB26B53548005C13BD /* Assets.xcassets */,
 				92CE7ACD26B53548005C13BD /* LaunchScreen.storyboard */,
-				92CE7AD826B58C4A005C13BD /* Mypage.storyboard */,
-				92CE7ADC26B58F89005C13BD /* Share.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -113,8 +116,7 @@
 			children = (
 				92CE7AE026B59344005C13BD /* NaviController.swift */,
 				92CE7AC626B53547005C13BD /* ViewController.swift */,
-				92CE7ADA26B58C69005C13BD /* MypageVC.swift */,
-				92CE7ADE26B58F99005C13BD /* ShareVC.swift */,
+				92CE7AF526B5D287005C13BD /* Mypage */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -143,6 +145,26 @@
 				92CE7AEE26B5ABE3005C13BD /* CALayer+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		92CE7AF026B5D1D8005C13BD /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				92CE7AD826B58C4A005C13BD /* Mypage.storyboard */,
+				92CE7ADC26B58F89005C13BD /* Share.storyboard */,
+				92CE7AF126B5D210005C13BD /* SharePopup.storyboard */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
+		92CE7AF526B5D287005C13BD /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				92CE7ADA26B58C69005C13BD /* MypageVC.swift */,
+				92CE7ADE26B58F99005C13BD /* ShareVC.swift */,
+				92CE7AF326B5D283005C13BD /* SharePopupVC.swift */,
+			);
+			path = Mypage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92CE7ACF26B53548005C13BD /* LaunchScreen.storyboard in Resources */,
+				92CE7AF226B5D210005C13BD /* SharePopup.storyboard in Resources */,
 				92CE7AE526B5A7C3005C13BD /* FriendsTVC.xib in Resources */,
 				92CE7ADD26B58F89005C13BD /* Share.storyboard in Resources */,
 				92CE7ACC26B53548005C13BD /* Assets.xcassets in Resources */,
@@ -225,6 +248,7 @@
 				92CE7AC326B53547005C13BD /* AppDelegate.swift in Sources */,
 				92CE7AC526B53547005C13BD /* SceneDelegate.swift in Sources */,
 				92CE7AE426B5A7C3005C13BD /* FriendsTVC.swift in Sources */,
+				92CE7AF426B5D283005C13BD /* SharePopupVC.swift in Sources */,
 				92CE7ADF26B58F99005C13BD /* ShareVC.swift in Sources */,
 				92CE7AEA26B5AA60005C13BD /* FriendsDataModel.swift in Sources */,
 				92CE7AED26B5ABD8005C13BD /* UIColor+.swift in Sources */,

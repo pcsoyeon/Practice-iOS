@@ -116,6 +116,16 @@ extension ShareVC {
             NotificationCenter.default.post(name: NSNotification.Name("shareCounts"), object: self.friends.count)
         }
         backButton.addAction(popToMypage, for: .touchUpInside)
+        
+        let presentPopup = UIAction { _ in
+            guard let dvc = UIStoryboard(name: "SharePopup", bundle: nil).instantiateViewController(withIdentifier: "SharePopupVC") as? SharePopupVC else {
+                return
+            }
+            dvc.modalPresentationStyle = .overFullScreen
+            dvc.modalTransitionStyle = . crossDissolve
+            self.present(dvc, animated: true, completion: nil)
+        }
+        shareButton.addAction(presentPopup, for: .touchUpInside)
     }
 }
 
