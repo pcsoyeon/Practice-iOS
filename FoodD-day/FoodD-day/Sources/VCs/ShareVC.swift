@@ -20,6 +20,9 @@ class ShareVC: UIViewController {
     @IBOutlet weak var guideLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
+    
     @IBOutlet weak var friendsTableView: UITableView!
     
     // MARK: - Local Variables
@@ -46,15 +49,23 @@ extension ShareVC {
         backView.backgroundColor = .fdMainGreen
         
         backButton.tintColor = .white
+        backButton.setTitle("", for: .normal)
+        backButton.setImage(UIImage(named: "back"), for: .normal)
         
-        titleLabel.text = "공유하기"
-        titleLabel.textColor = .black
+        titleLabel.text = "공유"
+        titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 15)
         
         topView.backgroundColor = .white
         topView.layer.cornerRadius = 15
         topView.layer.masksToBounds = true
         topView.layer.applyShadow()
+        
+        nameLabel.text = "땅콩"
+        nameLabel.textColor = .black
+        nameLabel.font = UIFont.systemFont(ofSize: 18)
+        
+        iconImageView.image = UIImage(named: "pGreen")
         
         guideLabel.text = "내 냉장고를 공유하여 구성원들끼리\n냉장고 상황을 파악하세요."
         guideLabel.textColor = UIColor.gray
