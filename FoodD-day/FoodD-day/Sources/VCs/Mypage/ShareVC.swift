@@ -32,17 +32,12 @@ class ShareVC: UIViewController {
 
     // MARK: - Life Cycle Methods
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        setNotification()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
         setAction()
+        setNotification()
         
         setList()
         registerXib()
@@ -130,6 +125,14 @@ extension ShareVC {
             }
             dvc.modalPresentationStyle = .overFullScreen
             dvc.modalTransitionStyle = . crossDissolve
+    
+            // MARK: - 뷰 이동 시에도 남아 있도록
+            
+            dvc.saveData = { friends in
+                self.friends.append(friends)
+                self.friendsTableView.reloadData()
+            }
+            
             self.present(dvc, animated: true, completion: nil)
         }
         shareButton.addAction(presentPopup, for: .touchUpInside)
