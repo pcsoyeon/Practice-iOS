@@ -28,8 +28,15 @@ class ShareVC: UIViewController {
     // MARK: - Local Variables
     
     private var friends = [FriendsDataModel]()
+    private var newFriend = FriendsDataModel(icon: "", name: "", relaiton: "")
 
     // MARK: - Life Cycle Methods
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        setNotification()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,7 +125,7 @@ extension ShareVC {
         backButton.addAction(popToMypage, for: .touchUpInside)
         
         let presentPopup = UIAction { _ in
-            guard let dvc = UIStoryboard(name: "SharePopup", bundle: nil).instantiateViewController(withIdentifier: "SharePopupVC") as? SharePopupVC else {
+            guard let dvc = UIStoryboard(name: "FirstPopup", bundle: nil).instantiateViewController(withIdentifier: "FirstPopupVC") as? FirstPopupVC else {
                 return
             }
             dvc.modalPresentationStyle = .overFullScreen
@@ -126,6 +133,21 @@ extension ShareVC {
             self.present(dvc, animated: true, completion: nil)
         }
         shareButton.addAction(presentPopup, for: .touchUpInside)
+    }
+}
+
+// MARK: - Notification
+
+extension ShareVC {
+    func setNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(addFriends), name: NSNotification.Name("addFriends"), object: nil)
+    }
+    
+    @objc
+    func addFriends(_ notification: Notification) {
+        newFriend = notification.object as! FriendsDataModel
+        friends.append(newFriend)
+        friendsTableView.reloadData()
     }
 }
 

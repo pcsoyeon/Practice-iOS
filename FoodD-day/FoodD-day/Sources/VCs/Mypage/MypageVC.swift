@@ -16,7 +16,7 @@ class MypageVC: UIViewController {
     
     // MARK: - Local Variables
     
-    var shareCounts: Int = 0
+    private var shareCounts: Int = 0
     
     // MARK: - Life Cycle Methods
     
