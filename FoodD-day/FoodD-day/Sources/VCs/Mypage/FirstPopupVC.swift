@@ -22,6 +22,7 @@ class FirstPopupVC: UIViewController {
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var searchButton: UIButton!
     
+    private var newFriend = FriendsDataModel(icon: "", name: "", relaiton: "")
     var saveData: ((FriendsDataModel) -> Void)?
     
     // MARK: - Life Cycle Methods
@@ -73,11 +74,19 @@ extension FirstPopupVC {
 extension FirstPopupVC {
     func setNotificaiton() {
         NotificationCenter.default.addObserver(self, selector: #selector(presentShare), name: NSNotification.Name("presentShare"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(addFriends), name: NSNotification.Name("addFriends"), object: nil)
     }
     
     @objc
     func presentShare() {
         self.dismiss(animated: false, completion: nil)
+    }
+    
+    @objc
+    func addFriends(_ notification: Notification) {
+        newFriend = notification.object as! FriendsDataModel
+        saveData?(newFriend)
     }
 }
 

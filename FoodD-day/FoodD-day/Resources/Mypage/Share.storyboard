@@ -98,10 +98,10 @@
                             <constraint firstItem="5fv-bk-XXR" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="14U-mB-Dth"/>
                             <constraint firstItem="5fv-bk-XXR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="CAT-6T-y3h"/>
                             <constraint firstItem="5fv-bk-XXR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Cbd-iK-Mb8"/>
-                            <constraint firstItem="OL4-lO-Gcs" firstAttribute="centerX" secondItem="TqL-eK-NGu" secondAttribute="centerX" id="USh-8a-yve"/>
-                            <constraint firstItem="OL4-lO-Gcs" firstAttribute="top" secondItem="TqL-eK-NGu" secondAttribute="bottom" constant="50" id="XoO-tv-jZe"/>
+                            <constraint firstItem="OL4-lO-Gcs" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="USh-8a-yve"/>
                             <constraint firstItem="TqL-eK-NGu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="109" id="ofl-Bh-TnJ"/>
                             <constraint firstItem="TqL-eK-NGu" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="uZo-VS-mBA"/>
+                            <constraint firstItem="OL4-lO-Gcs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="399" id="y7S-br-TTv"/>
                         </constraints>
                     </view>
                     <connections>

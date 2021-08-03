@@ -25,10 +25,30 @@ class ShareVC: UIViewController {
     
     @IBOutlet weak var friendsTableView: UITableView!
     
+    // tableview header view
+    private var tableHeaderView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
+    }()
+    
+    private var headerLabel: UILabel = {
+        let label = UILabel()
+        label.text = "구성원"
+        label.textColor = .gray
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
+    private var underLineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .gray
+        return view
+    }()
+    
     // MARK: - Local Variables
     
     private var friends = [FriendsDataModel]()
-    private var newFriend = FriendsDataModel(icon: "", name: "", relaiton: "")
 
     // MARK: - Life Cycle Methods
     
@@ -37,7 +57,6 @@ class ShareVC: UIViewController {
         
         setUI()
         setAction()
-        setNotification()
         
         setList()
         registerXib()
@@ -103,9 +122,23 @@ extension ShareVC {
         friendsTableView.separatorStyle = .none
         friendsTableView.backgroundColor = .white
         
-        friendsTableView.layer.cornerRadius = 15
-        friendsTableView.layer.masksToBounds = true
-        friendsTableView.layer.applyShadow()
+//        friendsTableView.layer.cornerRadius = 15
+//        friendsTableView.layer.masksToBounds = true
+//        friendsTableView.layer.applyShadow()
+        
+        tableHeaderView.addSubview(headerLabel)
+        tableHeaderView.addSubview(underLineView)
+        
+        headerLabel.text = "구성원 (\(friends.count))"
+        headerLabel.leadingAnchor.constraint(equalTo: tableHeaderView.leadingAnchor, constant: 15).isActive = true
+        headerLabel.topAnchor.constraint(equalTo: tableHeaderView.topAnchor, constant: 15).isActive = true
+        headerLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        underLineView.leadingAnchor.constraint(equalTo: tableHeaderView.leadingAnchor, constant: 15).isActive = true
+        underLineView.topAnchor.constraint(equalTo: tableHeaderView.bottomAnchor, constant: -1).isActive = true
+        underLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        underLineView.widthAnchor.constraint(equalToConstant: 285).isActive = true
+        underLineView.translatesAutoresizingMaskIntoConstraints = false
     }
 }
 
@@ -125,57 +158,29 @@ extension ShareVC {
             }
             dvc.modalPresentationStyle = .overFullScreen
             dvc.modalTransitionStyle = . crossDissolve
-    
-            // MARK: - 뷰 이동 시에도 남아 있도록
-            
             dvc.saveData = { friends in
                 self.friends.append(friends)
                 self.friendsTableView.reloadData()
             }
-            
             self.present(dvc, animated: true, completion: nil)
         }
         shareButton.addAction(presentPopup, for: .touchUpInside)
     }
 }
 
-// MARK: - Notification
-
-extension ShareVC {
-    func setNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(addFriends), name: NSNotification.Name("addFriends"), object: nil)
-    }
-    
-    @objc
-    func addFriends(_ notification: Notification) {
-        newFriend = notification.object as! FriendsDataModel
-        friends.append(newFriend)
-        friendsTableView.reloadData()
-    }
-}
-
 // MARK: - UITableView Delegate
 
 extension ShareVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "구성원 (\(friends.count))"
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return tableHeaderView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor.white
-        (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.gray
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // MARK: - FIX ME: 스크롤 시 테이블 헤더 고정
     }
 }
 
@@ -191,6 +196,8 @@ extension ShareVC: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.initCell(icon:friends[indexPath.row].icon, name: friends[indexPath.row].name, relation: friends[indexPath.row].relaiton)
+        cell.layer.cornerRadius = 15
+        cell.layer.masksToBounds = true
         return cell
     }
 }

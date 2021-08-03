@@ -53,9 +53,7 @@ extension MypageVC {
 extension MypageVC {
     func touchUpShare() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pushToShare(_:)))
-//        shareCountLabel.isUserInteractionEnabled = true
-//        shareCountLabel.addGestureRecognizer(tapGesture)
-        
+
         shareLabel.isUserInteractionEnabled = true
         shareLabel.addGestureRecognizer(tapGesture)
     }
