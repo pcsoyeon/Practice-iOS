@@ -132,6 +132,13 @@ extension MainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 108
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let dvc = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(identifier: "DetailVC") as? DetailVC else {
+            return
+        }
+        navigationController?.pushViewController(dvc, animated: true)
+    }
 }
 
 extension MainVC: UITableViewDataSource {
