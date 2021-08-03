@@ -11,6 +11,11 @@
 		927D04F926B6BCBB0010EA3F /* SecondPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927D04F826B6BCBB0010EA3F /* SecondPopupVC.swift */; };
 		927D04FE26B6E1280010EA3F /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927D04FD26B6E1280010EA3F /* TabbarController.swift */; };
 		927D050026B6E1F50010EA3F /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927D04FF26B6E1F50010EA3F /* Tabbar.storyboard */; };
+		9284EBC026B8E23A00D752D2 /* CategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284EBBE26B8E23A00D752D2 /* CategoryCVC.swift */; };
+		9284EBC126B8E23A00D752D2 /* CategoryCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9284EBBF26B8E23A00D752D2 /* CategoryCVC.xib */; };
+		9284EBC626B8E76300D752D2 /* FoodsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284EBC426B8E76300D752D2 /* FoodsTVC.swift */; };
+		9284EBC726B8E76300D752D2 /* FoodsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9284EBC526B8E76300D752D2 /* FoodsTVC.xib */; };
+		9284EBC926B8E82900D752D2 /* CategoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284EBC826B8E82900D752D2 /* CategoryDataModel.swift */; };
 		929D664726B7B28E00FAA0C0 /* FoodsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D664626B7B28E00FAA0C0 /* FoodsDataModel.swift */; };
 		92CE7AC326B53547005C13BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE7AC226B53547005C13BD /* AppDelegate.swift */; };
 		92CE7AC526B53547005C13BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE7AC426B53547005C13BD /* SceneDelegate.swift */; };
@@ -37,6 +42,11 @@
 		927D04F826B6BCBB0010EA3F /* SecondPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPopupVC.swift; sourceTree = "<group>"; };
 		927D04FD26B6E1280010EA3F /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		927D04FF26B6E1F50010EA3F /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		9284EBBE26B8E23A00D752D2 /* CategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCVC.swift; sourceTree = "<group>"; };
+		9284EBBF26B8E23A00D752D2 /* CategoryCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCVC.xib; sourceTree = "<group>"; };
+		9284EBC426B8E76300D752D2 /* FoodsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsTVC.swift; sourceTree = "<group>"; };
+		9284EBC526B8E76300D752D2 /* FoodsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodsTVC.xib; sourceTree = "<group>"; };
+		9284EBC826B8E82900D752D2 /* CategoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataModel.swift; sourceTree = "<group>"; };
 		929D664626B7B28E00FAA0C0 /* FoodsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsDataModel.swift; sourceTree = "<group>"; };
 		92CE7ABF26B53547005C13BD /* FoodD-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodD-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CE7AC226B53547005C13BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +172,10 @@
 			children = (
 				92CE7AE226B5A7C3005C13BD /* FriendsTVC.swift */,
 				92CE7AE326B5A7C3005C13BD /* FriendsTVC.xib */,
+				9284EBBE26B8E23A00D752D2 /* CategoryCVC.swift */,
+				9284EBBF26B8E23A00D752D2 /* CategoryCVC.xib */,
+				9284EBC426B8E76300D752D2 /* FoodsTVC.swift */,
+				9284EBC526B8E76300D752D2 /* FoodsTVC.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -171,6 +185,7 @@
 			children = (
 				92CE7AE926B5AA60005C13BD /* FriendsDataModel.swift */,
 				929D664626B7B28E00FAA0C0 /* FoodsDataModel.swift */,
+				9284EBC826B8E82900D752D2 /* CategoryDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,10 +280,12 @@
 			files = (
 				927D050026B6E1F50010EA3F /* Tabbar.storyboard in Resources */,
 				92CE7ACF26B53548005C13BD /* LaunchScreen.storyboard in Resources */,
+				9284EBC726B8E76300D752D2 /* FoodsTVC.xib in Resources */,
 				92CE7AF226B5D210005C13BD /* FirstPopup.storyboard in Resources */,
 				92CE7AE526B5A7C3005C13BD /* FriendsTVC.xib in Resources */,
 				92CE7ADD26B58F89005C13BD /* Share.storyboard in Resources */,
 				92CE7ACC26B53548005C13BD /* Assets.xcassets in Resources */,
+				9284EBC126B8E23A00D752D2 /* CategoryCVC.xib in Resources */,
 				927D04F726B6BCAB0010EA3F /* SecondPopup.storyboard in Resources */,
 				92CE7ACA26B53547005C13BD /* Main.storyboard in Resources */,
 				92CE7AD926B58C4A005C13BD /* Mypage.storyboard in Resources */,
@@ -283,6 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				92CE7AC726B53547005C13BD /* MainVC.swift in Sources */,
+				9284EBC926B8E82900D752D2 /* CategoryDataModel.swift in Sources */,
+				9284EBC626B8E76300D752D2 /* FoodsTVC.swift in Sources */,
 				92CE7AE126B59344005C13BD /* NaviController.swift in Sources */,
 				92CE7ADB26B58C69005C13BD /* MypageVC.swift in Sources */,
 				929D664726B7B28E00FAA0C0 /* FoodsDataModel.swift in Sources */,
@@ -290,6 +309,7 @@
 				92CE7AEF26B5ABE3005C13BD /* CALayer+.swift in Sources */,
 				92CE7AC326B53547005C13BD /* AppDelegate.swift in Sources */,
 				92CE7AC526B53547005C13BD /* SceneDelegate.swift in Sources */,
+				9284EBC026B8E23A00D752D2 /* CategoryCVC.swift in Sources */,
 				92CE7AE426B5A7C3005C13BD /* FriendsTVC.swift in Sources */,
 				92CE7AF426B5D283005C13BD /* FirstPopupVC.swift in Sources */,
 				92CE7ADF26B58F99005C13BD /* ShareVC.swift in Sources */,
