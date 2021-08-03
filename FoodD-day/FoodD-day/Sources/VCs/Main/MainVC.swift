@@ -87,8 +87,8 @@ extension MainVC {
     
     func setList() {
         foods.append(contentsOf: [
-            FoodsDataModel(image: "abc", name: "치즈", firstTag: "#냉장고", secondTag: "#모짜렐라", deadline: "D-5", expiryDay: "D-25"),
-            FoodsDataModel(image: "abc", name: "소금", firstTag: "#천일염", secondTag: "#굵은소금", deadline: "D-5", expiryDay: "D-25")
+            FoodsDataModel(image: "cheese", name: "치즈", firstTag: "#냉장고", secondTag: "#모짜렐라", deadline: "D-5", expiryDay: "D-25"),
+            FoodsDataModel(image: "cheese", name: "소금", firstTag: "#천일염", secondTag: "#굵은소금", deadline: "D-5", expiryDay: "D-25")
         ])
         
         categorys.append(contentsOf: [

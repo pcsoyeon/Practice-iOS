@@ -60,8 +60,6 @@ extension CategoryCVC {
         circleView.layer.masksToBounds = true
         circleView.layer.applyShadow()
         
-        categoryImageView.image = UIImage(named: "")
-        
         categoryLabel.text = "카레고리"
         categoryLabel.textColor = .black
         categoryLabel.font = UIFont.systemFont(ofSize: 13)
