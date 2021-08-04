@@ -21,6 +21,9 @@
 		929246A026BA2F920050612A /* GuideCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292469E26BA2F920050612A /* GuideCVC.swift */; };
 		929246A126BA2F920050612A /* GuideCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9292469F26BA2F920050612A /* GuideCVC.xib */; };
 		929246A726BA33050050612A /* GuideDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929246A626BA33050050612A /* GuideDataModel.swift */; };
+		929246AA26BA6AE80050612A /* RecipeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929246A826BA6AE80050612A /* RecipeCVC.swift */; };
+		929246AB26BA6AE80050612A /* RecipeCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929246A926BA6AE80050612A /* RecipeCVC.xib */; };
+		929246AD26BA85DF0050612A /* RecipeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929246AC26BA85DF0050612A /* RecipeDataModel.swift */; };
 		929D664726B7B28E00FAA0C0 /* FoodsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D664626B7B28E00FAA0C0 /* FoodsDataModel.swift */; };
 		92CE7AC326B53547005C13BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE7AC226B53547005C13BD /* AppDelegate.swift */; };
 		92CE7AC526B53547005C13BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE7AC426B53547005C13BD /* SceneDelegate.swift */; };
@@ -57,6 +60,9 @@
 		9292469E26BA2F920050612A /* GuideCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCVC.swift; sourceTree = "<group>"; };
 		9292469F26BA2F920050612A /* GuideCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideCVC.xib; sourceTree = "<group>"; };
 		929246A626BA33050050612A /* GuideDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDataModel.swift; sourceTree = "<group>"; };
+		929246A826BA6AE80050612A /* RecipeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCVC.swift; sourceTree = "<group>"; };
+		929246A926BA6AE80050612A /* RecipeCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCVC.xib; sourceTree = "<group>"; };
+		929246AC26BA85DF0050612A /* RecipeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDataModel.swift; sourceTree = "<group>"; };
 		929D664626B7B28E00FAA0C0 /* FoodsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsDataModel.swift; sourceTree = "<group>"; };
 		92CE7ABF26B53547005C13BD /* FoodD-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodD-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CE7AC226B53547005C13BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 				9284EBBF26B8E23A00D752D2 /* CategoryCVC.xib */,
 				9292469E26BA2F920050612A /* GuideCVC.swift */,
 				9292469F26BA2F920050612A /* GuideCVC.xib */,
+				929246A826BA6AE80050612A /* RecipeCVC.swift */,
+				929246A926BA6AE80050612A /* RecipeCVC.xib */,
 			);
 			path = CVC;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 				929D664626B7B28E00FAA0C0 /* FoodsDataModel.swift */,
 				9284EBC826B8E82900D752D2 /* CategoryDataModel.swift */,
 				929246A626BA33050050612A /* GuideDataModel.swift */,
+				929246AC26BA85DF0050612A /* RecipeDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929246AB26BA6AE80050612A /* RecipeCVC.xib in Resources */,
 				927D050026B6E1F50010EA3F /* Tabbar.storyboard in Resources */,
 				92CE7ACF26B53548005C13BD /* LaunchScreen.storyboard in Resources */,
 				9284EBC726B8E76300D752D2 /* FoodsTVC.xib in Resources */,
@@ -354,6 +364,7 @@
 				9284EBC626B8E76300D752D2 /* FoodsTVC.swift in Sources */,
 				92CE7AE126B59344005C13BD /* NaviController.swift in Sources */,
 				92CE7ADB26B58C69005C13BD /* MypageVC.swift in Sources */,
+				929246AA26BA6AE80050612A /* RecipeCVC.swift in Sources */,
 				9284EBCD26B9060000D752D2 /* DetailVC.swift in Sources */,
 				929D664726B7B28E00FAA0C0 /* FoodsDataModel.swift in Sources */,
 				927D04FE26B6E1280010EA3F /* TabbarController.swift in Sources */,
@@ -364,6 +375,7 @@
 				92CE7AE426B5A7C3005C13BD /* FriendsTVC.swift in Sources */,
 				92CE7AF426B5D283005C13BD /* FirstPopupVC.swift in Sources */,
 				92CE7ADF26B58F99005C13BD /* ShareVC.swift in Sources */,
+				929246AD26BA85DF0050612A /* RecipeDataModel.swift in Sources */,
 				929246A726BA33050050612A /* GuideDataModel.swift in Sources */,
 				92CE7AEA26B5AA60005C13BD /* FriendsDataModel.swift in Sources */,
 				92CE7AED26B5ABD8005C13BD /* UIColor+.swift in Sources */,

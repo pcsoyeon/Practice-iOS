@@ -182,6 +182,7 @@ extension MainVC: UITableViewDelegate {
         guard let dvc = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(identifier: "DetailVC") as? DetailVC else {
             return
         }
+        dvc.food = foods[indexPath.row]
         navigationController?.pushViewController(dvc, animated: true)
     }
 }
