@@ -45,9 +45,7 @@ extension RecipeCVC {
         backView.layer.cornerRadius = 15
         backView.layer.masksToBounds = true
         backView.layer.applyShadow()
-        
-//        backView.clipsToBounds = true
-        
+       
         topImageView.image = UIImage(named: "cake")
         topImageView.layer.cornerRadius = topImageView.frame.width / 2
         
@@ -57,7 +55,7 @@ extension RecipeCVC {
         
         subTitleLabel.text = "@daram_table"
         subTitleLabel.textColor = .gray
-        subTitleLabel.font = UIFont.systemFont(ofSize: 12)
+        subTitleLabel.font = UIFont.systemFont(ofSize: 7)
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
@@ -65,7 +63,7 @@ extension RecipeCVC {
         countLabel.font = UIFont.boldSystemFont(ofSize: 7)
         
         bottomImageView.image = UIImage(named: "cake")
-        bottomImageView.contentMode = .scaleToFill
+        bottomImageView.contentMode = .scaleAspectFill
         
         bottomImageView.layer.cornerRadius = 15
         bottomImageView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
