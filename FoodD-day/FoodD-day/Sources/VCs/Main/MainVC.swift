@@ -159,6 +159,8 @@ extension MainVC {
     func setCollectionView() {
         guideCollectionView.delegate = self
         guideCollectionView.dataSource = self
+        
+        guideCollectionView.backgroundColor = .fdMainGreen
         guideCollectionView.showsHorizontalScrollIndicator = false
         guideCollectionView.contentInsetAdjustmentBehavior = .never
         guideCollectionView.decelerationRate = .fast
