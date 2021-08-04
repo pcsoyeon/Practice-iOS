@@ -18,6 +18,9 @@
 		9284EBC926B8E82900D752D2 /* CategoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284EBC826B8E82900D752D2 /* CategoryDataModel.swift */; };
 		9284EBCB26B905EE00D752D2 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9284EBCA26B905EE00D752D2 /* Detail.storyboard */; };
 		9284EBCD26B9060000D752D2 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284EBCC26B9060000D752D2 /* DetailVC.swift */; };
+		929246A026BA2F920050612A /* GuideCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292469E26BA2F920050612A /* GuideCVC.swift */; };
+		929246A126BA2F920050612A /* GuideCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9292469F26BA2F920050612A /* GuideCVC.xib */; };
+		929246A726BA33050050612A /* GuideDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929246A626BA33050050612A /* GuideDataModel.swift */; };
 		929D664726B7B28E00FAA0C0 /* FoodsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D664626B7B28E00FAA0C0 /* FoodsDataModel.swift */; };
 		92CE7AC326B53547005C13BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE7AC226B53547005C13BD /* AppDelegate.swift */; };
 		92CE7AC526B53547005C13BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE7AC426B53547005C13BD /* SceneDelegate.swift */; };
@@ -51,6 +54,9 @@
 		9284EBC826B8E82900D752D2 /* CategoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataModel.swift; sourceTree = "<group>"; };
 		9284EBCA26B905EE00D752D2 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		9284EBCC26B9060000D752D2 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		9292469E26BA2F920050612A /* GuideCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCVC.swift; sourceTree = "<group>"; };
+		9292469F26BA2F920050612A /* GuideCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideCVC.xib; sourceTree = "<group>"; };
+		929246A626BA33050050612A /* GuideDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDataModel.swift; sourceTree = "<group>"; };
 		929D664626B7B28E00FAA0C0 /* FoodsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsDataModel.swift; sourceTree = "<group>"; };
 		92CE7ABF26B53547005C13BD /* FoodD-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodD-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CE7AC226B53547005C13BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +116,44 @@
 				9284EBCC26B9060000D752D2 /* DetailVC.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		929246A226BA2F970050612A /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				92CE7AE226B5A7C3005C13BD /* FriendsTVC.swift */,
+				92CE7AE326B5A7C3005C13BD /* FriendsTVC.xib */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
+		929246A326BA2FA40050612A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				929246A526BA2FBB0050612A /* TVC */,
+				929246A426BA2FB60050612A /* CVC */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		929246A426BA2FB60050612A /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				9284EBBE26B8E23A00D752D2 /* CategoryCVC.swift */,
+				9284EBBF26B8E23A00D752D2 /* CategoryCVC.xib */,
+				9292469E26BA2F920050612A /* GuideCVC.swift */,
+				9292469F26BA2F920050612A /* GuideCVC.xib */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
+		929246A526BA2FBB0050612A /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				9284EBC426B8E76300D752D2 /* FoodsTVC.swift */,
+				9284EBC526B8E76300D752D2 /* FoodsTVC.xib */,
+			);
+			path = TVC;
 			sourceTree = "<group>";
 		};
 		92CE7AB626B53547005C13BD = {
@@ -176,12 +220,8 @@
 		92CE7AE726B5A7D2005C13BD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				92CE7AE226B5A7C3005C13BD /* FriendsTVC.swift */,
-				92CE7AE326B5A7C3005C13BD /* FriendsTVC.xib */,
-				9284EBBE26B8E23A00D752D2 /* CategoryCVC.swift */,
-				9284EBBF26B8E23A00D752D2 /* CategoryCVC.xib */,
-				9284EBC426B8E76300D752D2 /* FoodsTVC.swift */,
-				9284EBC526B8E76300D752D2 /* FoodsTVC.xib */,
+				929246A326BA2FA40050612A /* Main */,
+				929246A226BA2F970050612A /* Mypage */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -192,6 +232,7 @@
 				92CE7AE926B5AA60005C13BD /* FriendsDataModel.swift */,
 				929D664626B7B28E00FAA0C0 /* FoodsDataModel.swift */,
 				9284EBC826B8E82900D752D2 /* CategoryDataModel.swift */,
+				929246A626BA33050050612A /* GuideDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,6 +330,7 @@
 				9284EBC726B8E76300D752D2 /* FoodsTVC.xib in Resources */,
 				92CE7AF226B5D210005C13BD /* FirstPopup.storyboard in Resources */,
 				92CE7AE526B5A7C3005C13BD /* FriendsTVC.xib in Resources */,
+				929246A126BA2F920050612A /* GuideCVC.xib in Resources */,
 				92CE7ADD26B58F89005C13BD /* Share.storyboard in Resources */,
 				92CE7ACC26B53548005C13BD /* Assets.xcassets in Resources */,
 				9284EBC126B8E23A00D752D2 /* CategoryCVC.xib in Resources */,
@@ -306,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929246A026BA2F920050612A /* GuideCVC.swift in Sources */,
 				92CE7AC726B53547005C13BD /* MainVC.swift in Sources */,
 				9284EBC926B8E82900D752D2 /* CategoryDataModel.swift in Sources */,
 				9284EBC626B8E76300D752D2 /* FoodsTVC.swift in Sources */,
@@ -321,6 +364,7 @@
 				92CE7AE426B5A7C3005C13BD /* FriendsTVC.swift in Sources */,
 				92CE7AF426B5D283005C13BD /* FirstPopupVC.swift in Sources */,
 				92CE7ADF26B58F99005C13BD /* ShareVC.swift in Sources */,
+				929246A726BA33050050612A /* GuideDataModel.swift in Sources */,
 				92CE7AEA26B5AA60005C13BD /* FriendsDataModel.swift in Sources */,
 				92CE7AED26B5ABD8005C13BD /* UIColor+.swift in Sources */,
 				927D04F926B6BCBB0010EA3F /* SecondPopupVC.swift in Sources */,

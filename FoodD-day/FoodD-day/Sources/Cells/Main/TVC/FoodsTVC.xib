@@ -111,6 +111,7 @@
             <connections>
                 <outlet property="backView" destination="w3s-eC-UnA" id="97s-UM-YvC"/>
                 <outlet property="deadlineLabel" destination="F4m-Ua-nsk" id="aGu-cV-pI5"/>
+                <outlet property="deadlineTrailing" destination="CyD-xN-rDV" id="PWU-wk-esN"/>
                 <outlet property="deadlineView" destination="hY2-vZ-W1K" id="bSS-gu-OlY"/>
                 <outlet property="expiryLabel" destination="3WZ-VE-Zie" id="ZBv-WB-hze"/>
                 <outlet property="expiryView" destination="ok9-zR-waB" id="A6e-sV-p3S"/>

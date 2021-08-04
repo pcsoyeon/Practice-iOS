@@ -22,6 +22,7 @@ class FoodsTVC: UITableViewCell {
     
     @IBOutlet weak var deadlineView: UIView!
     @IBOutlet weak var deadlineLabel: UILabel!
+    @IBOutlet weak var deadlineTrailing: NSLayoutConstraint!
     
     @IBOutlet weak var expiryView: UIView!
     @IBOutlet weak var expiryLabel: UILabel!
@@ -46,6 +47,10 @@ extension FoodsTVC {
         backView.layer.cornerRadius = 15
         backView.layer.masksToBounds = true
         backView.layer.applyShadow()
+        
+        foodImageView.layer.cornerRadius = 15
+        foodImageView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        foodImageView.layer.masksToBounds = true
         
         foodLabel.textColor = .black
         foodLabel.font = UIFont.systemFont(ofSize: 13)
@@ -81,5 +86,10 @@ extension FoodsTVC {
         
         deadlineLabel.text = deadline
         expiryLabel.text = expiryDay
+        
+        if deadlineLabel.text == "D-5" {
+            deadlineTrailing.constant = 45
+            deadlineView.layoutIfNeeded()
+        }
     }
 }

@@ -12,7 +12,12 @@ class MainVC: UIViewController {
     // MARK: - UI Components
     @IBOutlet weak var topView: UIView!
     
+    @IBOutlet weak var guideCollectionView: UICollectionView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    
+    @IBOutlet weak var firstIndicator: UIView!
+    @IBOutlet weak var secondIndicator: UIView!
+    @IBOutlet weak var thirdIndicator: UIView!
     
     @IBOutlet weak var countBackView: UIView!
     @IBOutlet weak var countLabel: UILabel!
@@ -22,10 +27,15 @@ class MainVC: UIViewController {
     @IBOutlet weak var deadlineColorView: UIView!
     @IBOutlet weak var deadlineLabel: UILabel!
     
+    @IBOutlet weak var expiryColorView: UIView!
+    @IBOutlet weak var expiryDayLabel:
+        UILabel!
+    
     @IBOutlet weak var listTableView: UITableView!
     
     // MARK:- Local Variables
     
+    private var guides = [GuideDataModel]()
     private var categorys = [CategoryDataModel]()
     private var foods = [FoodsDataModel]()
     
@@ -56,13 +66,25 @@ extension MainVC {
         
         topView.backgroundColor = .fdMainGreen
         
+        firstIndicator.layer.cornerRadius = firstIndicator.frame.width / 2
+        firstIndicator.backgroundColor = .white
+        
+        secondIndicator.layer.cornerRadius = secondIndicator.frame.width / 2
+        secondIndicator.backgroundColor = .fdMainGreen
+        secondIndicator.layer.borderWidth = 1
+        secondIndicator.layer.borderColor = UIColor.white.cgColor
+        
+        thirdIndicator.layer.cornerRadius = thirdIndicator.frame.width / 2
+        thirdIndicator.backgroundColor = .fdMainGreen
+        thirdIndicator.layer.borderWidth = 1
+        thirdIndicator.layer.borderColor = UIColor.white.cgColor
+        
         countBackView.layer.cornerRadius = 10
         countBackView.layer.masksToBounds = true
         
         countBackView.layer.borderWidth = 1
         countBackView.layer.borderColor = UIColor.gray.cgColor
         
-//        countLabel.text = "품목 \(foods.count)"
         countLabel.textColor = .gray
         countLabel.font = UIFont.systemFont(ofSize: 11)
         
@@ -72,7 +94,6 @@ extension MainVC {
         sortButton.layer.borderColor = UIColor.gray.cgColor
         
         sortButton.setTitle("최근 추가한 순", for: .normal)
-//        sortButton.contentHorizontalAlignment = .left
         sortButton.tintColor = .gray
         sortButton.titleLabel?.font = UIFont.systemFont(ofSize: 11)
         
@@ -83,12 +104,26 @@ extension MainVC {
         deadlineLabel.text = "유통기한"
         deadlineLabel.textColor = .black
         deadlineLabel.font = UIFont.systemFont(ofSize: 11)
+        
+        expiryColorView.backgroundColor = .fdYellow
+        expiryColorView.layer.cornerRadius = deadlineColorView.frame.width / 2
+        expiryColorView.layer.masksToBounds = true
+        
+        expiryDayLabel.text = "소비기한"
+        expiryDayLabel.textColor = .black
+        expiryDayLabel.font = UIFont.systemFont(ofSize: 11)
     }
     
     func setList() {
+        guides.append(contentsOf: [
+            GuideDataModel(guide: "안녕하세요. 그래놀라님,", guideImage: "pGranola"),
+            GuideDataModel(guide: "안녕하세요. 호두님,", guideImage: "pWalnut"),
+            GuideDataModel(guide: "안녕하세요. 아몬드님,", guideImage: "pAlmond")
+        ])
+        
         foods.append(contentsOf: [
             FoodsDataModel(image: "cheese", name: "치즈", firstTag: "#냉장고", secondTag: "#모짜렐라", deadline: "D-5", expiryDay: "D-25"),
-            FoodsDataModel(image: "cheese", name: "소금", firstTag: "#천일염", secondTag: "#굵은소금", deadline: "D-5", expiryDay: "D-25")
+            FoodsDataModel(image: "cheese", name: "소금", firstTag: "#천일염", secondTag: "#굵은소금", deadline: "D-10", expiryDay: "D-25")
         ])
         
         categorys.append(contentsOf: [
@@ -103,6 +138,9 @@ extension MainVC {
     }
     
     func registerXib() {
+        let guideNib = UINib(nibName: GuideCVC.identifier, bundle: nil)
+        guideCollectionView.register(guideNib, forCellWithReuseIdentifier: GuideCVC.identifier)
+        
         let cvcNib = UINib(nibName: CategoryCVC.identifier, bundle: nil)
         categoryCollectionView.register(cvcNib, forCellWithReuseIdentifier: CategoryCVC.identifier)
         
@@ -119,9 +157,14 @@ extension MainVC {
     }
     
     func setCollectionView() {
+        guideCollectionView.delegate = self
+        guideCollectionView.dataSource = self
+        guideCollectionView.showsHorizontalScrollIndicator = false
+        guideCollectionView.contentInsetAdjustmentBehavior = .never
+        guideCollectionView.decelerationRate = .fast
+        
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
-        
         categoryCollectionView.showsHorizontalScrollIndicator = false
     }
 }
@@ -160,30 +203,119 @@ extension MainVC: UITableViewDataSource {
 
 extension MainVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
+        if collectionView == guideCollectionView {
+            return 0
+        } else {
+            return 15
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.frame.width - 30) / 6
-        let height = collectionView.frame.height
+        var width: CGFloat = 0
+        var height: CGFloat = 0
+        
+        if collectionView == guideCollectionView {
+            width = collectionView.frame.width
+            height = collectionView.frame.height
+        } else {
+            width = (collectionView.frame.width - 30) / 6
+            height = collectionView.frame.height
+        }
+        
         return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
+        if collectionView == guideCollectionView {
+            return .zero
+        } else {
+            return UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 50)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == categoryCollectionView {
+            categoryCollectionView.scrollToItem(at: IndexPath(item: indexPath.row, section: 0), at: .centeredHorizontally, animated: true)
+        }
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if scrollView == guideCollectionView {
+            let spacing = topView.frame.width
+            var offset = targetContentOffset.pointee
+            let index = round((offset.x + scrollView.contentInset.left) / spacing)
+
+            offset = CGPoint(x: index * spacing - scrollView.contentInset.left, y: scrollView.contentInset.top)
+            targetContentOffset.pointee = offset
+
+            if index == 0 {
+                firstIndicator.backgroundColor = .white
+
+                secondIndicator.backgroundColor = .fdMainGreen
+                secondIndicator.layer.borderWidth = 1
+                secondIndicator.layer.borderColor = UIColor.white.cgColor
+
+                thirdIndicator.backgroundColor = .fdMainGreen
+                thirdIndicator.layer.borderWidth = 1
+                thirdIndicator.layer.borderColor = UIColor.white.cgColor
+
+            } else if index == 1 {
+                firstIndicator.backgroundColor = .fdMainGreen
+                firstIndicator.layer.borderWidth = 1
+                firstIndicator.layer.borderColor = UIColor.white.cgColor
+
+                secondIndicator.backgroundColor = .white
+
+                thirdIndicator.backgroundColor = .fdMainGreen
+                thirdIndicator.layer.borderWidth = 1
+                thirdIndicator.layer.borderColor = UIColor.white.cgColor
+            } else {
+                firstIndicator.backgroundColor = .fdMainGreen
+                firstIndicator.layer.borderWidth = 1
+                firstIndicator.layer.borderColor = UIColor.white.cgColor
+
+                secondIndicator.backgroundColor = .fdMainGreen
+                secondIndicator.layer.borderWidth = 1
+                secondIndicator.layer.borderColor = UIColor.white.cgColor
+
+                thirdIndicator.backgroundColor = .white
+            }
+        }
     }
 }
 
 extension MainVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == guideCollectionView {
+            return guides.count
+        }
         return categorys.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCVC.identifier, for: indexPath) as? CategoryCVC else {
-            return UICollectionViewCell()
+        if collectionView == guideCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GuideCVC.identifier, for: indexPath) as? GuideCVC else {
+                return UICollectionViewCell()
+            }
+            cell.initCell(guide: guides[indexPath.row].guide, image: guides[indexPath.row].guideImage)
+            return cell
         }
-        cell.initCell(image: categorys[indexPath.row].image, category: categorys[indexPath.row].category)
-        return cell
+        
+        if collectionView == categoryCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCVC.identifier, for: indexPath) as? CategoryCVC else {
+                return UICollectionViewCell()
+            }
+            if indexPath.row == 0 {
+                cell.isSelected = true
+                // MARK: - FIX ME
+                collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .init())
+            } else {
+                cell.isSelected = false
+            }
+            cell.initCell(image: categorys[indexPath.row].image, category: categorys[indexPath.row].category)
+            return cell
+        }
+        
+        return UICollectionViewCell()
     }
 }
