@@ -15,6 +15,12 @@ class ArticleTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        titleLabel.lineBreakMode = .byTruncatingTail
+        titleLabel.numberOfLines = 3
+        
+        descriptionLabel.lineBreakMode = .byTruncatingTail
+        descriptionLabel.numberOfLines = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

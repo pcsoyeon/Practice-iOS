@@ -14,12 +14,22 @@ class NewsListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setup()
+        configUI()
+        setTableView()
+        
+        getAPI()
     }
     
-    private func setup() {
+    private func configUI() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
     
+    private func setTableView() {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 300
+    }
+    
+    private func getAPI() {
         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=e9b514c39c5f456db8ed4ecb693b0040")!
         WebService().getArticles(url: url) {
             (articles) in
