@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Then
+import Moya
 
 class MainVC: UIViewController {
     
@@ -41,8 +42,17 @@ class MainVC: UIViewController {
         $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 12)
     }
+    
+    // MARK: - Local Variables
+    private let authProvider = MoyaProvider<WeatherService>()
 
      //MARK: - Life Cycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        getCurrentWeather()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +93,28 @@ extension MainVC {
         descriptionLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(20)
             make.top.equalTo(weatherLabel.snp.bottom).offset(20)
+        }
+    }
+}
+
+extension MainVC {
+    private func getCurrentWeather() {
+        
+        let param: WeatherRequest = WeatherRequest.init(GeneralAPI.apiKey)
+        
+        authProvider.request(.current(param: param)) { response in
+            switch response {
+            case .success(let result):
+                do {
+                    dump(result)
+                    let data = try result.map(WeatherData.self)
+                    dump(data)
+                } catch(let err) {
+                    print("디코드 안됨 - ", err.localizedDescription)
+                }
+            case .failure(let err):
+                print("데이터 못 받음 - ",err.localizedDescription)
+            }
         }
     }
 }
