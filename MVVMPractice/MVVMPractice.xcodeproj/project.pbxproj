@@ -13,6 +13,9 @@
 		925118EC26BE3DFF00B7690A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925118EA26BE3DFF00B7690A /* Main.storyboard */; };
 		925118EE26BE3E0000B7690A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925118ED26BE3E0000B7690A /* Assets.xcassets */; };
 		925118F126BE3E0000B7690A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925118EF26BE3E0000B7690A /* LaunchScreen.storyboard */; };
+		925118FE26BE404200B7690A /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925118FD26BE404200B7690A /* Dog.swift */; };
+		9251190026BE41A800B7690A /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925118FF26BE41A800B7690A /* DogViewModel.swift */; };
+		9251190226BE53C200B7690A /* DogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251190126BE53C200B7690A /* DogView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		925118ED26BE3E0000B7690A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		925118F026BE3E0000B7690A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		925118F226BE3E0000B7690A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		925118FD26BE404200B7690A /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		925118FF26BE41A800B7690A /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
+		9251190126BE53C200B7690A /* DogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 		925118F826BE3F8A00B7690A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				925118FD26BE404200B7690A /* Dog.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -77,6 +84,7 @@
 		925118F926BE3F9B00B7690A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				925118FF26BE41A800B7690A /* DogViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -103,6 +111,7 @@
 			children = (
 				925118EA26BE3DFF00B7690A /* Main.storyboard */,
 				925118EF26BE3E0000B7690A /* LaunchScreen.storyboard */,
+				9251190126BE53C200B7690A /* DogView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,7 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				925118E926BE3DFF00B7690A /* ViewController.swift in Sources */,
+				9251190226BE53C200B7690A /* DogView.swift in Sources */,
 				925118E526BE3DFF00B7690A /* AppDelegate.swift in Sources */,
+				9251190026BE41A800B7690A /* DogViewModel.swift in Sources */,
+				925118FE26BE404200B7690A /* Dog.swift in Sources */,
 				925118E726BE3DFF00B7690A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
