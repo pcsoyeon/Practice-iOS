@@ -7,37 +7,30 @@
 
 import Foundation
 
-import Foundation
-
 // MARK: - WeatherData
 struct WeatherData: Codable {
+    let data: [Datum]
     let count: Int
-    let results: [Results]
-    let minutely: [Minutely]
 }
 
 // MARK: - Data
-struct Results: Codable {
+struct Datum: Codable {
     let rh: Int
     let pod: String
     let lon, pres: Double
     let timezone, obTime, countryCode: String
-    let clouds, ts: Int
-    let solarRAD: Double
+    let clouds, ts, solarRAD: Int
     let stateCode, cityName: String
     let windSpd: Double
     let windCdirFull, windCdir: String
     let slp: Double
-    let vis: Int
-    let hAngle: Double
+    let vis, hAngle: Int
     let sunset: String
-    let dni, dewpt: Double
-    let snow: Int
-    let uv: Double
-    let precip, windDir: Int
+    let dni: Int
+    let dewpt: Double
+    let snow, uv, precip, windDir: Int
     let sunrise: String
-    let ghi, dhi: Double
-    let aqi: Int
+    let ghi, dhi, aqi: Int
     let lat: Double
     let weather: Weather
     let datetime: String
@@ -77,20 +70,3 @@ struct Weather: Codable {
         case weatherDescription = "description"
     }
 }
-
-// MARK: - Minutely
-struct Minutely: Codable {
-    let timestampUTC: String
-    let snow: Int
-    let temp: Double
-    let timestampLocal: String
-    let ts, precip: Int
-
-    enum CodingKeys: String, CodingKey {
-        case timestampUTC = "timestamp_utc"
-        case snow, temp
-        case timestampLocal = "timestamp_local"
-        case ts, precip
-    }
-}
-

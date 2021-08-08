@@ -9,5 +9,5 @@ import Foundation
 
 struct GeneralAPI {
     static let baseURL = "https://api.weatherbit.io/v2.0"
-    static let apiKey = "apiKey"
+    static let apiKey = "YourAPIKey"
 }

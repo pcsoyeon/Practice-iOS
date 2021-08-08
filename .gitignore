@@ -2,7 +2,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/swift,cocoapods,xcode
 # Edit at https://www.toptal.com/developers/gitignore?templates=swift,cocoapods,xcode
 
-Weather/Weather/Services/GeneralAPI.swift
+Weather/Weather/Services/KeyCenter.swift
 
 ### CocoaPods ###
 ## CocoaPods GitIgnore Template

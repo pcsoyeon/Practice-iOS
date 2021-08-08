@@ -15,13 +15,11 @@ class MainVC: UIViewController {
     // MARK: - Properties
     
     private var locationLabel = UILabel().then {
-        $0.text = "위치"
         $0.textColor = .white
         $0.font = UIFont.boldSystemFont(ofSize: 20)
     }
     
     private var dateLabel = UILabel().then {
-        $0.text = "날짜"
         $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 15)
     }
@@ -32,25 +30,28 @@ class MainVC: UIViewController {
     }
     
     private var weatherLabel = UILabel().then {
-        $0.text = "날씨"
         $0.textColor = .white
         $0.font = UIFont.boldSystemFont(ofSize: 15)
     }
     
     private var descriptionLabel = UILabel().then {
-        $0.text = "날씨 상세 정보"
         $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 12)
+        $0.numberOfLines = 2
     }
     
     // MARK: - Local Variables
     private let authProvider = MoyaProvider<WeatherService>()
+    private var currentWeather:CurrentWeatherService!
+    
+    private var dateFormatter = DateFormatter()
 
      //MARK: - Life Cycle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+//        getWeather()
         getCurrentWeather()
     }
     
@@ -98,7 +99,7 @@ extension MainVC {
 }
 
 extension MainVC {
-    private func getCurrentWeather() {
+    private func getWeather() {
         
         let param: WeatherRequest = WeatherRequest.init(GeneralAPI.apiKey)
         
@@ -115,6 +116,22 @@ extension MainVC {
             case .failure(let err):
                 print("데이터 못 받음 - ",err.localizedDescription)
             }
+        }
+    }
+    
+    private func getCurrentWeather() {
+        currentWeather = CurrentWeatherService()
+        currentWeather.getCurrentWeather() { (success) in
+            dump(self.currentWeather)
+            self.locationLabel.text = self.currentWeather.city
+            
+            self.dateFormatter.locale = Locale(identifier: "ko_KR")
+            self.dateFormatter.dateFormat = "yyyy.MM.dd"
+            self.dateLabel.text = self.dateFormatter.string(from: Date())
+            
+            self.weatherLabel.text = self.currentWeather.weatherType
+            self.weatherImageView.image = getWeatherIconFor(self.currentWeather.weatherIcon)
+            self.descriptionLabel.text = "해 뜨는 시간: \(self.currentWeather.sunset)\n해 지는 시간: \(self.currentWeather.sunrise)"
         }
     }
 }
