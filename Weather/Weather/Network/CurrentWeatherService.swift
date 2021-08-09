@@ -123,7 +123,7 @@ class CurrentWeatherService {
         
         var url:String!
         
-        url = String(format: "https://api.weatherbit.io/v2.0/current?lat=\(35.7796)&lon=\(-78.6382)&key=\(KeyCenter.key)")
+        url = String(format: "https://api.weatherbit.io/v2.0/current?lat=\(35.7796)&lon=\(-78.6382)&key=\(GeneralAPI.key)")
         
         //Swift5부터 AF로 바뀜.
         AF.request(url).responseJSON { (response) in

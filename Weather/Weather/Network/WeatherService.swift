@@ -43,7 +43,7 @@ extension WeatherService: TargetType {
     var task: Task {
         switch self {
         case .current:
-            return .requestParameters(parameters: ["lat" : 35.7796, "lon" : -78.6382,"key": KeyCenter.key], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["lat" : 35.7796, "lon" : -78.6382,"key": GeneralAPI.key], encoding: URLEncoding.default)
         }
     }
     

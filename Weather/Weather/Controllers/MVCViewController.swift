@@ -100,7 +100,7 @@ extension MVCViewController {
 
 extension MVCViewController {
     private func getWeather() {
-        let param: WeatherRequest = WeatherRequest.init(35.7796, -78.6382, KeyCenter.key)
+        let param: WeatherRequest = WeatherRequest.init(35.7796, -78.6382, GeneralAPI.key)
         
         authProvider.request(.current(param: param)) { response in
             switch response {
