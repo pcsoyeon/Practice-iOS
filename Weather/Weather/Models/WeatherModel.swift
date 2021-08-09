@@ -11,6 +11,13 @@ import Foundation
 struct WeatherModel: Codable {
     let data: [WeatherResponse]
     let count: Int
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        data = (try? values.decode([WeatherResponse].self, forKey: .data)) ?? []
+        count = (try? values.decode(Int.self, forKey: .count)) ?? 1
+    }
 }
 
 // MARK: - Data
@@ -57,6 +64,47 @@ struct WeatherResponse: Codable {
         case elevAngle = "elev_angle"
         case appTemp = "app_temp"
     }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        rh = (try? values.decode(Int.self, forKey: .rh)) ?? 0
+        pod = (try? values.decode(String.self, forKey: .pod)) ?? ""
+        lon = (try? values.decode(Double.self, forKey: .lon)) ?? 0
+        pres = (try? values.decode(Double.self, forKey: .pres)) ?? 0
+        timezone = (try? values.decode(String.self, forKey: .timezone)) ?? ""
+        obTime = (try? values.decode(String.self, forKey: .obTime)) ?? ""
+        countryCode = (try? values.decode(String.self, forKey: .countryCode)) ?? ""
+        clouds = (try? values.decode(Int.self, forKey: .clouds)) ?? 0
+        ts = (try? values.decode(Int.self, forKey: .ts)) ?? 0
+        solarRAD = (try? values.decode(Int.self, forKey: .solarRAD)) ?? 0
+        stateCode = (try? values.decode(String.self, forKey: .stateCode)) ?? ""
+        cityName = (try? values.decode(String.self, forKey: .cityName)) ?? ""
+        windSpd = (try? values.decode(Double.self, forKey: .windSpd)) ?? 0
+        windCdirFull = (try? values.decode(String.self, forKey: .windCdirFull)) ?? ""
+        windCdir = (try? values.decode(String.self, forKey: .windCdir)) ?? ""
+        slp = (try? values.decode(Double.self, forKey: .slp)) ?? 0
+        vis = (try? values.decode(Int.self, forKey: .vis)) ?? 0
+        hAngle = (try? values.decode(Int.self, forKey: .hAngle)) ?? 0
+        sunset = (try? values.decode(String.self, forKey: .sunset)) ?? ""
+        dni = (try? values.decode(Int.self, forKey: .dni)) ?? 0
+        dewpt = (try? values.decode(Double.self, forKey: .dewpt)) ?? 0
+        snow = (try? values.decode(Int.self, forKey: .snow)) ?? 0
+        uv = (try? values.decode(Int.self, forKey: .uv)) ?? 0
+        precip = (try? values.decode(Int.self, forKey: .precip)) ?? 0
+        windDir = (try? values.decode(Int.self, forKey: .windDir)) ?? 0
+        sunrise = (try? values.decode(String.self, forKey: .sunrise)) ?? ""
+        ghi = (try? values.decode(Int.self, forKey: .ghi)) ?? 0
+        dhi = (try? values.decode(Int.self, forKey: .dhi)) ?? 0
+        aqi = (try? values.decode(Int.self, forKey: .aqi)) ?? 0
+        lat = (try? values.decode(Double.self, forKey: .lat)) ?? 0
+        datetime = (try? values.decode(String.self, forKey: .datetime)) ?? ""
+        temp = (try? values.decode(Double.self, forKey: .temp)) ?? 0
+        station = (try? values.decode(String.self, forKey: .station)) ?? ""
+        elevAngle = (try? values.decode(Double.self, forKey: .elevAngle)) ?? 0
+        appTemp = (try? values.decode(Double.self, forKey: .appTemp)) ?? 0
+        weather = (try? values.decode(Weather.self, forKey: .weather))!
+    }
 }
 
 // MARK: - Weather
@@ -68,5 +116,13 @@ struct Weather: Codable {
     enum CodingKeys: String, CodingKey {
         case icon, code
         case weatherDescription = "description"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        icon = (try? values.decode(String.self, forKey: .icon)) ?? ""
+        code = (try? values.decode(Int.self, forKey: .code)) ?? 0
+        weatherDescription = (try? values.decode(String.self, forKey: .weatherDescription)) ?? ""
     }
 }

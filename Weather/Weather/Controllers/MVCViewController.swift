@@ -10,7 +10,7 @@ import SnapKit
 import Then
 import Moya
 
-class MainVC: UIViewController {
+class MVCViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -63,7 +63,7 @@ class MainVC: UIViewController {
     }
 }
 
-extension MainVC {
+extension MVCViewController {
     func configUI() {
         view.backgroundColor = .wtGreen
     }
@@ -98,9 +98,8 @@ extension MainVC {
     }
 }
 
-extension MainVC {
+extension MVCViewController {
     private func getWeather() {
-        
         let param: WeatherRequest = WeatherRequest.init(35.7796, -78.6382, KeyCenter.key)
         
         authProvider.request(.current(param: param)) { response in

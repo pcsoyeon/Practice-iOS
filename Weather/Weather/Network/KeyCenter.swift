@@ -8,5 +8,5 @@
 import Foundation
 
 struct KeyCenter {
-    static let key = "66c89713f9c747a6a71abecca4b31765"
+    static let key = "YourAPIKey"
 }

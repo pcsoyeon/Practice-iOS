@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9251191026BE617A00B7690A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251190F26BE617A00B7690A /* AppDelegate.swift */; };
 		9251191226BE617A00B7690A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251191126BE617A00B7690A /* SceneDelegate.swift */; };
-		9251191426BE617A00B7690A /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251191326BE617A00B7690A /* MainVC.swift */; };
+		9251191426BE617A00B7690A /* MVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251191326BE617A00B7690A /* MVCViewController.swift */; };
 		9251191726BE617A00B7690A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9251191526BE617A00B7690A /* Main.storyboard */; };
 		9251191926BE617B00B7690A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9251191826BE617B00B7690A /* Assets.xcassets */; };
 		9251191C26BE617B00B7690A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9251191A26BE617B00B7690A /* LaunchScreen.storyboard */; };
@@ -24,6 +24,10 @@
 		92D3EA8B26BF65A6001931A1 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3EA8A26BF65A6001931A1 /* Date+.swift */; };
 		92D3EA8D26BF65DF001931A1 /* TempFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3EA8C26BF65DF001931A1 /* TempFormat.swift */; };
 		92D3EA8F26BF71DF001931A1 /* KeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3EA8E26BF71DF001931A1 /* KeyCenter.swift */; };
+		92FF4F7F26C0D99B00FF1E8C /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF4F7E26C0D99B00FF1E8C /* WeatherViewModel.swift */; };
+		92FF4F8126C0DA4800FF1E8C /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF4F8026C0DA4800FF1E8C /* MVVMViewController.swift */; };
+		92FF4F8426C0DAD700FF1E8C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF4F8326C0DAD700FF1E8C /* Box.swift */; };
+		92FF4F8726C0E28E00FF1E8C /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF4F8626C0E28E00FF1E8C /* WeatherView.swift */; };
 		F1B00095046CB9FD6529A2DC /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709A812CAF8D2D46340C9695 /* Pods_Weather.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +36,7 @@
 		9251190C26BE617A00B7690A /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9251190F26BE617A00B7690A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9251191126BE617A00B7690A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9251191326BE617A00B7690A /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		9251191326BE617A00B7690A /* MVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCViewController.swift; sourceTree = "<group>"; };
 		9251191626BE617A00B7690A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9251191826BE617B00B7690A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9251191B26BE617B00B7690A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +52,10 @@
 		92D3EA8A26BF65A6001931A1 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		92D3EA8C26BF65DF001931A1 /* TempFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempFormat.swift; sourceTree = "<group>"; };
 		92D3EA8E26BF71DF001931A1 /* KeyCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCenter.swift; sourceTree = "<group>"; };
+		92FF4F7E26C0D99B00FF1E8C /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		92FF4F8026C0DA4800FF1E8C /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
+		92FF4F8326C0DAD700FF1E8C /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		92FF4F8626C0E28E00FF1E8C /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		CB8C39A1277AB42948FF381D /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 		E76DE7F2C4D06CFC96E445E0 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,7 +110,9 @@
 				9282D74026BEBACF000C949C /* Network */,
 				9282D73926BEB457000C949C /* Extensions */,
 				9251192526BE62A700B7690A /* Controllers */,
+				92FF4F8226C0DAC800FF1E8C /* Utilities */,
 				9251192426BE62A100B7690A /* ViewModels */,
+				92FF4F8526C0E27500FF1E8C /* Views */,
 				9251192326BE629100B7690A /* Models */,
 			);
 			path = Weather;
@@ -120,6 +130,7 @@
 		9251192426BE62A100B7690A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				92FF4F7E26C0D99B00FF1E8C /* WeatherViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -127,7 +138,8 @@
 		9251192526BE62A700B7690A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9251191326BE617A00B7690A /* MainVC.swift */,
+				9251191326BE617A00B7690A /* MVCViewController.swift */,
+				92FF4F8026C0DA4800FF1E8C /* MVVMViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -169,6 +181,22 @@
 				92D3EA8E26BF71DF001931A1 /* KeyCenter.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		92FF4F8226C0DAC800FF1E8C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				92FF4F8326C0DAD700FF1E8C /* Box.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		92FF4F8526C0E27500FF1E8C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92FF4F8626C0E28E00FF1E8C /* WeatherView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DE0315A1824761A76AC0F74F /* Pods */ = {
@@ -299,13 +327,17 @@
 				9282D73B26BEB4BA000C949C /* UIView+.swift in Sources */,
 				92D3EA8B26BF65A6001931A1 /* Date+.swift in Sources */,
 				92D3EA8F26BF71DF001931A1 /* KeyCenter.swift in Sources */,
-				9251191426BE617A00B7690A /* MainVC.swift in Sources */,
+				9251191426BE617A00B7690A /* MVCViewController.swift in Sources */,
 				9251191026BE617A00B7690A /* AppDelegate.swift in Sources */,
 				9251191226BE617A00B7690A /* SceneDelegate.swift in Sources */,
+				92FF4F8126C0DA4800FF1E8C /* MVVMViewController.swift in Sources */,
 				92D3EA8926BF6582001931A1 /* GlobalHelpers.swift in Sources */,
 				9282D73F26BEB9ED000C949C /* WeatherModel.swift in Sources */,
+				92FF4F7F26C0D99B00FF1E8C /* WeatherViewModel.swift in Sources */,
 				9282D74626BEC154000C949C /* WeatherRequest.swift in Sources */,
+				92FF4F8426C0DAD700FF1E8C /* Box.swift in Sources */,
 				9282D74226BEBBE3000C949C /* GeneralAPI.swift in Sources */,
+				92FF4F8726C0E28E00FF1E8C /* WeatherView.swift in Sources */,
 				9282D73D26BEB71C000C949C /* UIColor+.swift in Sources */,
 				92D3EA8D26BF65DF001931A1 /* TempFormat.swift in Sources */,
 			);
