@@ -97,10 +97,10 @@
 				9251191D26BE617B00B7690A /* Info.plist */,
 				92D3EA8826BF6582001931A1 /* GlobalHelpers.swift */,
 				92D3EA8C26BF65DF001931A1 /* TempFormat.swift */,
-				9282D74026BEBACF000C949C /* Services */,
-				9282D73926BEB457000C949C /* Extensions */,
 				9251192726BE62BA00B7690A /* Supports */,
-				9251192626BE62B300B7690A /* Views */,
+				9251192626BE62B300B7690A /* Storyboards */,
+				9282D74026BEBACF000C949C /* Network */,
+				9282D73926BEB457000C949C /* Extensions */,
 				9251192526BE62A700B7690A /* Controllers */,
 				9251192426BE62A100B7690A /* ViewModels */,
 				9251192326BE629100B7690A /* Models */,
@@ -132,13 +132,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		9251192626BE62B300B7690A /* Views */ = {
+		9251192626BE62B300B7690A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				9251191526BE617A00B7690A /* Main.storyboard */,
 				9251191A26BE617B00B7690A /* LaunchScreen.storyboard */,
 			);
-			path = Views;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		9251192726BE62BA00B7690A /* Supports */ = {
@@ -160,7 +160,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9282D74026BEBACF000C949C /* Services */ = {
+		9282D74026BEBACF000C949C /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				9282D74126BEBBE3000C949C /* GeneralAPI.swift */,
@@ -168,7 +168,7 @@
 				92D3EA8626BF638F001931A1 /* CurrentWeatherService.swift */,
 				92D3EA8E26BF71DF001931A1 /* KeyCenter.swift */,
 			);
-			path = Services;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		DE0315A1824761A76AC0F74F /* Pods */ = {

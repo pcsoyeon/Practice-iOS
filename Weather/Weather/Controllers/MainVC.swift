@@ -112,16 +112,16 @@ extension MainVC {
                     
                     let weatherData = data.data[0]
                     
-                    self.locationLabel.text = weatherData.cityName
+                    self.locationLabel.text = weatherData.timezone
                     
-                    self.dateFormatter.locale = Locale(identifier: "ko_KR")
-                    self.dateFormatter.dateFormat = "yyyy.MM.dd"
+                    self.dateFormatter.locale = Locale(identifier: "US")
+                    self.dateFormatter.dateFormat = "EE,MM.dd.yyyy"
                     self.dateLabel.text = self.dateFormatter.string(from: Date())
                     
-                    self.weatherLabel.text = weatherData.weather.weatherDescription
+                    self.weatherLabel.text = String(weatherData.temp)
                     self.weatherImageView.image = getWeatherIconFor(weatherData.weather.icon)
                     
-                    self.descriptionLabel.text = "해 뜨는 시간: \(weatherData.sunrise)\n해 지는 시간: \(weatherData.sunset)"
+                    self.descriptionLabel.text = weatherData.weather.weatherDescription
                     
                 } catch(let err) {
                     print("디코드 안됨 - ", err.localizedDescription)
