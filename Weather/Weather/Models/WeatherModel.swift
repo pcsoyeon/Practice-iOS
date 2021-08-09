@@ -8,13 +8,13 @@
 import Foundation
 
 // MARK: - WeatherData
-struct WeatherData: Codable {
-    let data: [Datum]
+struct WeatherModel: Codable {
+    let data: [WeatherResponse]
     let count: Int
 }
 
 // MARK: - Data
-struct Datum: Codable {
+struct WeatherResponse: Codable {
     let rh: Int
     let pod: String
     let lon, pres: Double

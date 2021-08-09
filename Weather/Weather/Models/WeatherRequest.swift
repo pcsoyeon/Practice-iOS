@@ -8,13 +8,13 @@
 import Foundation
 
 struct WeatherRequest: Codable {
-    var api_key: String
-    var latitude: Double
-    var longtitude: Double
+    var lat: Double
+    var lon: Double
+    var key: String
     
-    init(_ api_key: String, _ latitude: Double = 35.7796, _ longtitude:Double = -78.6382) {
-        self.api_key = api_key
-        self.latitude = latitude
-        self.longtitude = longtitude
+    init(_ lat: Double = 35.7796, _ lon:Double = -78.6382, _ key: String) {
+        self.lat = lat
+        self.lon = lon
+        self.key = key
     }
 }

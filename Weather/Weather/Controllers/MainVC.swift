@@ -51,8 +51,8 @@ class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-//        getWeather()
-        getCurrentWeather()
+        getWeather()
+//        getCurrentWeather()
     }
     
     override func viewDidLoad() {
@@ -101,15 +101,28 @@ extension MainVC {
 extension MainVC {
     private func getWeather() {
         
-        let param: WeatherRequest = WeatherRequest.init(GeneralAPI.apiKey)
+        let param: WeatherRequest = WeatherRequest.init(35.7796, -78.6382, KeyCenter.key)
         
         authProvider.request(.current(param: param)) { response in
             switch response {
             case .success(let result):
                 do {
-                    dump(result)
-                    let data = try result.map(WeatherData.self)
+                    let data = try result.map(WeatherModel.self)
                     dump(data)
+                    
+                    let weatherData = data.data[0]
+                    
+                    self.locationLabel.text = weatherData.cityName
+                    
+                    self.dateFormatter.locale = Locale(identifier: "ko_KR")
+                    self.dateFormatter.dateFormat = "yyyy.MM.dd"
+                    self.dateLabel.text = self.dateFormatter.string(from: Date())
+                    
+                    self.weatherLabel.text = weatherData.weather.weatherDescription
+                    self.weatherImageView.image = getWeatherIconFor(weatherData.weather.icon)
+                    
+                    self.descriptionLabel.text = "해 뜨는 시간: \(weatherData.sunrise)\n해 지는 시간: \(weatherData.sunset)"
+                    
                 } catch(let err) {
                     print("디코드 안됨 - ", err.localizedDescription)
                 }
@@ -131,7 +144,8 @@ extension MainVC {
             
             self.weatherLabel.text = self.currentWeather.weatherType
             self.weatherImageView.image = getWeatherIconFor(self.currentWeather.weatherIcon)
-            self.descriptionLabel.text = "해 뜨는 시간: \(self.currentWeather.sunset)\n해 지는 시간: \(self.currentWeather.sunrise)"
+            
+            self.descriptionLabel.text = "해 뜨는 시간: \(self.currentWeather.sunrise)\n해 지는 시간: \(self.currentWeather.sunset)"
         }
     }
 }

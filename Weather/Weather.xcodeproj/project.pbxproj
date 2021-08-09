@@ -15,7 +15,7 @@
 		9251191C26BE617B00B7690A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9251191A26BE617B00B7690A /* LaunchScreen.storyboard */; };
 		9282D73B26BEB4BA000C949C /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282D73A26BEB4BA000C949C /* UIView+.swift */; };
 		9282D73D26BEB71C000C949C /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282D73C26BEB71C000C949C /* UIColor+.swift */; };
-		9282D73F26BEB9ED000C949C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282D73E26BEB9ED000C949C /* Weather.swift */; };
+		9282D73F26BEB9ED000C949C /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282D73E26BEB9ED000C949C /* WeatherModel.swift */; };
 		9282D74226BEBBE3000C949C /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282D74126BEBBE3000C949C /* GeneralAPI.swift */; };
 		9282D74426BEC116000C949C /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282D74326BEC116000C949C /* WeatherService.swift */; };
 		9282D74626BEC154000C949C /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282D74526BEC154000C949C /* WeatherRequest.swift */; };
@@ -39,7 +39,7 @@
 		9251191D26BE617B00B7690A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9282D73A26BEB4BA000C949C /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		9282D73C26BEB71C000C949C /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
-		9282D73E26BEB9ED000C949C /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		9282D73E26BEB9ED000C949C /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		9282D74126BEBBE3000C949C /* GeneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
 		9282D74326BEC116000C949C /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		9282D74526BEC154000C949C /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
@@ -96,6 +96,7 @@
 				9251191826BE617B00B7690A /* Assets.xcassets */,
 				9251191D26BE617B00B7690A /* Info.plist */,
 				92D3EA8826BF6582001931A1 /* GlobalHelpers.swift */,
+				92D3EA8C26BF65DF001931A1 /* TempFormat.swift */,
 				9282D74026BEBACF000C949C /* Services */,
 				9282D73926BEB457000C949C /* Extensions */,
 				9251192726BE62BA00B7690A /* Supports */,
@@ -110,7 +111,7 @@
 		9251192326BE629100B7690A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9282D73E26BEB9ED000C949C /* Weather.swift */,
+				9282D73E26BEB9ED000C949C /* WeatherModel.swift */,
 				9282D74526BEC154000C949C /* WeatherRequest.swift */,
 			);
 			path = Models;
@@ -165,7 +166,6 @@
 				9282D74126BEBBE3000C949C /* GeneralAPI.swift */,
 				9282D74326BEC116000C949C /* WeatherService.swift */,
 				92D3EA8626BF638F001931A1 /* CurrentWeatherService.swift */,
-				92D3EA8C26BF65DF001931A1 /* TempFormat.swift */,
 				92D3EA8E26BF71DF001931A1 /* KeyCenter.swift */,
 			);
 			path = Services;
@@ -303,7 +303,7 @@
 				9251191026BE617A00B7690A /* AppDelegate.swift in Sources */,
 				9251191226BE617A00B7690A /* SceneDelegate.swift in Sources */,
 				92D3EA8926BF6582001931A1 /* GlobalHelpers.swift in Sources */,
-				9282D73F26BEB9ED000C949C /* Weather.swift in Sources */,
+				9282D73F26BEB9ED000C949C /* WeatherModel.swift in Sources */,
 				9282D74626BEC154000C949C /* WeatherRequest.swift in Sources */,
 				9282D74226BEBBE3000C949C /* GeneralAPI.swift in Sources */,
 				9282D73D26BEB71C000C949C /* UIColor+.swift in Sources */,
