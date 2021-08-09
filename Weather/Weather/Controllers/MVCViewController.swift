@@ -51,8 +51,8 @@ class MVCViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        getWeather()
-//        getCurrentWeather()
+//        getWeather()
+        getCurrentWeather()
     }
     
     override func viewDidLoad() {

@@ -117,15 +117,12 @@ class CurrentWeatherService {
         return _visibility
     }
 
-    
-    //completion으로 콜백함수 만들기
     func getCurrentWeather(completion:@escaping(_ success:Bool) -> Void) {
         
         var url:String!
         
         url = String(format: "https://api.weatherbit.io/v2.0/current?lat=\(35.7796)&lon=\(-78.6382)&key=\(GeneralAPI.key)")
         
-        //Swift5부터 AF로 바뀜.
         AF.request(url).responseJSON { (response) in
             let result = response.result
             switch result {
