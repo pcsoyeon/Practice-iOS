@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MVVMBindings
+//  MVVMBinding
 //
 //  Created by soyeon on 2021/08/10.
 //
