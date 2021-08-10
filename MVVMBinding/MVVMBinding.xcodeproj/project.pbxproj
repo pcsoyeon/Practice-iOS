@@ -13,6 +13,7 @@
 		929F0B6D26C2324100F9CDDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929F0B6B26C2324100F9CDDE /* Main.storyboard */; };
 		929F0B6F26C2324200F9CDDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929F0B6E26C2324200F9CDDE /* Assets.xcassets */; };
 		929F0B7226C2324200F9CDDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929F0B7026C2324200F9CDDE /* LaunchScreen.storyboard */; };
+		929F0B7A26C259A900F9CDDE /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F0B7926C259A900F9CDDE /* MVVMViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		929F0B6E26C2324200F9CDDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		929F0B7126C2324200F9CDDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		929F0B7326C2324200F9CDDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		929F0B7926C259A900F9CDDE /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				929F0B6E26C2324200F9CDDE /* Assets.xcassets */,
 				929F0B7026C2324200F9CDDE /* LaunchScreen.storyboard */,
 				929F0B7326C2324200F9CDDE /* Info.plist */,
+				929F0B7926C259A900F9CDDE /* MVVMViewController.swift */,
 			);
 			path = MVVMBinding;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929F0B7A26C259A900F9CDDE /* MVVMViewController.swift in Sources */,
 				929F0B6A26C2324100F9CDDE /* ViewController.swift in Sources */,
 				929F0B6626C2324100F9CDDE /* AppDelegate.swift in Sources */,
 				929F0B6826C2324100F9CDDE /* SceneDelegate.swift in Sources */,

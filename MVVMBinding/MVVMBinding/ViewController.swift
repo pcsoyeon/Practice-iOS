@@ -39,7 +39,7 @@ struct User: Codable {
     let name: String
 }
 
-// View Models
+// MARK: - View Models
 struct UserListViewModel {
     var users: Observable<[UserTableViewCellViewModel]> = Observable([])
 }
@@ -48,7 +48,7 @@ struct UserTableViewCellViewModel {
     let name: String
 }
 
-// Controller
+// MARK: - Controller
 class ViewController: UIViewController, UITableViewDataSource {
     private let tableView: UITableView = {
         let table = UITableView()
