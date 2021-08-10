@@ -7,7 +7,14 @@
 
 import UIKit
 
-// Obserable
+/// MVVM Pattern의 규칙
+/// 1. View는 ViewModel을 갖고 ViewModel은 Model을 갖는다.
+/// 2. ViewModel은 입출력을 처리하고 UI가 요구하는 로직을 처리한다.
+/// 3. ViewModel은 UI를 수정할 수 없다.
+/// 이때, ViewModel과 ViewController는 서로의 데이터 변경을 알려줄 수 있는 방법이 필요 -> 이것이 DataBinding
+///
+
+// MARK: - Obserable
 class Observable<T> {
     var value: T? {
         didSet {
@@ -27,7 +34,7 @@ class Observable<T> {
     }
 }
 
-// Model
+// MARK: - Model
 struct User: Codable {
     let name: String
 }
