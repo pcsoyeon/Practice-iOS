@@ -18,11 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let mvcVC = MVCViewController()
-        let mvvmVC = MVVMViewController()
+//        let mvcVC = MVCViewController()
+//        let mvvmVC = MVVMViewController()
+        let weatherVC = WeatherVC()
         
 //        window?.rootViewController = mvcVC
-        window?.rootViewController = mvvmVC
+//        window?.rootViewController = mvvmVC
+        window?.rootViewController = weatherVC
         window?.makeKeyAndVisible()
     }
 

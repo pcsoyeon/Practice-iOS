@@ -118,7 +118,7 @@ extension MVCViewController {
                     self.dateLabel.text = self.dateFormatter.string(from: Date())
                     
                     self.weatherLabel.text = String(weatherData.temp)
-                    self.weatherImageView.image = getWeatherIconFor(weatherData.weather.icon)
+//                    self.weatherImageView.image = getWeatherIconFor(weatherData.weather.icon)
                     
                     self.descriptionLabel.text = weatherData.weather.weatherDescription
                     
@@ -142,7 +142,7 @@ extension MVCViewController {
             self.dateLabel.text = self.dateFormatter.string(from: Date())
             
             self.weatherLabel.text = self.currentWeather.weatherType
-            self.weatherImageView.image = getWeatherIconFor(self.currentWeather.weatherIcon)
+//            self.weatherImageView.image = getWeatherIconFor(self.currentWeather.weatherIcon)
             
             self.descriptionLabel.text = "해 뜨는 시간: \(self.currentWeather.sunrise)\n해 지는 시간: \(self.currentWeather.sunset)"
         }

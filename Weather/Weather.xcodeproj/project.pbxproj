@@ -14,6 +14,8 @@
 		9251191926BE617B00B7690A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9251191826BE617B00B7690A /* Assets.xcassets */; };
 		9251191C26BE617B00B7690A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9251191A26BE617B00B7690A /* LaunchScreen.storyboard */; };
 		926D656B26C3FB98006965A5 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D656A26C3FB98006965A5 /* WeatherVC.swift */; };
+		926D656D26C400F2006965A5 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D656C26C400F2006965A5 /* WeatherDataModel.swift */; };
+		926D657026C40196006965A5 /* WeatherTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D656F26C40196006965A5 /* WeatherTVC.swift */; };
 		9282D73B26BEB4BA000C949C /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282D73A26BEB4BA000C949C /* UIView+.swift */; };
 		9282D73D26BEB71C000C949C /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282D73C26BEB71C000C949C /* UIColor+.swift */; };
 		9282D73F26BEB9ED000C949C /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282D73E26BEB9ED000C949C /* WeatherModel.swift */; };
@@ -42,6 +44,8 @@
 		9251191B26BE617B00B7690A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9251191D26BE617B00B7690A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		926D656A26C3FB98006965A5 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
+		926D656C26C400F2006965A5 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
+		926D656F26C40196006965A5 /* WeatherTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTVC.swift; sourceTree = "<group>"; };
 		9282D73A26BEB4BA000C949C /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		9282D73C26BEB71C000C949C /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		9282D73E26BEB9ED000C949C /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 				9251191D26BE617B00B7690A /* Info.plist */,
 				92D3EA8826BF6582001931A1 /* GlobalHelpers.swift */,
 				92D3EA8C26BF65DF001931A1 /* TempFormat.swift */,
+				926D656E26C4017E006965A5 /* Cells */,
 				9251192726BE62BA00B7690A /* Supports */,
 				9251192626BE62B300B7690A /* Storyboards */,
 				9282D74026BEBACF000C949C /* Network */,
@@ -123,6 +128,7 @@
 			children = (
 				9282D73E26BEB9ED000C949C /* WeatherModel.swift */,
 				9282D74526BEC154000C949C /* WeatherRequest.swift */,
+				926D656C26C400F2006965A5 /* WeatherDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +167,14 @@
 				9251191126BE617A00B7690A /* SceneDelegate.swift */,
 			);
 			path = Supports;
+			sourceTree = "<group>";
+		};
+		926D656E26C4017E006965A5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				926D656F26C40196006965A5 /* WeatherTVC.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9282D73926BEB457000C949C /* Extensions */ = {
@@ -322,10 +336,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926D657026C40196006965A5 /* WeatherTVC.swift in Sources */,
 				92FF4F8926C0FA3100FF1E8C /* GerneralAPI.swift in Sources */,
 				92D3EA8726BF638F001931A1 /* CurrentWeatherService.swift in Sources */,
 				9282D74426BEC116000C949C /* WeatherService.swift in Sources */,
 				9282D73B26BEB4BA000C949C /* UIView+.swift in Sources */,
+				926D656D26C400F2006965A5 /* WeatherDataModel.swift in Sources */,
 				92D3EA8B26BF65A6001931A1 /* Date+.swift in Sources */,
 				9251191426BE617A00B7690A /* MVCViewController.swift in Sources */,
 				9251191026BE617A00B7690A /* AppDelegate.swift in Sources */,

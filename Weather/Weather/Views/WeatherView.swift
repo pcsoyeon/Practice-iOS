@@ -22,7 +22,7 @@ class WeatherView: UIView {
     }
     
     var weatherImageView = UIImageView().then {
-        guard let image = UIImage(named: "abc") else { return }
+        guard let image = UIImage(systemName: "abc") else { return }
         $0.image = image
     }
     
