@@ -29,7 +29,6 @@
 		92FF4F8126C0DA4800FF1E8C /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF4F8026C0DA4800FF1E8C /* MVVMViewController.swift */; };
 		92FF4F8426C0DAD700FF1E8C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF4F8326C0DAD700FF1E8C /* Box.swift */; };
 		92FF4F8726C0E28E00FF1E8C /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF4F8626C0E28E00FF1E8C /* WeatherView.swift */; };
-		92FF4F8926C0FA3100FF1E8C /* GerneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF4F8826C0FA3100FF1E8C /* GerneralAPI.swift */; };
 		F1B00095046CB9FD6529A2DC /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709A812CAF8D2D46340C9695 /* Pods_Weather.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		92FF4F8026C0DA4800FF1E8C /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
 		92FF4F8326C0DAD700FF1E8C /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		92FF4F8626C0E28E00FF1E8C /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
-		92FF4F8826C0FA3100FF1E8C /* GerneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerneralAPI.swift; sourceTree = "<group>"; };
 		CB8C39A1277AB42948FF381D /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 		E76DE7F2C4D06CFC96E445E0 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,7 +206,6 @@
 			children = (
 				9282D74326BEC116000C949C /* WeatherService.swift */,
 				92D3EA8626BF638F001931A1 /* CurrentWeatherService.swift */,
-				92FF4F8826C0FA3100FF1E8C /* GerneralAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -353,7 +350,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				926D657026C40196006965A5 /* WeatherTVC.swift in Sources */,
-				92FF4F8926C0FA3100FF1E8C /* GerneralAPI.swift in Sources */,
 				92D3EA8726BF638F001931A1 /* CurrentWeatherService.swift in Sources */,
 				9282D74426BEC116000C949C /* WeatherService.swift in Sources */,
 				9282D73B26BEB4BA000C949C /* UIView+.swift in Sources */,
