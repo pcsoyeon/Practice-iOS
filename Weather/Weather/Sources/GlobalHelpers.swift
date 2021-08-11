@@ -13,7 +13,7 @@ func currentDateFromUnix(unixDate:Double?) -> Date? {
 
     if unixDate != nil {
         return Date(timeIntervalSince1970: unixDate!)
-    }else{
+    } else {
         return Date()
     }
 }
@@ -33,20 +33,20 @@ func getTempBasedOnSettings(celsious:Double) -> Double  {
     let format = returnTempFormatFromUserDefaults()
     if format == TempFormat.celsius {
         return celsious
-    }else{
+    } else {
         return fahrenheitFrom(celsius: celsious)
     }
 }
 
-func returnTempFormatFromUserDefaults() -> String{
+func returnTempFormatFromUserDefaults() -> String {
     if let tempFormat = UserDefaults.standard.value(forKey: "TempFormat") {
-        if tempFormat as! Int == 0{
+        if tempFormat as! Int == 0 {
             return TempFormat.celsius
-        }else{
+        } else {
             return TempFormat.fahrenheit
         }
        
-    }else {
+    } else {
         return TempFormat.celsius
     }
 }
