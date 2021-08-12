@@ -17,6 +17,7 @@ class WeatherVC: UIViewController {
     // MARK: - Local Variables
     
     private var models = [DailyWeatherEntry]()
+    private var hourlyModels = [HourlyWeatherEntry]()
     private var currentWeather: CurrentWeather?
     
     private let locationManager = CLLocationManager()
@@ -51,6 +52,7 @@ extension WeatherVC {
         weatherTableView.dataSource = self
         
         weatherTableView.register(WeatherTVC.self, forCellReuseIdentifier: WeatherTVC.identifier)
+        weatherTableView.register(HourlyTVC.self, forCellReuseIdentifier: HourlyTVC.identifier)
         
         weatherTableView.separatorStyle = .none
     }
@@ -90,6 +92,9 @@ extension WeatherVC {
             let current = result.currently
             self.currentWeather = current
             
+            let hourly = result.hourly.data
+            self.hourlyModels.append(contentsOf: hourly)
+            
             // Update user interface
             DispatchQueue.main.async {
                 self.weatherTableView.reloadData()
@@ -125,23 +130,43 @@ extension WeatherVC {
 
 extension WeatherVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        if indexPath.section == 0 {
+            return 150
+        } else {
+            return 100
+        }
     }
 }
 
 // MARK: - UITableView DataSource
 
 extension WeatherVC: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        if section == 0 {
+            return 1
+        } else {
+            return models.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTVC.identifier) as? WeatherTVC else {
-            return UITableViewCell()
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: HourlyTVC.identifier) as? HourlyTVC else {
+               return UITableViewCell()
+            }
+            cell.initCell(with: hourlyModels)
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTVC.identifier) as? WeatherTVC else {
+                return UITableViewCell()
+            }
+            cell.initCell(with: models[indexPath.row])
+            return cell
         }
-        cell.initCell(with: models[indexPath.row])
-        return cell
     }
 }
 

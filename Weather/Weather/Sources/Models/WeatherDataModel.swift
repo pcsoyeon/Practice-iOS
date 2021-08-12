@@ -26,7 +26,8 @@ struct CurrentWeather: Codable {
     let windGust: Double
     let windBearing: Int
     let cloudCover: Double
-    let uvIndex, visibility: Int
+    let uvIndex: Int
+    let visibility: Double
     let ozone: Double
 }
 
@@ -45,7 +46,8 @@ struct HourlyWeatherEntry: Codable {
     let windGust: Double
     let windBearing: Int
     let cloudCover: Double
-    let uvIndex, visibility: Int
+    let uvIndex: Int
+    let visibility: Double
     let ozone: Double
 }
 
