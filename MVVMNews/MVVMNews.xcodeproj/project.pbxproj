@@ -64,7 +64,7 @@
 		92D15FE526BCCE2C00EACA9F /* MVVMNews */ = {
 			isa = PBXGroup;
 			children = (
-				92D1601C26BCF18800EACA9F /* Services */,
+				92D1601C26BCF18800EACA9F /* Network */,
 				92D1601B26BCF18200EACA9F /* Cells */,
 				92D1601A26BCF17500EACA9F /* Controllers */,
 				92D1601926BCF16E00EACA9F /* ViewModels */,
@@ -119,12 +119,12 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		92D1601C26BCF18800EACA9F /* Services */ = {
+		92D1601C26BCF18800EACA9F /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				92D1601026BCE59100EACA9F /* APIService.swift */,
 			);
-			path = Services;
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

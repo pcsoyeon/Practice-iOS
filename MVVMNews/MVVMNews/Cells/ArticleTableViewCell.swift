@@ -26,4 +26,9 @@ class ArticleTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    func initCell(title: String, description: String) {
+        titleLabel.text = title
+        descriptionLabel.text = description
+    }
 }

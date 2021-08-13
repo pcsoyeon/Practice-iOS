@@ -31,7 +31,7 @@ class NewsListTableViewController: UITableViewController {
     
     private func getAPI() {
         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=e9b514c39c5f456db8ed4ecb693b0040")!
-        WebService().getArticles(url: url) {
+        APIService().getArticles(url: url) {
             (articles) in
             
             if let articles = articles {
@@ -46,12 +46,12 @@ class NewsListTableViewController: UITableViewController {
 }
 
 extension NewsListTableViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.articleListVM.numberOfRowsInSection(section)
-    }
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.articleListVM == nil ? 0 : self.articleListVM.numberOfSections
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.articleListVM.numberOfRowsInSection(section)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,8 +59,7 @@ extension NewsListTableViewController {
         else {fatalError("no matched articleTableViewCell identifier")}
         
         let articleVM = self.articleListVM.articleAtIndex(indexPath.row)
-        cell.descriptionLabel?.text = articleVM.description
-        cell.titleLabel?.text = articleVM.title
+        cell.initCell(title: articleVM.title ?? "", description: articleVM.description ?? "")
         return cell
     }
     
