@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsListTableViewController: UITableViewController {
+class ArticleListTableViewController: UITableViewController {
 
     private var articleListVM: ArticleListViewModel!
     
@@ -45,7 +45,7 @@ class NewsListTableViewController: UITableViewController {
     }
 }
 
-extension NewsListTableViewController {
+extension ArticleListTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.articleListVM == nil ? 0 : self.articleListVM.numberOfSections
     }

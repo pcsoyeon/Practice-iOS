@@ -18,11 +18,28 @@ class APIService {
             }
             else if let data = data {
                 let articleList = try? JSONDecoder().decode(ArticleList.self, from: data)
-                
                 if let articleList = articleList {
                     completion(articleList.articles)
                 }
             }
         }.resume()
     }
+    
+    func getNews(url: URL, completion: @escaping (NewsList?) -> ()) {
+        
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(nil)
+            }
+            else if let data = data {
+                let articleList = try? JSONDecoder().decode(NewsList.self, from: data)
+                if let articleList = articleList {
+                    completion(articleList)
+                }
+            }
+        }.resume()
+    }
+    
 }

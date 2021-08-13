@@ -10,7 +10,7 @@
         <!--Good News-->
         <scene sceneID="oXd-tM-0uf">
             <objects>
-                <tableViewController id="Pm9-6s-rc3" customClass="NewsListTableViewController" customModule="MVVMNews" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Pm9-6s-rc3" customClass="ArticleListTableViewController" customModule="MVVMNews" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HaA-TC-B0H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,8 +53,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Pm9-6s-rc3" id="m6Z-vx-PAB"/>
-                            <outlet property="delegate" destination="Pm9-6s-rc3" id="du6-vS-spR"/>
+                            <outlet property="dataSource" destination="Pm9-6s-rc3" id="Efi-Ns-BLg"/>
+                            <outlet property="delegate" destination="Pm9-6s-rc3" id="uGO-mv-tNK"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Good News" id="eeS-iz-PYp"/>

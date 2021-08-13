@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		923A83FA26C6AFCB008FE113 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A83F926C6AFCB008FE113 /* News.swift */; };
+		923A83FC26C6B117008FE113 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A83FB26C6B117008FE113 /* NewsViewModel.swift */; };
+		923A840026C6B809008FE113 /* NewsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A83FF26C6B809008FE113 /* NewsListVC.swift */; };
 		92D15FE726BCCE2C00EACA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FE626BCCE2C00EACA9F /* AppDelegate.swift */; };
 		92D15FE926BCCE2C00EACA9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FE826BCCE2C00EACA9F /* SceneDelegate.swift */; };
 		92D15FEE26BCCE2C00EACA9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D15FEC26BCCE2C00EACA9F /* Main.storyboard */; };
@@ -14,12 +17,15 @@
 		92D15FF326BCCE2F00EACA9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D15FF126BCCE2F00EACA9F /* LaunchScreen.storyboard */; };
 		92D1600F26BCE57A00EACA9F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1600E26BCE57A00EACA9F /* Article.swift */; };
 		92D1601126BCE59100EACA9F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1601026BCE59100EACA9F /* APIService.swift */; };
-		92D1601326BCE5C500EACA9F /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1601226BCE5C500EACA9F /* NewsListTableViewController.swift */; };
+		92D1601326BCE5C500EACA9F /* ArticleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1601226BCE5C500EACA9F /* ArticleListTableViewController.swift */; };
 		92D1601526BCE5DF00EACA9F /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1601426BCE5DF00EACA9F /* ArticleListViewModel.swift */; };
 		92D1601726BCE63700EACA9F /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1601626BCE63700EACA9F /* ArticleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		923A83F926C6AFCB008FE113 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		923A83FB26C6B117008FE113 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		923A83FF26C6B809008FE113 /* NewsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListVC.swift; sourceTree = "<group>"; };
 		92D15FE326BCCE2C00EACA9F /* MVVMNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D15FE626BCCE2C00EACA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D15FE826BCCE2C00EACA9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +35,7 @@
 		92D15FF426BCCE2F00EACA9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D1600E26BCE57A00EACA9F /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		92D1601026BCE59100EACA9F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		92D1601226BCE5C500EACA9F /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
+		92D1601226BCE5C500EACA9F /* ArticleListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewController.swift; sourceTree = "<group>"; };
 		92D1601426BCE5DF00EACA9F /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		92D1601626BCE63700EACA9F /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				92D1600E26BCE57A00EACA9F /* Article.swift */,
+				923A83F926C6AFCB008FE113 /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				92D1601426BCE5DF00EACA9F /* ArticleListViewModel.swift */,
+				923A83FB26C6B117008FE113 /* NewsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -106,7 +114,8 @@
 		92D1601A26BCF17500EACA9F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				92D1601226BCE5C500EACA9F /* NewsListTableViewController.swift */,
+				92D1601226BCE5C500EACA9F /* ArticleListTableViewController.swift */,
+				923A83FF26C6B809008FE113 /* NewsListVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -198,9 +207,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				92D1600F26BCE57A00EACA9F /* Article.swift in Sources */,
+				923A840026C6B809008FE113 /* NewsListVC.swift in Sources */,
+				923A83FC26C6B117008FE113 /* NewsViewModel.swift in Sources */,
 				92D1601126BCE59100EACA9F /* APIService.swift in Sources */,
+				923A83FA26C6AFCB008FE113 /* News.swift in Sources */,
 				92D15FE726BCCE2C00EACA9F /* AppDelegate.swift in Sources */,
-				92D1601326BCE5C500EACA9F /* NewsListTableViewController.swift in Sources */,
+				92D1601326BCE5C500EACA9F /* ArticleListTableViewController.swift in Sources */,
 				92D15FE926BCCE2C00EACA9F /* SceneDelegate.swift in Sources */,
 				92D1601726BCE63700EACA9F /* ArticleTableViewCell.swift in Sources */,
 				92D1601526BCE5DF00EACA9F /* ArticleListViewModel.swift in Sources */,
