@@ -21,19 +21,5 @@ class NewsViewModel {
     var description: String {
         return newsList.articles[0].articleDescription
     }
-    
-//    var news: News
-//
-//    init(_ news: News) {
-//        self.news = news
-//    }
-//
-//    var title: String {
-//        return news.title
-//    }
-//
-//    var description: String {
-//        return news.articleDescription
-//    }
 }
 
