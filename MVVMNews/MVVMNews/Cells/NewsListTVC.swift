@@ -12,6 +12,13 @@ class NewsListTVC: UITableViewCell {
     
     // MARK: - Properties
     
+    private lazy var newsImageView = UIImageView().then {
+        $0.image = UIImage(systemName: "abc")
+        $0.snp.makeConstraints { make in
+            make.width.height.equalTo(100)
+        }
+    }
+    
     private lazy var titleLabel = UILabel().then {
         $0.text = "title"
         $0.textColor = .black
@@ -49,21 +56,38 @@ extension NewsListTVC {
     func configUI() {
         backgroundColor = .white
         
+        contentView.addSubview(newsImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(descriptionLabel)
         
+        newsImageView.snp.makeConstraints { make in
+            make.leading.top.equalToSuperview().inset(20)
+        }
+        
         titleLabel.snp.makeConstraints { make in
-            make.leading.trailing.top.equalToSuperview().inset(20)
+            make.leading.equalTo(newsImageView.snp.trailing).offset(10)
+            make.trailing.top.equalToSuperview().inset(20)
         }
         
         descriptionLabel.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(20)
+            make.leading.equalTo(newsImageView.snp.trailing).offset(20)
             make.top.equalTo(titleLabel.snp.bottom).offset(15)
-            make.bottom.equalToSuperview().inset(20)
+            make.trailing.bottom.equalToSuperview().inset(20)
         }
     }
     
-    func initCell(title: String, description: String) {
+    func initCell(image: String, title: String, description: String) {
+        let url = URL(string: image)
+        let data = try? Data(contentsOf: url!)
+        self.newsImageView.image = UIImage(data: data!)
+        
+//        DispatchQueue.global().async {
+//            let data = try? Data(contentsOf: url!)
+//            DispatchQueue.main.async {
+//                self.newsImageView.image = UIImage(data: data!)
+//            }
+//        }
+
         titleLabel.text = title
         descriptionLabel.text = description
     }

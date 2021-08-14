@@ -42,5 +42,9 @@ struct NewsViewModel {
     var description: String {
         return news.articleDescription
     }
+    
+    var image: String {
+        return news.urlToImage
+    }
 }
 

@@ -79,7 +79,7 @@ extension NewsListVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsListTVC.identifier) as? NewsListTVC else { return UITableViewCell() }
-        cell.initCell(title: newsListVM.articleAtIndex(indexPath.row).title, description: newsListVM.articleAtIndex(indexPath.row).description)
+        cell.initCell(image: newsListVM.articleAtIndex(indexPath.row).image, title: newsListVM.articleAtIndex(indexPath.row).title, description: newsListVM.articleAtIndex(indexPath.row).description)
         return cell
     }
 }
@@ -108,12 +108,12 @@ extension NewsListVC {
             case .success(let result):
                 do {
                     let data = try result.map(NewsList.self)
-                    dump(data)
                     self.newsListVM = NewsListViewModel(data)
+                    self.newsListTableView.reloadData()
                     
-                    DispatchQueue.main.async {
-                        self.newsListTableView.reloadData()
-                    }
+//                    DispatchQueue.main.async {
+//                        self.newsListTableView.reloadData()
+//                    }
                     
                 } catch(let err) {
                     print("디코드 에러 - ", err.localizedDescription)
