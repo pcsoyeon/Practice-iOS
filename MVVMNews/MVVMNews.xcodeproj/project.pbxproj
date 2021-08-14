@@ -23,6 +23,7 @@
 		92D1601726BCE63700EACA9F /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1601626BCE63700EACA9F /* ArticleTableViewCell.swift */; };
 		92F4171F26C76C440068A7A5 /* NewsListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4171E26C76C440068A7A5 /* NewsListTVC.swift */; };
 		92F4172126C78F4C0068A7A5 /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4172026C78F4C0068A7A5 /* GeneralAPI.swift */; };
+		92F4172326C797400068A7A5 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4172226C797400068A7A5 /* NewsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		92D1601626BCE63700EACA9F /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		92F4171E26C76C440068A7A5 /* NewsListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTVC.swift; sourceTree = "<group>"; };
 		92F4172026C78F4C0068A7A5 /* GeneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
+		92F4172226C797400068A7A5 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		9D3FC202424967A19513402B /* Pods-MVVMNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMNews.debug.xcconfig"; path = "Target Support Files/Pods-MVVMNews/Pods-MVVMNews.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC957924FD54932B2425B7E /* Pods-MVVMNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMNews.release.xcconfig"; path = "Target Support Files/Pods-MVVMNews/Pods-MVVMNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +164,7 @@
 			children = (
 				92D1601026BCE59100EACA9F /* APIService.swift */,
 				92F4172026C78F4C0068A7A5 /* GeneralAPI.swift */,
+				92F4172226C797400068A7A5 /* NewsService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				92D1601126BCE59100EACA9F /* APIService.swift in Sources */,
 				923A83FA26C6AFCB008FE113 /* News.swift in Sources */,
 				92F4171F26C76C440068A7A5 /* NewsListTVC.swift in Sources */,
+				92F4172326C797400068A7A5 /* NewsService.swift in Sources */,
 				92D15FE726BCCE2C00EACA9F /* AppDelegate.swift in Sources */,
 				92D1601326BCE5C500EACA9F /* ArticleListTableViewController.swift in Sources */,
 				92D15FE926BCCE2C00EACA9F /* SceneDelegate.swift in Sources */,

@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Then
+import Moya
 
 class NewsListVC: UIViewController {
 
@@ -20,6 +21,7 @@ class NewsListVC: UIViewController {
     // MARK: - Local Variables
     
     private var newsListVM: NewsListViewModel!
+    private let authProvider = MoyaProvider<NewsService>()
     
     // MARK: - Life Cycle
     
@@ -31,7 +33,7 @@ class NewsListVC: UIViewController {
         setNavigation()
         setTableView()
         
-        getAPI()
+        getNews()
     }
 }
 
@@ -94,6 +96,30 @@ extension NewsListVC {
             }
             DispatchQueue.main.async {
                 self.newsListTableView.reloadData()
+            }
+        }
+    }
+    
+    func getNews() {
+        let param: NewsRequest = NewsRequest.init("us", GeneralAPI.apiKey)
+        
+        authProvider.request(.top(param: param)) { response in
+            switch response {
+            case .success(let result):
+                do {
+                    let data = try result.map(NewsList.self)
+                    dump(data)
+                    self.newsListVM = NewsListViewModel(data)
+                    
+                    DispatchQueue.main.async {
+                        self.newsListTableView.reloadData()
+                    }
+                    
+                } catch(let err) {
+                    print("디코드 에러 - ", err.localizedDescription)
+                }
+            case .failure(let err):
+                print("데이터 에러 - ",err.localizedDescription)
             }
         }
     }
