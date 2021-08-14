@@ -9,7 +9,6 @@ import Foundation
 
 class APIService {
     func getArticles(url: URL, completion: @escaping ([Article]?) -> ()) {
-        
         URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             if let error = error {
@@ -26,7 +25,6 @@ class APIService {
     }
     
     func getNews(url: URL, completion: @escaping (NewsList?) -> ()) {
-        
         URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             if let error = error {

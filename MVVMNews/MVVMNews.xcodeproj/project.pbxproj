@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,8 @@
 		92D1601326BCE5C500EACA9F /* ArticleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1601226BCE5C500EACA9F /* ArticleListTableViewController.swift */; };
 		92D1601526BCE5DF00EACA9F /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1601426BCE5DF00EACA9F /* ArticleListViewModel.swift */; };
 		92D1601726BCE63700EACA9F /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1601626BCE63700EACA9F /* ArticleTableViewCell.swift */; };
+		92F4171F26C76C440068A7A5 /* NewsListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4171E26C76C440068A7A5 /* NewsListTVC.swift */; };
+		92F4172126C78F4C0068A7A5 /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4172026C78F4C0068A7A5 /* GeneralAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		92D1601226BCE5C500EACA9F /* ArticleListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewController.swift; sourceTree = "<group>"; };
 		92D1601426BCE5DF00EACA9F /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		92D1601626BCE63700EACA9F /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		92F4171E26C76C440068A7A5 /* NewsListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTVC.swift; sourceTree = "<group>"; };
+		92F4172026C78F4C0068A7A5 /* GeneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
 		9D3FC202424967A19513402B /* Pods-MVVMNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMNews.debug.xcconfig"; path = "Target Support Files/Pods-MVVMNews/Pods-MVVMNews.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC957924FD54932B2425B7E /* Pods-MVVMNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMNews.release.xcconfig"; path = "Target Support Files/Pods-MVVMNews/Pods-MVVMNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +66,6 @@
 				9D3FC202424967A19513402B /* Pods-MVVMNews.debug.xcconfig */,
 				CDC957924FD54932B2425B7E /* Pods-MVVMNews.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -149,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				92D1601626BCE63700EACA9F /* ArticleTableViewCell.swift */,
+				92F4171E26C76C440068A7A5 /* NewsListTVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -157,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				92D1601026BCE59100EACA9F /* APIService.swift */,
+				92F4172026C78F4C0068A7A5 /* GeneralAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -278,8 +283,10 @@
 				92D1600F26BCE57A00EACA9F /* Article.swift in Sources */,
 				923A840026C6B809008FE113 /* NewsListVC.swift in Sources */,
 				923A83FC26C6B117008FE113 /* NewsViewModel.swift in Sources */,
+				92F4172126C78F4C0068A7A5 /* GeneralAPI.swift in Sources */,
 				92D1601126BCE59100EACA9F /* APIService.swift in Sources */,
 				923A83FA26C6AFCB008FE113 /* News.swift in Sources */,
+				92F4171F26C76C440068A7A5 /* NewsListTVC.swift in Sources */,
 				92D15FE726BCCE2C00EACA9F /* AppDelegate.swift in Sources */,
 				92D1601326BCE5C500EACA9F /* ArticleListTableViewController.swift in Sources */,
 				92D15FE926BCCE2C00EACA9F /* SceneDelegate.swift in Sources */,

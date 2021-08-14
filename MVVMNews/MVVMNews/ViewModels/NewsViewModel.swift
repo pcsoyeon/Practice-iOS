@@ -7,19 +7,40 @@
 
 import Foundation
 
-class NewsViewModel {
+struct NewsListViewModel {
     var newsList: NewsList
 
     init(_ newList: NewsList) {
         self.newsList = newList
     }
+    
+    var numberOfSections: Int {
+        return 1
+    }
+    
+    func numberOfRowsInSection(_ section: Int) -> Int {
+        return self.newsList.articles.count
+    }
+    
+    func articleAtIndex(_ index: Int) -> NewsViewModel {
+        let article = self.newsList.articles[index]
+        return NewsViewModel(article)
+    }
+}
 
+struct NewsViewModel {
+    var news: News
+    
+    init(_ news: News) {
+        self.news = news
+    }
+    
     var title: String {
-        return newsList.articles[0].title
+        return news.title
     }
 
     var description: String {
-        return newsList.articles[0].articleDescription
+        return news.articleDescription
     }
 }
 
