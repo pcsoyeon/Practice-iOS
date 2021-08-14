@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class NewsListTVC: UITableViewCell {
     static let identifier = "NewsListTVC"
@@ -13,7 +14,6 @@ class NewsListTVC: UITableViewCell {
     // MARK: - Properties
     
     private lazy var newsImageView = UIImageView().then {
-        $0.image = UIImage(systemName: "abc")
         $0.snp.makeConstraints { make in
             make.width.height.equalTo(100)
         }
@@ -47,6 +47,11 @@ class NewsListTVC: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        newsImageView.image = nil
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -70,24 +75,26 @@ extension NewsListTVC {
         }
         
         descriptionLabel.snp.makeConstraints { make in
-            make.leading.equalTo(newsImageView.snp.trailing).offset(20)
+            make.leading.equalTo(newsImageView.snp.trailing).offset(10)
             make.top.equalTo(titleLabel.snp.bottom).offset(15)
             make.trailing.bottom.equalToSuperview().inset(20)
         }
     }
     
-    func initCell(image: String, title: String, description: String) {
-        let url = URL(string: image)
-        let data = try? Data(contentsOf: url!)
-        self.newsImageView.image = UIImage(data: data!)
-        
+    func initCell(imageURL: String, title: String, description: String) {
+//        let url = URL(string: imageURL)
+//        let data = try? Data(contentsOf: url!)
+//        self.newsImageView.image = UIImage(data: data!)
+//
+//
 //        DispatchQueue.global().async {
 //            let data = try? Data(contentsOf: url!)
 //            DispatchQueue.main.async {
 //                self.newsImageView.image = UIImage(data: data!)
 //            }
 //        }
-
+        
+        newsImageView.kf.setImage(with: URL(string: imageURL))
         titleLabel.text = title
         descriptionLabel.text = description
     }

@@ -7,6 +7,7 @@ target 'MVVMNews' do
 	pod 'SnapKit', '~>5.0.0'
 	pod 'Then'
 	pod 'Moya', '~>14.0'
+	pod 'Kingfisher'
   # Pods for MVVMNews
 
 end
