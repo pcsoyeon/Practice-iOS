@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Then
+import Kingfisher
 
 class NewsVC: UIViewController {
 
@@ -43,6 +44,15 @@ class NewsVC: UIViewController {
         $0.font = UIFont.systemFont(ofSize: 13)
     }
     
+    private lazy var newsImageView = UIImageView().then {
+        $0.kf.setImage(with: URL(string: newsVM.image))
+        $0.layer.cornerRadius = 15
+        $0.layer.masksToBounds = true
+        $0.snp.makeConstraints { make in
+            make.width.height.equalTo(200)
+        }
+    }
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,16 +67,21 @@ extension NewsVC {
     func configUI() {
         view.backgroundColor = .white
         
-        view.addSubviews([titleLabel, contentLabel, authorLabel, dateLabel])
+        view.addSubviews([titleLabel, contentLabel, authorLabel, dateLabel,newsImageView])
         
         titleLabel.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(20)
             make.top.equalToSuperview().inset(100)
         }
         
-        contentLabel.snp.makeConstraints { make in
+        newsImageView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(20)
             make.top.equalTo(titleLabel.snp.bottom).offset(15)
+        }
+        
+        contentLabel.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.top.equalTo(newsImageView.snp.bottom).offset(15)
         }
         
         authorLabel.snp.makeConstraints { make in
@@ -76,7 +91,7 @@ extension NewsVC {
         
         dateLabel.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(20)
-            make.top.equalTo(contentLabel.snp.bottom).offset(15)
+            make.top.equalTo(authorLabel.snp.bottom).offset(15)
         }
     }
     
