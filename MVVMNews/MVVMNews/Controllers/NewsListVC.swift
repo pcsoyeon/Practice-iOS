@@ -65,7 +65,10 @@ extension NewsListVC {
 }
 
 extension NewsListVC: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dvc = NewsVC()
+        navigationController?.pushViewController(dvc, animated: true)
+    }
 }
 
 extension NewsListVC: UITableViewDataSource {
