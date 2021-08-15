@@ -12,6 +12,7 @@
 		923A83FC26C6B117008FE113 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A83FB26C6B117008FE113 /* NewsViewModel.swift */; };
 		923A840026C6B809008FE113 /* NewsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A83FF26C6B809008FE113 /* NewsListVC.swift */; };
 		929DDC0F26C952D2009413CE /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DDC0E26C952D2009413CE /* NewsVC.swift */; };
+		929DDC1226C95C90009413CE /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DDC1126C95C90009413CE /* UIView+.swift */; };
 		92D15FE726BCCE2C00EACA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FE626BCCE2C00EACA9F /* AppDelegate.swift */; };
 		92D15FE926BCCE2C00EACA9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FE826BCCE2C00EACA9F /* SceneDelegate.swift */; };
 		92D15FEE26BCCE2C00EACA9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D15FEC26BCCE2C00EACA9F /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		923A83FB26C6B117008FE113 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		923A83FF26C6B809008FE113 /* NewsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListVC.swift; sourceTree = "<group>"; };
 		929DDC0E26C952D2009413CE /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		929DDC1126C95C90009413CE /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		92D15FE326BCCE2C00EACA9F /* MVVMNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D15FE626BCCE2C00EACA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D15FE826BCCE2C00EACA9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		929DDC1026C95C51009413CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				929DDC1126C95C90009413CE /* UIView+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		92D15FDA26BCCE2C00EACA9F = {
 			isa = PBXGroup;
 			children = (
@@ -104,25 +114,26 @@
 			children = (
 				92D15FF426BCCE2F00EACA9F /* Info.plist */,
 				92D15FEF26BCCE2F00EACA9F /* Assets.xcassets */,
+				92D15FE626BCCE2C00EACA9F /* AppDelegate.swift */,
+				92D15FE826BCCE2C00EACA9F /* SceneDelegate.swift */,
+				929DDC1026C95C51009413CE /* Extensions */,
 				92D1601C26BCF18800EACA9F /* Network */,
 				92D1601B26BCF18200EACA9F /* Cells */,
 				92D1601A26BCF17500EACA9F /* Controllers */,
 				92D1601926BCF16E00EACA9F /* ViewModels */,
 				92D1601826BCF16700EACA9F /* Models */,
-				92D1600B26BCD41F00EACA9F /* Base */,
+				92D1600B26BCD41F00EACA9F /* Scene */,
 			);
 			path = MVVMNews;
 			sourceTree = "<group>";
 		};
-		92D1600B26BCD41F00EACA9F /* Base */ = {
+		92D1600B26BCD41F00EACA9F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				92D15FE626BCCE2C00EACA9F /* AppDelegate.swift */,
-				92D15FE826BCCE2C00EACA9F /* SceneDelegate.swift */,
 				92D15FEC26BCCE2C00EACA9F /* Main.storyboard */,
 				92D15FF126BCCE2F00EACA9F /* LaunchScreen.storyboard */,
 			);
-			path = Base;
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		92D1601826BCF16700EACA9F /* Models */ = {
@@ -295,6 +306,7 @@
 				923A83FA26C6AFCB008FE113 /* News.swift in Sources */,
 				92F4171F26C76C440068A7A5 /* NewsListTVC.swift in Sources */,
 				92F4172326C797400068A7A5 /* NewsService.swift in Sources */,
+				929DDC1226C95C90009413CE /* UIView+.swift in Sources */,
 				92D15FE726BCCE2C00EACA9F /* AppDelegate.swift in Sources */,
 				92D1601326BCE5C500EACA9F /* ArticleListTableViewController.swift in Sources */,
 				92D15FE926BCCE2C00EACA9F /* SceneDelegate.swift in Sources */,

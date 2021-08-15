@@ -30,11 +30,13 @@ struct News: Codable {
     let url: String
     let urlToImage: String
     let content: String
+    let publishedAt: String
 
     enum CodingKeys: String, CodingKey {
         case author, title
         case articleDescription = "description"
         case url, urlToImage, content
+        case publishedAt
     }
     
     init(from decoder: Decoder) throws {
@@ -46,6 +48,7 @@ struct News: Codable {
         url = (try? values.decode(String.self, forKey: .url)) ?? ""
         urlToImage = (try? values.decode(String.self, forKey: .urlToImage)) ?? ""
         content = (try? values.decode(String.self, forKey: .content)) ?? ""
+        publishedAt = (try? values.decode(String.self, forKey: .publishedAt)) ?? ""
     }
 }
 

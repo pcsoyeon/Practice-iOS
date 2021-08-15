@@ -43,8 +43,24 @@ struct NewsViewModel {
         return news.articleDescription
     }
     
+    var content: String {
+        return news.content
+    }
+    
     var image: String {
         return news.urlToImage
+    }
+    
+    var author: String {
+        return news.author
+    }
+    
+    var url: String {
+        return news.url
+    }
+    
+    var date: String {
+        return news.publishedAt
     }
 }
 
