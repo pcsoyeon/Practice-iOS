@@ -8,18 +8,9 @@
 import Foundation
 import Moya
 
-struct NewsRequest {
-    var country: String
-    var apiKey: String
-    
-    init(_ country: String, _ apiKey: String) {
-        self.country = country
-        self.apiKey = apiKey
-    }
-}
-
 enum NewsService {
     case top(param: NewsRequest)
+    case everything(keyword: String)
 }
 
 extension NewsService: TargetType{
@@ -33,12 +24,16 @@ extension NewsService: TargetType{
         switch self {
         case .top:
             return "/top-headlines"
+        case .everything:
+            return "/everything"
         }
     }
     
     var method: Moya.Method {
         switch self {
         case .top:
+            return .get
+        case .everything:
             return .get
         }
     }
@@ -53,6 +48,8 @@ extension NewsService: TargetType{
         switch self {
         case .top:
             return .requestParameters(parameters: ["country": "us", "apiKey": GeneralAPI.apiKey], encoding: URLEncoding.default)
+        case .everything(let keyWord):
+            return .requestParameters(parameters: ["q": keyWord, "apiKey": GeneralAPI.apiKey], encoding: URLEncoding.default)
         }
     }
     

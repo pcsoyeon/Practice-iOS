@@ -14,26 +14,38 @@ class NewsListVC: UIViewController {
 
     // MARK: - Properties
     
-    private var newsListTableView = UITableView().then {
+    private lazy var newsListTableView = UITableView().then {
         $0.register(NewsListTVC.self, forCellReuseIdentifier: NewsListTVC.identifier)
     }
+    
+    private var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        
+        searchController.searchBar.placeholder = "Try Search"
+        searchController.searchBar.searchBarStyle = .minimal
+        searchController.definesPresentationContext = true
+        
+        return searchController
+    }()
     
     // MARK: - Local Variables
     
     private var newsListVM: NewsListViewModel!
     private let authProvider = MoyaProvider<NewsService>()
     
+    private var keyword = String()
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configUI()
         
         setNavigation()
+        setSearchController()
         setTableView()
         
-        getNews()
+        getTopNews()
     }
 }
 
@@ -43,7 +55,7 @@ extension NewsListVC {
     func configUI() {
         view.backgroundColor = .white
         
-        view.addSubview(newsListTableView)
+        view.addSubviews([newsListTableView])
         
         newsListTableView.snp.makeConstraints { make in
             make.leading.trailing.top.bottom.equalToSuperview()
@@ -52,6 +64,13 @@ extension NewsListVC {
     
     func setNavigation() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "뉴스"
+        navigationItem.searchController = searchController
+    }
+    
+    func setSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
     }
     
     func setTableView() {
@@ -61,6 +80,18 @@ extension NewsListVC {
         newsListTableView.rowHeight = UITableView.automaticDimension
         newsListTableView.estimatedRowHeight = 300
         newsListTableView.separatorStyle = .none
+    }
+}
+
+extension NewsListVC: UISearchResultsUpdating, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text?.lowercased() else { return }
+        keyword = text
+        getEveryNews(keyword: keyword)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        getTopNews()
     }
 }
 
@@ -104,10 +135,31 @@ extension NewsListVC {
         }
     }
     
-    func getNews() {
-        let param: NewsRequest = NewsRequest.init("us", GeneralAPI.apiKey)
+    func getTopNews() {
+        let param: NewsRequest = NewsRequest.init("us", GeneralAPI.apiKey, _keyword: "")
         
         authProvider.request(.top(param: param)) { response in
+            switch response {
+            case .success(let result):
+                do {
+                    let data = try result.map(NewsList.self)
+                    self.newsListVM = NewsListViewModel(data)
+                    
+                    DispatchQueue.main.async {
+                        self.newsListTableView.reloadData()
+                    }
+                    
+                } catch(let err) {
+                    print("디코드 에러 - ", err.localizedDescription)
+                }
+            case .failure(let err):
+                print("데이터 에러 - ",err.localizedDescription)
+            }
+        }
+    }
+    
+    func getEveryNews(keyword: String) {
+        authProvider.request(.everything(keyword: keyword)) { response in
             switch response {
             case .success(let result):
                 do {
