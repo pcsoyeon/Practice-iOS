@@ -13,7 +13,36 @@
 		920849DF26CE481100E2114A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920849DE26CE481100E2114A /* Assets.xcassets */; };
 		920849E226CE481100E2114A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920849E126CE481100E2114A /* Preview Assets.xcassets */; };
 		920849E526CE481100E2114A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920849E326CE481100E2114A /* LaunchScreen.storyboard */; };
+		920849F326CE48F700E2114A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920849F226CE48F700E2114A /* WidgetKit.framework */; };
+		920849F526CE48F700E2114A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 920849F426CE48F700E2114A /* SwiftUI.framework */; };
+		920849F826CE48F700E2114A /* BTC_App_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920849F726CE48F700E2114A /* BTC_App_Widget.swift */; };
+		920849FA26CE48F900E2114A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920849F926CE48F900E2114A /* Assets.xcassets */; };
+		920849FE26CE48F900E2114A /* BTC-App-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 920849F026CE48F700E2114A /* BTC-App-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		920849FC26CE48F900E2114A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 920849CD26CE481000E2114A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 920849EF26CE48F700E2114A;
+			remoteInfo = "BTC-App-WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92084A0226CE48F900E2114A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				920849FE26CE48F900E2114A /* BTC-App-WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		920849D526CE481000E2114A /* BTC-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTC-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +53,12 @@
 		920849E126CE481100E2114A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		920849E426CE481100E2114A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		920849E626CE481100E2114A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		920849F026CE48F700E2114A /* BTC-App-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BTC-App-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		920849F226CE48F700E2114A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		920849F426CE48F700E2114A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		920849F726CE48F700E2114A /* BTC_App_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTC_App_Widget.swift; sourceTree = "<group>"; };
+		920849F926CE48F900E2114A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		920849FB26CE48F900E2114A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +69,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		920849ED26CE48F700E2114A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920849F526CE48F700E2114A /* SwiftUI.framework in Frameworks */,
+				920849F326CE48F700E2114A /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				920849D726CE481000E2114A /* BTC-App */,
+				920849F626CE48F700E2114A /* BTC-App-Widget */,
+				920849F126CE48F700E2114A /* Frameworks */,
 				920849D626CE481000E2114A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				920849D526CE481000E2114A /* BTC-App.app */,
+				920849F026CE48F700E2114A /* BTC-App-WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +122,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		920849F126CE48F700E2114A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				920849F226CE48F700E2114A /* WidgetKit.framework */,
+				920849F426CE48F700E2114A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		920849F626CE48F700E2114A /* BTC-App-Widget */ = {
+			isa = PBXGroup;
+			children = (
+				920849F726CE48F700E2114A /* BTC_App_Widget.swift */,
+				920849F926CE48F900E2114A /* Assets.xcassets */,
+				920849FB26CE48F900E2114A /* Info.plist */,
+			);
+			path = "BTC-App-Widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,15 +151,34 @@
 				920849D126CE481000E2114A /* Sources */,
 				920849D226CE481000E2114A /* Frameworks */,
 				920849D326CE481000E2114A /* Resources */,
+				92084A0226CE48F900E2114A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				920849FD26CE48F900E2114A /* PBXTargetDependency */,
 			);
 			name = "BTC-App";
 			productName = "BTC-App";
 			productReference = 920849D526CE481000E2114A /* BTC-App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		920849EF26CE48F700E2114A /* BTC-App-WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 920849FF26CE48F900E2114A /* Build configuration list for PBXNativeTarget "BTC-App-WidgetExtension" */;
+			buildPhases = (
+				920849EC26CE48F700E2114A /* Sources */,
+				920849ED26CE48F700E2114A /* Frameworks */,
+				920849EE26CE48F700E2114A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BTC-App-WidgetExtension";
+			productName = "BTC-App-WidgetExtension";
+			productReference = 920849F026CE48F700E2114A /* BTC-App-WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -105,6 +190,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					920849D426CE481000E2114A = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					920849EF26CE48F700E2114A = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -123,6 +211,7 @@
 			projectRoot = "";
 			targets = (
 				920849D426CE481000E2114A /* BTC-App */,
+				920849EF26CE48F700E2114A /* BTC-App-WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +224,14 @@
 				920849E526CE481100E2114A /* LaunchScreen.storyboard in Resources */,
 				920849E226CE481100E2114A /* Preview Assets.xcassets in Resources */,
 				920849DF26CE481100E2114A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		920849EE26CE48F700E2114A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920849FA26CE48F900E2114A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +248,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		920849EC26CE48F700E2114A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920849F826CE48F700E2114A /* BTC_App_Widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		920849FD26CE48F900E2114A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 920849EF26CE48F700E2114A /* BTC-App-WidgetExtension */;
+			targetProxy = 920849FC26CE48F900E2114A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		920849E326CE481100E2114A /* LaunchScreen.storyboard */ = {
@@ -284,6 +397,7 @@
 		920849EA26CE481100E2114A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +418,7 @@
 		920849EB26CE481100E2114A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +431,46 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "soyeon.BTC-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92084A0026CE48F900E2114A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BTC-App-Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "soyeon.BTC-App.BTC-App-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92084A0126CE48F900E2114A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BTC-App-Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "soyeon.BTC-App.BTC-App-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +493,15 @@
 			buildConfigurations = (
 				920849EA26CE481100E2114A /* Debug */,
 				920849EB26CE481100E2114A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		920849FF26CE48F900E2114A /* Build configuration list for PBXNativeTarget "BTC-App-WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92084A0026CE48F900E2114A /* Debug */,
+				92084A0126CE48F900E2114A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
