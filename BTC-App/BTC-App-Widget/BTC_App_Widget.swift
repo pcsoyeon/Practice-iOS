@@ -8,29 +8,50 @@
 import WidgetKit
 import SwiftUI
 
+class NetworkManager {
+    func getBTCData(completion: @escaping (SimpleEntry.BTCData?) -> Void) {
+        guard let url = URL(string: "https://api.blockchain.com/v3/exchange/tickers/BTC-USD") else { return completion(nil)}
+        
+        URLSession.shared.dataTask(with: url) { d, res, err in
+            var result: SimpleEntry.BTCData?
+            
+            if let data = d,
+               let response = res as? HTTPURLResponse,
+               response.statusCode == 200 {
+                do {
+                    result = try JSONDecoder().decode(SimpleEntry.BTCData.self, from: data)
+                } catch {
+                    print(error)
+                }
+            }
+            
+            return completion(result)
+        }
+        .resume()
+    }
+}
+
 struct Provider: TimelineProvider {
+    let networkManager = NetworkManager()
+    
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), data: .previewData, error: false)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), data: .previewData, error: false)
-        completion(entry)
+        networkManager.getBTCData { data in
+            let entry = SimpleEntry(date: Date(), data: data ?? .error, error: data == nil)
+            completion(entry)
+        }
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, data: .previewData, error: false)
-            entries.append(entry)
+        networkManager.getBTCData { data in
+            let timeline = Timeline(entries: [SimpleEntry(date: Date(),
+                                                          data: data ?? .error, error: data == nil)],
+                                    policy: .after(Calendar.current.date(byAdding: .minute, value: 15, to: Date())!))
+            completion(timeline)
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
     }
 }
 
@@ -169,7 +190,7 @@ struct BTC_App_Widget: Widget {
     }
 }
 
-struct BTC_App_Widget_Previews: PreviewProvider {
+struct BTC_App_Widget_Previews: PreviewProvider { 
     static var previews: some View {
         Group {
             BTC_App_WidgetEntryView(entry: SimpleEntry(date: Date(), data: .previewData, error: false))
