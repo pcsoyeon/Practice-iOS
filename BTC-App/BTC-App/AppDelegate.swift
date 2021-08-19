@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  WidgetPractice
+//  BTC-App
 //
 //  Created by soyeon on 2021/08/19.
 //
