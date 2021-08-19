@@ -13,6 +13,7 @@
 		9284C4F226CEA3A9000C95F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9284C4F026CEA3A9000C95F2 /* Main.storyboard */; };
 		9284C4F426CEA3AB000C95F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9284C4F326CEA3AB000C95F2 /* Assets.xcassets */; };
 		9284C4F726CEA3AB000C95F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9284C4F526CEA3AB000C95F2 /* LaunchScreen.storyboard */; };
+		9284C50126CEA55C000C95F2 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9284C4FF26CEA4BB000C95F2 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9284C4F326CEA3AB000C95F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9284C4F626CEA3AB000C95F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9284C4F826CEA3AB000C95F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9284C4FF26CEA4BB000C95F2 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9284C50126CEA55C000C95F2 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				9284C4E926CEA3A9000C95F2 /* BioID */,
 				9284C4E826CEA3A9000C95F2 /* Products */,
+				9284C4FE26CEA4BB000C95F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +69,14 @@
 				9284C4F826CEA3AB000C95F2 /* Info.plist */,
 			);
 			path = BioID;
+			sourceTree = "<group>";
+		};
+		9284C4FE26CEA4BB000C95F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9284C4FF26CEA4BB000C95F2 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
