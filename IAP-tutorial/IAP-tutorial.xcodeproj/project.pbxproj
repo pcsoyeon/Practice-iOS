@@ -24,6 +24,7 @@
 		92317DA826DD2A8B0037D15E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92317DAB26DD2A8B0037D15E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92317DAD26DD2A8B0037D15E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92317DB326DD2EB70037D15E /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 				92317D9F26DD2A8A0037D15E /* AppDelegate.swift */,
 				92317DA126DD2A8A0037D15E /* SceneDelegate.swift */,
 				92317DA326DD2A8A0037D15E /* ViewController.swift */,
+				92317DB326DD2EB70037D15E /* Configuration.storekit */,
 				92317DA526DD2A8A0037D15E /* Main.storyboard */,
 				92317DA826DD2A8B0037D15E /* Assets.xcassets */,
 				92317DAA26DD2A8B0037D15E /* LaunchScreen.storyboard */,

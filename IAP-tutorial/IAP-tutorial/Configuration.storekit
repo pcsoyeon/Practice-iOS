@@ -1,0 +1,63 @@
+{
+  "identifier" : "D9057CA6",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "DCB941D0",
+      "localizations" : [
+        {
+          "description" : "Remove all ads in the app.",
+          "displayName" : "Remove Ads",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.myapp.everything",
+      "referenceName" : "Remove Ads",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "EB3E5EEF",
+      "localizations" : [
+        {
+          "description" : "Unlock a pack of gems.",
+          "displayName" : "Get Gems",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.myapp.gems",
+      "referenceName" : "Gems",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "1AF3B9B3",
+      "localizations" : [
+        {
+          "description" : "Get all aspects of the app.",
+          "displayName" : "Unlock Everything",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.myapp.everything",
+      "referenceName" : "Everything",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 1
+  }
+}
