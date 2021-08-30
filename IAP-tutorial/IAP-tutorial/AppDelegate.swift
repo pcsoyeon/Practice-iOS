@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  StoreKit
+//  IAP-tutorial
 //
-//  Created by soyeon on 2021/08/30.
+//  Created by soyeon on 2021/08/31.
 //
 
 import UIKit
