@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  IAP-tutorial
+//  DeepLinking-tutorial
 //
-//  Created by soyeon on 2021/08/31.
+//  Created by soyeon on 2021/09/02.
 //
 
 import UIKit
