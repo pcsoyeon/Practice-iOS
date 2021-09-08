@@ -48,7 +48,7 @@ class ViewController: UIViewController {
 //        configUI()
 //        setAction()
         
-        // MARK: - 로그인 버튼 (터치+페이스)
+        // MARK: - touch+face 하나로 정리
         view.addSubview(loginButton)
         loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loginButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
@@ -106,8 +106,8 @@ extension ViewController {
             }
             
             // 3회 이상 -> password 요구
-//            if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: nil) {
-//                context.evaluatePolicy(LAPolicy.deviceOwnerAuthentication, localizedReason: "🔒") { wasSuccessful, error in
+//            if authContext.canEvaluatePolicy(.deviceOwnerAuthentication, error: nil) {
+//                authContext.evaluatePolicy(LAPolicy.deviceOwnerAuthentication, localizedReason: "🔒") { wasSuccessful, error in
 //                    if wasSuccessful {
 //                        print("😺 성공")
 //                    } else {
