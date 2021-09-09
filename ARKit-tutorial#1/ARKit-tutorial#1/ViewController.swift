@@ -22,23 +22,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-        let sphere = SCNSphere(radius: 0.2)
-        let material = SCNMaterial()
-        material.diffuse.contents = UIImage(named:"art.scnassets/8k_moon.jpg")
-        sphere.materials = [material]
-        let node = SCNNode()
-        node.position = SCNVector3(x:0,y: 0.1, z: -0.5)
-        node.geometry = sphere
-        sceneView.scene.rootNode.addChildNode(node)
-        sceneView.autoenablesDefaultLighting = true
-        
-//        // Create a new scene
-//        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-//
-//        // Set the scene to the view
-//        sceneView.scene = scene
-        
-        
+        setMoon()
+//        setShip()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,5 +67,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
+    }
+}
+
+extension ViewController {
+    func setMoon() {
+        let sphere = SCNSphere(radius: 0.2)
+        let material = SCNMaterial()
+        material.diffuse.contents = UIImage(named:"art.scnassets/8k_moon.jpg")
+        sphere.materials = [material]
+        let node = SCNNode()
+        node.position = SCNVector3(x:0,y: 0.1, z: -0.5)
+        node.geometry = sphere
+        sceneView.scene.rootNode.addChildNode(node)
+        sceneView.autoenablesDefaultLighting = true
+    }
+    
+    func setShip() {
+        // Create a new scene
+        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+
+        // Set the scene to the view
+        sceneView.scene = scene
     }
 }
