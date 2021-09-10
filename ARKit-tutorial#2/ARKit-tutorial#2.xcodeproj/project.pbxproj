@@ -13,6 +13,7 @@
 		92F50C4026EB5C9600EEE9CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F50C3E26EB5C9600EEE9CA /* Main.storyboard */; };
 		92F50C4226EB5C9600EEE9CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92F50C4126EB5C9600EEE9CA /* Assets.xcassets */; };
 		92F50C4526EB5C9600EEE9CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F50C4326EB5C9600EEE9CA /* LaunchScreen.storyboard */; };
+		92F50C4D26EB716300EEE9CA /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F50C4C26EB716300EEE9CA /* InfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		92F50C4126EB5C9600EEE9CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92F50C4426EB5C9600EEE9CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92F50C4626EB5C9600EEE9CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92F50C4C26EB716300EEE9CA /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				92F50C4126EB5C9600EEE9CA /* Assets.xcassets */,
 				92F50C4326EB5C9600EEE9CA /* LaunchScreen.storyboard */,
 				92F50C4626EB5C9600EEE9CA /* Info.plist */,
+				92F50C4C26EB716300EEE9CA /* InfoVC.swift */,
 			);
 			path = "ARKit-tutorial#2";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				92F50C3D26EB5C9600EEE9CA /* ViewController.swift in Sources */,
 				92F50C3926EB5C9600EEE9CA /* AppDelegate.swift in Sources */,
+				92F50C4D26EB716300EEE9CA /* InfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

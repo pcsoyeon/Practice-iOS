@@ -27,6 +27,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.addGestureRecognizer(tapGesure)
         
         addLight()
+        
+        // Set Info Button
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Info",
+                                                                 style: .plain,
+                                                                 target: self,
+                                                                 action: #selector(pushToInfo))
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,5 +114,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                                       hitTestResult.worldTransform.columns.3.y,
                                       hitTestResult.worldTransform.columns.3.z)
         addFoodModelTo(position: position)
+    }
+}
+
+extension ViewController {
+    @objc
+    func pushToInfo() {
+        let vc = InfoVC()
+        vc.title = "Infomation"
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
