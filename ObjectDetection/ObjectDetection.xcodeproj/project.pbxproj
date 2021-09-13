@@ -13,6 +13,8 @@
 		9299839426EF3EE4001B3181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9299839226EF3EE4001B3181 /* Main.storyboard */; };
 		9299839626EF3EE5001B3181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9299839526EF3EE5001B3181 /* Assets.xcassets */; };
 		9299839926EF3EE5001B3181 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9299839726EF3EE5001B3181 /* LaunchScreen.storyboard */; };
+		929983A126EF44FD001B3181 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 929983A026EF44FD001B3181 /* SqueezeNet.mlmodel */; };
+		929983A326EF4767001B3181 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 929983A226EF4767001B3181 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9299839526EF3EE5001B3181 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9299839826EF3EE5001B3181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9299839A26EF3EE5001B3181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		929983A026EF44FD001B3181 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		929983A226EF4767001B3181 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		9299838B26EF3EE4001B3181 /* ObjectDetection */ = {
 			isa = PBXGroup;
 			children = (
+				929983A226EF4767001B3181 /* Resnet50.mlmodel */,
+				929983A026EF44FD001B3181 /* SqueezeNet.mlmodel */,
 				9299838C26EF3EE4001B3181 /* AppDelegate.swift */,
 				9299838E26EF3EE4001B3181 /* SceneDelegate.swift */,
 				9299839026EF3EE4001B3181 /* ViewController.swift */,
@@ -137,9 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929983A326EF4767001B3181 /* Resnet50.mlmodel in Sources */,
 				9299839126EF3EE4001B3181 /* ViewController.swift in Sources */,
 				9299838D26EF3EE4001B3181 /* AppDelegate.swift in Sources */,
 				9299838F26EF3EE4001B3181 /* SceneDelegate.swift in Sources */,
+				929983A126EF44FD001B3181 /* SqueezeNet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +295,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				COREML_CODEGEN_LANGUAGE = Swift;
 				DEVELOPMENT_TEAM = PU64TS56AD;
 				INFOPLIST_FILE = ObjectDetection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,6 +315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				COREML_CODEGEN_LANGUAGE = Swift;
 				DEVELOPMENT_TEAM = PU64TS56AD;
 				INFOPLIST_FILE = ObjectDetection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
