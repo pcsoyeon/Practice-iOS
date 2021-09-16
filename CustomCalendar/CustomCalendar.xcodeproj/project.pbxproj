@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		922BE99426F2F90500B1E08D /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BE99326F2F90500B1E08D /* Date+.swift */; };
+		922BE99626F2FB1200B1E08D /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BE99526F2FB1200B1E08D /* UIScreen+.swift */; };
+		922BE9A926F3005300B1E08D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BE9A826F3005300B1E08D /* UIView+.swift */; };
 		92DCF2FC26F26EE800A30F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2FB26F26EE800A30F4D /* AppDelegate.swift */; };
 		92DCF2FE26F26EE800A30F4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2FD26F26EE800A30F4D /* SceneDelegate.swift */; };
-		92DCF30026F26EE800A30F4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2FF26F26EE800A30F4D /* ViewController.swift */; };
-		92DCF30326F26EE800A30F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF30126F26EE800A30F4D /* Main.storyboard */; };
 		92DCF30526F26EEA00A30F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF30426F26EEA00A30F4D /* Assets.xcassets */; };
 		92DCF30826F26EEA00A30F4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF30626F26EEA00A30F4D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		922BE99326F2F90500B1E08D /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		922BE99526F2FB1200B1E08D /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
+		922BE9A826F3005300B1E08D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		92DCF2F826F26EE800A30F4D /* CustomCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DCF2FB26F26EE800A30F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92DCF2FD26F26EE800A30F4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92DCF2FF26F26EE800A30F4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		92DCF30226F26EE800A30F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92DCF30426F26EEA00A30F4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92DCF30726F26EEA00A30F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92DCF30926F26EEA00A30F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +39,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		922BE99026F2F72E00B1E08D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				922BE9A326F2FCD600B1E08D /* Views */,
+				922BE99826F2FC7F00B1E08D /* Cells */,
+				922BE99726F2FC7800B1E08D /* VCs */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		922BE99126F2F73600B1E08D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				922BE99226F2F8F400B1E08D /* Extensions */,
+				92DCF30426F26EEA00A30F4D /* Assets.xcassets */,
+				92DCF30626F26EEA00A30F4D /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		922BE99226F2F8F400B1E08D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				922BE99326F2F90500B1E08D /* Date+.swift */,
+				922BE99526F2FB1200B1E08D /* UIScreen+.swift */,
+				922BE9A826F3005300B1E08D /* UIView+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		922BE99726F2FC7800B1E08D /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		922BE99826F2FC7F00B1E08D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		922BE9A326F2FCD600B1E08D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		92DCF2EF26F26EE700A30F4D = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +111,9 @@
 			children = (
 				92DCF2FB26F26EE800A30F4D /* AppDelegate.swift */,
 				92DCF2FD26F26EE800A30F4D /* SceneDelegate.swift */,
-				92DCF2FF26F26EE800A30F4D /* ViewController.swift */,
-				92DCF30126F26EE800A30F4D /* Main.storyboard */,
-				92DCF30426F26EEA00A30F4D /* Assets.xcassets */,
-				92DCF30626F26EEA00A30F4D /* LaunchScreen.storyboard */,
 				92DCF30926F26EEA00A30F4D /* Info.plist */,
+				922BE99126F2F73600B1E08D /* Resources */,
+				922BE99026F2F72E00B1E08D /* Sources */,
 			);
 			path = CustomCalendar;
 			sourceTree = "<group>";
@@ -126,7 +177,6 @@
 			files = (
 				92DCF30826F26EEA00A30F4D /* LaunchScreen.storyboard in Resources */,
 				92DCF30526F26EEA00A30F4D /* Assets.xcassets in Resources */,
-				92DCF30326F26EE800A30F4D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +187,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92DCF30026F26EE800A30F4D /* ViewController.swift in Sources */,
+				922BE9A926F3005300B1E08D /* UIView+.swift in Sources */,
+				922BE99626F2FB1200B1E08D /* UIScreen+.swift in Sources */,
 				92DCF2FC26F26EE800A30F4D /* AppDelegate.swift in Sources */,
 				92DCF2FE26F26EE800A30F4D /* SceneDelegate.swift in Sources */,
+				922BE99426F2F90500B1E08D /* Date+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		92DCF30126F26EE800A30F4D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92DCF30226F26EE800A30F4D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		92DCF30626F26EEA00A30F4D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
