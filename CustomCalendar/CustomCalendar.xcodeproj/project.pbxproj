@@ -10,6 +10,9 @@
 		922BE99426F2F90500B1E08D /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BE99326F2F90500B1E08D /* Date+.swift */; };
 		922BE99626F2FB1200B1E08D /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BE99526F2FB1200B1E08D /* UIScreen+.swift */; };
 		922BE9A926F3005300B1E08D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BE9A826F3005300B1E08D /* UIView+.swift */; };
+		922BE9AF26F305CC00B1E08D /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922BE9AE26F305CC00B1E08D /* Calendar.storyboard */; };
+		922BE9B126F305FC00B1E08D /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BE9B026F305FC00B1E08D /* CalendarVC.swift */; };
+		922BE9B326F3077700B1E08D /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BE9B226F3077700B1E08D /* DayCell.swift */; };
 		92DCF2FC26F26EE800A30F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2FB26F26EE800A30F4D /* AppDelegate.swift */; };
 		92DCF2FE26F26EE800A30F4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2FD26F26EE800A30F4D /* SceneDelegate.swift */; };
 		92DCF30526F26EEA00A30F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF30426F26EEA00A30F4D /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 		922BE99326F2F90500B1E08D /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		922BE99526F2FB1200B1E08D /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
 		922BE9A826F3005300B1E08D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		922BE9AE26F305CC00B1E08D /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		922BE9B026F305FC00B1E08D /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		922BE9B226F3077700B1E08D /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		92DCF2F826F26EE800A30F4D /* CustomCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DCF2FB26F26EE800A30F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92DCF2FD26F26EE800A30F4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +61,7 @@
 				922BE99226F2F8F400B1E08D /* Extensions */,
 				92DCF30426F26EEA00A30F4D /* Assets.xcassets */,
 				92DCF30626F26EEA00A30F4D /* LaunchScreen.storyboard */,
+				922BE9AE26F305CC00B1E08D /* Calendar.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -72,6 +79,7 @@
 		922BE99726F2FC7800B1E08D /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				922BE9B026F305FC00B1E08D /* CalendarVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -79,6 +87,7 @@
 		922BE99826F2FC7F00B1E08D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				922BE9B226F3077700B1E08D /* DayCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -175,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				922BE9AF26F305CC00B1E08D /* Calendar.storyboard in Resources */,
 				92DCF30826F26EEA00A30F4D /* LaunchScreen.storyboard in Resources */,
 				92DCF30526F26EEA00A30F4D /* Assets.xcassets in Resources */,
 			);
@@ -189,6 +199,8 @@
 			files = (
 				922BE9A926F3005300B1E08D /* UIView+.swift in Sources */,
 				922BE99626F2FB1200B1E08D /* UIScreen+.swift in Sources */,
+				922BE9B126F305FC00B1E08D /* CalendarVC.swift in Sources */,
+				922BE9B326F3077700B1E08D /* DayCell.swift in Sources */,
 				92DCF2FC26F26EE800A30F4D /* AppDelegate.swift in Sources */,
 				92DCF2FE26F26EE800A30F4D /* SceneDelegate.swift in Sources */,
 				922BE99426F2F90500B1E08D /* Date+.swift in Sources */,
