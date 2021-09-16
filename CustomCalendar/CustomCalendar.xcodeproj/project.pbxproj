@@ -79,7 +79,8 @@
 		922BE99726F2FC7800B1E08D /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				922BE9B026F305FC00B1E08D /* CalendarVC.swift */,
+				922BE9C926F3441000B1E08D /* MonthlyWeekly */,
+				922BE9C626F343ED00B1E08D /* Basic */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -87,7 +88,8 @@
 		922BE99826F2FC7F00B1E08D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				922BE9B226F3077700B1E08D /* DayCell.swift */,
+				922BE9C826F343FE00B1E08D /* MonthlyWeekly */,
+				922BE9C726F343F500B1E08D /* Basic */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -97,6 +99,36 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		922BE9C626F343ED00B1E08D /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				922BE9B026F305FC00B1E08D /* CalendarVC.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		922BE9C726F343F500B1E08D /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				922BE9B226F3077700B1E08D /* DayCell.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		922BE9C826F343FE00B1E08D /* MonthlyWeekly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MonthlyWeekly;
+			sourceTree = "<group>";
+		};
+		922BE9C926F3441000B1E08D /* MonthlyWeekly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MonthlyWeekly;
 			sourceTree = "<group>";
 		};
 		92DCF2EF26F26EE700A30F4D = {
