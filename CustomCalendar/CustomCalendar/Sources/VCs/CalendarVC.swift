@@ -59,7 +59,29 @@ class CalendarVC: UIViewController {
 // MARK: - Calendar Button Methods
 
 extension CalendarVC {
-    func makeMonthDate() {
+    private func calculation() {
+        let firstDayOfMonth = Calendar.current.date(from: components)
+        let firstWeekday = Calendar.current.component(.weekday, from: firstDayOfMonth!)
+        daysCountInMonth = Calendar.current.range(of: .day,
+                                        in: .month,
+                                        for: firstDayOfMonth!)!.count
+        
+        weekdayAdding = 2 - firstWeekday
+        
+        dateFormatter.dateFormat = "M월 YYYY"
+        self.monthLabel.text = dateFormatter.string(from: firstDayOfMonth!)
+        
+        self.days.removeAll()
+        for day in weekdayAdding...daysCountInMonth {
+            if day < 1 {
+                self.days.append("")
+            } else {
+                self.days.append(String(day))
+            }
+        }
+    }
+    
+    private func makeMonthDate() {
         monthDate.removeAll()
         dayAndYear = ""
         
@@ -83,7 +105,7 @@ extension CalendarVC {
             }
         }
         
-        print(monthDate)
+        print("✅", monthDate)
     }
 }
 
@@ -106,41 +128,19 @@ extension CalendarVC {
     }
     
     private func initCollectionView() {
+        weekdayCollectionView.register(DayCell.self, forCellWithReuseIdentifier: DayCell.identifier)
         weekdayCollectionView.delegate = self
         weekdayCollectionView.dataSource = self
-        weekdayCollectionView.register(DayCell.self, forCellWithReuseIdentifier: DayCell.identifier)
         
+        dateCollectionView.register(DayCell.self, forCellWithReuseIdentifier: DayCell.identifier)
         dateCollectionView.delegate = self
         dateCollectionView.dataSource = self
-        dateCollectionView.register(DayCell.self, forCellWithReuseIdentifier: DayCell.identifier)
     }
     
     private func initCalendar() {
         components.year = Calendar.current.component(.year, from: Date())
         components.month = Calendar.current.component(.month, from: Date())
         components.day = 1
-    }
-    
-    private func calculation() {
-        let firstDayOfMonth = Calendar.current.date(from: components)
-        let firstWeekday = Calendar.current.component(.weekday, from: firstDayOfMonth!)
-        daysCountInMonth = Calendar.current.range(of: .day,
-                                        in: .month,
-                                        for: firstDayOfMonth!)!.count
-        
-        weekdayAdding = 2 - firstWeekday
-        
-        dateFormatter.dateFormat = "M월 YYYY"
-        self.monthLabel.text = dateFormatter.string(from: firstDayOfMonth!)
-        
-        self.days.removeAll()
-        for day in weekdayAdding...daysCountInMonth {
-            if day < 1 {
-                self.days.append("")
-            } else {
-                self.days.append(String(day))
-            }
-        }
     }
 }
 
@@ -209,12 +209,14 @@ extension CalendarVC: UICollectionViewDataSource {
             
             if !monthDate.isEmpty {
                 if monthDate[0] == days[indexPath.row] {
-//                    cell.characterImage.isHidden = false
-                    cell.countLabel.text = "✅"
+                    cell.characterImage.isHidden = false
+                    
+                    cell.countLabel.text = "written"
                     cell.countLabel.textAlignment = .center
                     cell.countLabel.textColor = .black
                     cell.countLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-//                    cell.dataLabel.isHidden = true
+                    
+                    cell.dataLabel.isHidden = true
                     monthDate.removeFirst()
                 } else {
                     cell.dataLabel.isHidden = false

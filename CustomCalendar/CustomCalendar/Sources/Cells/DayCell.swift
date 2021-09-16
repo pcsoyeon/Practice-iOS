@@ -14,6 +14,7 @@ class DayCell: UICollectionViewCell {
     var characterImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "charc")
+        image.contentMode = .scaleAspectFit
         image.isHidden = true
         return image
     }()
