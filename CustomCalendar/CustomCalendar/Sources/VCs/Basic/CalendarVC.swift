@@ -56,7 +56,7 @@ class CalendarVC: UIViewController {
     }
 }
 
-// MARK: - Calendar Button Methods
+// MARK: - Date Custom Methods
 
 extension CalendarVC {
     private func calculation() {
@@ -109,7 +109,7 @@ extension CalendarVC {
     }
 }
 
-// MARK: - Custom Methods
+// MARK: - Init Methods
 
 extension CalendarVC {
     private func initView() {
@@ -144,7 +144,7 @@ extension CalendarVC {
     }
 }
 
-// MARK: - UICollectionView
+// MARK: - UICollectionView Delegate
 
 extension CalendarVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -178,6 +178,8 @@ extension CalendarVC: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
 }
+
+// MARK: - UICollectionView DataSource
 
 extension CalendarVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section:Int) -> Int {
