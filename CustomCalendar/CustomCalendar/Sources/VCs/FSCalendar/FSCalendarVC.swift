@@ -17,12 +17,16 @@ class FSCalendarVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.initUI()
+        self.initCalendar()
+        
+        self.setUpEvents()
+    }
+}
+
+extension FSCalendarVC {
+    private func initUI() {
         view.backgroundColor = .white
-        
-        calendar.dataSource = self
-        calendar.delegate = self
-        
-        calendar.locale = Locale(identifier: "ko_KR")
         
         view.addSubview(calendar)
         
@@ -33,13 +37,26 @@ class FSCalendarVC: UIViewController {
         calendar.widthAnchor.constraint(equalToConstant: 400).isActive = true
     }
     
-    func setUpEvents() {
+    private func initCalendar() {
+        calendar.dataSource = self
+        calendar.delegate = self
+        
+        calendar.locale = Locale(identifier: "ko_KR")
+        
+        calendar.appearance.selectionColor = .systemTeal
+        calendar.appearance.todayColor = .systemBlue
+        
+        calendar.allowsMultipleSelection = true
+        calendar.swipeToChooseGesture.isEnabled = true
+    }
+    
+    private func setUpEvents() {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko_KR")
         formatter.dateFormat = "yyyy-MM-dd"
-        let xmas = formatter.date(from: "2020-12-25")
-        let sampledate = formatter.date(from: "2020-08-22")
-        events = [xmas!, sampledate!]
+        let xmas = formatter.date(from: "2021-12-25")
+        let birthDay = formatter.date(from: "2021-09-30")
+        events = [xmas!, birthDay!]
     }
 }
 

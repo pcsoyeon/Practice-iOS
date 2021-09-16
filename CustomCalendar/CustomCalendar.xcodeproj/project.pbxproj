@@ -15,6 +15,14 @@
 		922BE9CB26F3447800B1E08D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BE9CA26F3447800B1E08D /* String+Extension.swift */; };
 		922BE9D826F3577600B1E08D /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 922BE9D726F3577600B1E08D /* FSCalendar */; };
 		922BE9DA26F3585A00B1E08D /* FSCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BE9D926F3585A00B1E08D /* FSCalendarVC.swift */; };
+		92536F8426F39ECA00869F26 /* MacoCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92536F8326F39ECA00869F26 /* MacoCalendarVC.swift */; };
+		92536F8626F39ED900869F26 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92536F8526F39ED900869F26 /* UIColor+Extension.swift */; };
+		92536F8826F39F8800869F26 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92536F8726F39F8800869F26 /* Colors.xcassets */; };
+		92536F8A26F3A35800869F26 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92536F8926F3A35800869F26 /* UIView+Extension.swift */; };
+		92536F8C26F3A55700869F26 /* MacoCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92536F8B26F3A55700869F26 /* MacoCalendarCell.swift */; };
+		92536F8F26F3A60400869F26 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 92536F8E26F3A60400869F26 /* SnapKit */; };
+		92536F9126F3A6A200869F26 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92536F9026F3A6A200869F26 /* UIDevice+Extension.swift */; };
+		92536F9326F3A76E00869F26 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92536F9226F3A76E00869F26 /* UIStackView+Extension.swift */; };
 		92DCF2FC26F26EE800A30F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2FB26F26EE800A30F4D /* AppDelegate.swift */; };
 		92DCF2FE26F26EE800A30F4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2FD26F26EE800A30F4D /* SceneDelegate.swift */; };
 		92DCF30526F26EEA00A30F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92DCF30426F26EEA00A30F4D /* Assets.xcassets */; };
@@ -29,6 +37,13 @@
 		922BE9B226F3077700B1E08D /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		922BE9CA26F3447800B1E08D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		922BE9D926F3585A00B1E08D /* FSCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarVC.swift; sourceTree = "<group>"; };
+		92536F8326F39ECA00869F26 /* MacoCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacoCalendarVC.swift; sourceTree = "<group>"; };
+		92536F8526F39ED900869F26 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		92536F8726F39F8800869F26 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		92536F8926F3A35800869F26 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		92536F8B26F3A55700869F26 /* MacoCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacoCalendarCell.swift; sourceTree = "<group>"; };
+		92536F9026F3A6A200869F26 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		92536F9226F3A76E00869F26 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		92DCF2F826F26EE800A30F4D /* CustomCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DCF2FB26F26EE800A30F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92DCF2FD26F26EE800A30F4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				922BE9D826F3577600B1E08D /* FSCalendar in Frameworks */,
+				92536F8F26F3A60400869F26 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +80,7 @@
 			children = (
 				922BE99226F2F8F400B1E08D /* Extensions */,
 				92DCF30426F26EEA00A30F4D /* Assets.xcassets */,
+				92536F8726F39F8800869F26 /* Colors.xcassets */,
 				92DCF30626F26EEA00A30F4D /* LaunchScreen.storyboard */,
 				922BE9AE26F305CC00B1E08D /* Calendar.storyboard */,
 			);
@@ -73,9 +90,13 @@
 		922BE99226F2F8F400B1E08D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				92536F9026F3A6A200869F26 /* UIDevice+Extension.swift */,
 				922BE99526F2FB1200B1E08D /* UIScreen+Extension.swift */,
 				922BE99326F2F90500B1E08D /* Date+Extension.swift */,
 				922BE9CA26F3447800B1E08D /* String+Extension.swift */,
+				92536F8526F39ED900869F26 /* UIColor+Extension.swift */,
+				92536F8926F3A35800869F26 /* UIView+Extension.swift */,
+				92536F9226F3A76E00869F26 /* UIStackView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -83,8 +104,8 @@
 		922BE99726F2FC7800B1E08D /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				92536F8226F3981600869F26 /* FSCalendar */,
 				922BE9C626F343ED00B1E08D /* Basic */,
-				922BE9D926F3585A00B1E08D /* FSCalendarVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -92,6 +113,7 @@
 		922BE99826F2FC7F00B1E08D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				92536F8B26F3A55700869F26 /* MacoCalendarCell.swift */,
 				922BE9C726F343F500B1E08D /* Basic */,
 			);
 			path = Cells;
@@ -118,6 +140,15 @@
 				922BE9B226F3077700B1E08D /* DayCell.swift */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		92536F8226F3981600869F26 /* FSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				922BE9D926F3585A00B1E08D /* FSCalendarVC.swift */,
+				92536F8326F39ECA00869F26 /* MacoCalendarVC.swift */,
+			);
+			path = FSCalendar;
 			sourceTree = "<group>";
 		};
 		92DCF2EF26F26EE700A30F4D = {
@@ -166,6 +197,7 @@
 			name = CustomCalendar;
 			packageProductDependencies = (
 				922BE9D726F3577600B1E08D /* FSCalendar */,
+				92536F8E26F3A60400869F26 /* SnapKit */,
 			);
 			productName = CustomCalendar;
 			productReference = 92DCF2F826F26EE800A30F4D /* CustomCalendar.app */;
@@ -196,6 +228,7 @@
 			mainGroup = 92DCF2EF26F26EE700A30F4D;
 			packageReferences = (
 				922BE9D626F3577600B1E08D /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				92536F8D26F3A60400869F26 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 92DCF2F926F26EE800A30F4D /* Products */;
 			projectDirPath = "";
@@ -212,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				922BE9AF26F305CC00B1E08D /* Calendar.storyboard in Resources */,
+				92536F8826F39F8800869F26 /* Colors.xcassets in Resources */,
 				92DCF30826F26EEA00A30F4D /* LaunchScreen.storyboard in Resources */,
 				92DCF30526F26EEA00A30F4D /* Assets.xcassets in Resources */,
 			);
@@ -224,14 +258,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92536F9126F3A6A200869F26 /* UIDevice+Extension.swift in Sources */,
+				92536F9326F3A76E00869F26 /* UIStackView+Extension.swift in Sources */,
+				92536F8A26F3A35800869F26 /* UIView+Extension.swift in Sources */,
 				922BE99626F2FB1200B1E08D /* UIScreen+Extension.swift in Sources */,
 				922BE9DA26F3585A00B1E08D /* FSCalendarVC.swift in Sources */,
 				922BE9B126F305FC00B1E08D /* CalendarVC.swift in Sources */,
 				922BE9B326F3077700B1E08D /* DayCell.swift in Sources */,
 				92DCF2FC26F26EE800A30F4D /* AppDelegate.swift in Sources */,
 				92DCF2FE26F26EE800A30F4D /* SceneDelegate.swift in Sources */,
+				92536F8C26F3A55700869F26 /* MacoCalendarCell.swift in Sources */,
 				922BE9CB26F3447800B1E08D /* String+Extension.swift in Sources */,
+				92536F8426F39ECA00869F26 /* MacoCalendarVC.swift in Sources */,
 				922BE99426F2F90500B1E08D /* Date+Extension.swift in Sources */,
+				92536F8626F39ED900869F26 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +475,14 @@
 				minimumVersion = 2.8.2;
 			};
 		};
+		92536F8D26F3A60400869F26 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -442,6 +490,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 922BE9D626F3577600B1E08D /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		92536F8E26F3A60400869F26 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92536F8D26F3A60400869F26 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
