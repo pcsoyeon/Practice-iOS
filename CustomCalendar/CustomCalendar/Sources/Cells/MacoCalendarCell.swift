@@ -53,7 +53,6 @@ class MacoCalendarCell: FSCalendarCell {
     }
     
     func setMacoCalendarCell() {
-        
         contentView.addSubviews(emojiImageView, circleNumberView)
         
         circleNumberView.addSubviews(numberLabel)

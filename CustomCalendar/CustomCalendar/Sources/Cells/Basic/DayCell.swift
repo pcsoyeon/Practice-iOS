@@ -11,6 +11,7 @@ class DayCell: UICollectionViewCell {
     static let identifier = "DayCell"
     
     var dataLabel = UILabel()
+    
     var characterImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "charc")
@@ -18,28 +19,28 @@ class DayCell: UICollectionViewCell {
         image.isHidden = true
         return image
     }()
+    
     var countLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.addSubview(dataLabel)
-        self.addSubview(characterImage)
-        self.addSubview(countLabel)
-        dataLabel.translatesAutoresizingMaskIntoConstraints = false
-        characterImage.translatesAutoresizingMaskIntoConstraints = false
-        countLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubviews(dataLabel, characterImage, countLabel)
         
-        NSLayoutConstraint.activate([
-            dataLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            dataLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            characterImage.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            characterImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 7),
-            characterImage.heightAnchor.constraint(equalToConstant: 27),
-            characterImage.widthAnchor.constraint(equalToConstant: 32),
-            countLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            countLabel.topAnchor.constraint(equalTo: characterImage.bottomAnchor, constant: 1)
-        ])
+        dataLabel.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+        }
+        
+        characterImage.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+            make.height.equalTo(27)
+            make.width.equalTo(32)
+        }
+        
+        countLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(characterImage.snp.bottom).offset(1)
+        }
     }
     
     required init?(coder: NSCoder) {
