@@ -13,9 +13,11 @@
 		92BC21812700EE910053D031 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BC217F2700EE910053D031 /* Main.storyboard */; };
 		92BC21832700EE940053D031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BC21822700EE940053D031 /* Assets.xcassets */; };
 		92BC21862700EE940053D031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BC21842700EE940053D031 /* LaunchScreen.storyboard */; };
+		A8BCE6FC271F3CA284911C3D /* Pods_LibraryDismantling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC0130848468A9CC8D5A810 /* Pods_LibraryDismantling.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42702B389E690386208DF96A /* Pods-LibraryDismantling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraryDismantling.release.xcconfig"; path = "Target Support Files/Pods-LibraryDismantling/Pods-LibraryDismantling.release.xcconfig"; sourceTree = "<group>"; };
 		92BC21762700EE910053D031 /* LibraryDismantling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibraryDismantling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BC21792700EE910053D031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92BC217B2700EE910053D031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		92BC21822700EE940053D031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92BC21852700EE940053D031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92BC21872700EE940053D031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD0462F9B6D1E0D2D0C5031 /* Pods-LibraryDismantling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraryDismantling.debug.xcconfig"; path = "Target Support Files/Pods-LibraryDismantling/Pods-LibraryDismantling.debug.xcconfig"; sourceTree = "<group>"; };
+		EDC0130848468A9CC8D5A810 /* Pods_LibraryDismantling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibraryDismantling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8BCE6FC271F3CA284911C3D /* Pods_LibraryDismantling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49A6D82767F441AA1E1A7F2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDC0130848468A9CC8D5A810 /* Pods_LibraryDismantling.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		896A763AD2BD70CAC4D60330 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFD0462F9B6D1E0D2D0C5031 /* Pods-LibraryDismantling.debug.xcconfig */,
+				42702B389E690386208DF96A /* Pods-LibraryDismantling.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		92BC216D2700EE910053D031 = {
 			isa = PBXGroup;
 			children = (
 				92BC21782700EE910053D031 /* LibraryDismantling */,
 				92BC21772700EE910053D031 /* Products */,
+				896A763AD2BD70CAC4D60330 /* Pods */,
+				49A6D82767F441AA1E1A7F2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92BC218A2700EE940053D031 /* Build configuration list for PBXNativeTarget "LibraryDismantling" */;
 			buildPhases = (
+				23AF3D463FA605CF3C5594F8 /* [CP] Check Pods Manifest.lock */,
 				92BC21722700EE910053D031 /* Sources */,
 				92BC21732700EE910053D031 /* Frameworks */,
 				92BC21742700EE910053D031 /* Resources */,
+				8087FCD645010BA3E95DCF6A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23AF3D463FA605CF3C5594F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LibraryDismantling-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8087FCD645010BA3E95DCF6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibraryDismantling/Pods-LibraryDismantling-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibraryDismantling/Pods-LibraryDismantling-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LibraryDismantling/Pods-LibraryDismantling-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		92BC21722700EE910053D031 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		92BC218B2700EE940053D031 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFD0462F9B6D1E0D2D0C5031 /* Pods-LibraryDismantling.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		92BC218C2700EE940053D031 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42702B389E690386208DF96A /* Pods-LibraryDismantling.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

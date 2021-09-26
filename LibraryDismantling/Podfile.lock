@@ -1,0 +1,24 @@
+PODS:
+  - anim (1.2.10)
+  - Hero (1.6.1)
+  - Spruce (1.0.0)
+
+DEPENDENCIES:
+  - anim
+  - Hero
+  - Spruce (~> 1.0.0)
+
+SPEC REPOS:
+  trunk:
+    - anim
+    - Hero
+    - Spruce
+
+SPEC CHECKSUMS:
+  anim: 8603b8aa9f20c26fb04bfc94967f0e942687938d
+  Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
+  Spruce: 07ffdb990923f500111fcbf13d102e16075b230e
+
+PODFILE CHECKSUM: 48962134a00d7808fb9b4ace4fea36c533de60c1
+
+COCOAPODS: 1.11.2
