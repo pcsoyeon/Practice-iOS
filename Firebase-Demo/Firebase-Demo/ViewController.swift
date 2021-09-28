@@ -36,16 +36,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
         field.delegate = self
         
         let docRef = database.document("soyeon/example")
-        docRef.getDocument { [weak self] snapshot, error in
+        
+        docRef.addSnapshotListener { [weak self] snapshot, error in
             guard let data = snapshot?.data(), error == nil else { return }
             
-            dump(data)
-            
             guard let text = data["text"] as? String else { return }
+            
             DispatchQueue.main.async {
                 self?.label.text = text
             }
         }
+//        docRef.getDocument { [weak self] snapshot, error in
+//            guard let data = snapshot?.data(), error == nil else { return }
+//
+//            dump(data)
+//
+//            guard let text = data["text"] as? String else { return }
+//            DispatchQueue.main.async {
+//                self?.label.text = text
+//            }
+//        }
     }
     
     override func viewDidLayoutSubviews() {
