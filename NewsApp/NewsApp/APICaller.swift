@@ -28,7 +28,7 @@ final class APICaller {
             else if let data = data {
                 do {
                     let result = try JSONDecoder().decode(APIResponse.self, from: data)
-                    dump(result.articles)
+//                    dump(result.articles)
                     completion(.success(result.articles))
                 } catch {
                     completion(.failure(error))
