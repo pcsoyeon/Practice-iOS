@@ -13,6 +13,7 @@
 		92451FC027057CF200FE0755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92451FBE27057CF200FE0755 /* Main.storyboard */; };
 		92451FC227057CF300FE0755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92451FC127057CF300FE0755 /* Assets.xcassets */; };
 		92451FC527057CF300FE0755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92451FC327057CF300FE0755 /* LaunchScreen.storyboard */; };
+		92451FCD27057DE100FE0755 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92451FCC27057DE100FE0755 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		92451FC127057CF300FE0755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92451FC427057CF300FE0755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92451FC627057CF300FE0755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92451FCC27057DE100FE0755 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				92451FC127057CF300FE0755 /* Assets.xcassets */,
 				92451FC327057CF300FE0755 /* LaunchScreen.storyboard */,
 				92451FC627057CF300FE0755 /* Info.plist */,
+				92451FCC27057DE100FE0755 /* Contact.swift */,
 			);
 			path = AccessContacts;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92451FCD27057DE100FE0755 /* Contact.swift in Sources */,
 				92451FBD27057CF200FE0755 /* ViewController.swift in Sources */,
 				92451FB927057CF200FE0755 /* AppDelegate.swift in Sources */,
 				92451FBB27057CF200FE0755 /* SceneDelegate.swift in Sources */,
