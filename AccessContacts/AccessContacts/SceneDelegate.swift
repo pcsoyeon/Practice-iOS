@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Firebase-Demo
+//  AccessContacts
 //
-//  Created by soyeon on 2021/09/28.
+//  Created by soyeon on 2021/09/30.
 //
 
 import UIKit
