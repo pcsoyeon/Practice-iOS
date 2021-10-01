@@ -29,14 +29,17 @@ class ViewController: UIViewController {
             }
         }
         
+        setTableView()
         fetchConstacts()
-        
-        listTableView.delegate = self
-        listTableView.dataSource = self
     }
 }
 
 extension ViewController {
+    func setTableView() {
+        listTableView.delegate = self
+        listTableView.dataSource = self
+    }
+    
     func fetchConstacts() {
         let key = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey] as [CNKeyDescriptor]
         let request = CNContactFetchRequest(keysToFetch: key)
@@ -55,6 +58,7 @@ extension ViewController {
 }
 
 extension ViewController: UITableViewDelegate {
+    
 }
 
 extension ViewController: UITableViewDataSource {
