@@ -17,9 +17,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Axs-eP-09t">
-                        <rect key="frame" x="10" y="20" width="150" height="40"/>
+                        <rect key="frame" x="36" y="20" width="150" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="150" id="tLY-Eg-yiA"/>
+                            <constraint firstAttribute="width" constant="150" id="LFS-4S-jA2"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
@@ -29,22 +29,53 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdC-Nm-0X0">
+                        <rect key="frame" x="20" y="20" width="11" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzT-J7-oZQ">
+                        <rect key="frame" x="10" y="20" width="77" height="40"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" title="나눔   "/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezG-4H-Ko1">
+                        <rect key="frame" x="193.5" y="20" width="116.5" height="40"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="나눔 이벤트 열기"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qdC-Nm-0X0" secondAttribute="bottom" constant="20" id="18a-RU-M5k"/>
                     <constraint firstAttribute="bottom" secondItem="TqE-4t-VAG" secondAttribute="bottom" constant="20" id="24P-Es-3WZ"/>
                     <constraint firstAttribute="trailing" secondItem="TqE-4t-VAG" secondAttribute="trailing" constant="10" id="AMC-He-lab"/>
                     <constraint firstItem="TqE-4t-VAG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="DHh-f6-N1e"/>
-                    <constraint firstItem="Axs-eP-09t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="RTJ-bB-Q9l"/>
-                    <constraint firstItem="Axs-eP-09t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="kqq-bI-9jM"/>
-                    <constraint firstAttribute="bottom" secondItem="Axs-eP-09t" secondAttribute="bottom" constant="20" id="tsV-ve-5L7"/>
+                    <constraint firstItem="ezG-4H-Ko1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="KOX-kA-eP9"/>
+                    <constraint firstItem="Axs-eP-09t" firstAttribute="leading" secondItem="qdC-Nm-0X0" secondAttribute="trailing" constant="5" id="Kwi-Sr-aWU"/>
+                    <constraint firstAttribute="bottom" secondItem="Axs-eP-09t" secondAttribute="bottom" constant="20" id="MSL-K7-xOY"/>
+                    <constraint firstItem="qdC-Nm-0X0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Mnw-wU-DmG"/>
+                    <constraint firstItem="NzT-J7-oZQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Pmu-AT-L0Y"/>
+                    <constraint firstAttribute="bottom" secondItem="NzT-J7-oZQ" secondAttribute="bottom" constant="20" id="VSR-sy-2jU"/>
+                    <constraint firstItem="NzT-J7-oZQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="eTt-mZ-AT7"/>
+                    <constraint firstItem="Axs-eP-09t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="eaT-JM-6bD"/>
+                    <constraint firstItem="qdC-Nm-0X0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="fdU-Rb-WPu"/>
+                    <constraint firstAttribute="trailing" secondItem="ezG-4H-Ko1" secondAttribute="trailing" constant="10" id="p3W-61-9OT"/>
+                    <constraint firstAttribute="bottom" secondItem="ezG-4H-Ko1" secondAttribute="bottom" constant="20" id="z6j-1p-bml"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="priceButton" destination="TqE-4t-VAG" id="omQ-O2-rqE"/>
+                <outlet property="getPriceButton" destination="TqE-4t-VAG" id="5Fd-Q5-FRE"/>
                 <outlet property="priceTextField" destination="Axs-eP-09t" id="SxE-cq-j76"/>
+                <outlet property="shareButton" destination="ezG-4H-Ko1" id="fzo-fO-fsq"/>
+                <outlet property="shareCategoryButton" destination="NzT-J7-oZQ" id="jSW-V0-kNN"/>
+                <outlet property="wonLabel" destination="qdC-Nm-0X0" id="c7t-wA-W6d"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

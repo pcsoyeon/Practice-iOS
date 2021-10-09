@@ -12,12 +12,17 @@ class PriceTVC: UITableViewCell {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var wonLabel: UILabel!
     @IBOutlet weak var priceTextField: UITextField!
-    @IBOutlet weak var priceButton: UIButton!
+    @IBOutlet weak var getPriceButton: UIButton!
+    
+    @IBOutlet weak var shareCategoryButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
     // MARK: - Properties
     
     private var getOffer = true
+    private var isShare = false
     
     // MARK: - Initializer
     
@@ -36,21 +41,36 @@ class PriceTVC: UITableViewCell {
 
 extension PriceTVC {
     func initUI() {
+        wonLabel.textColor = .lightGray
+        
         priceTextField.borderStyle = .none
         priceTextField.placeholder = "가격 (선택사항)"
         priceTextField.font = UIFont.systemFont(ofSize: 16)
         priceTextField.keyboardType = .numberPad
         
-        var configuration = UIButton.Configuration.plain()
-        configuration.image = UIImage(systemName: "circle")
-        configuration.titlePadding = 10
-        configuration.imagePadding = 10
-        configuration.baseForegroundColor = .lightGray
-        configuration.attributedTitle = AttributedString("가격제안 받기", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
+        var getOfferConfig = UIButton.Configuration.plain()
+        getOfferConfig.image = UIImage(systemName: "checkmark.circle.fill")
+        getOfferConfig.titlePadding = 10
+        getOfferConfig.imagePadding = 10
+        getOfferConfig.baseForegroundColor = .lightGray
+        getOfferConfig.attributedTitle = AttributedString("가격제안 받기", attributes: AttributeContainer([ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
         
-        priceButton.configuration = configuration
-        priceButton.isEnabled = false
-        priceButton.addTarget(self, action: #selector(touchUpGetOffer), for: .touchUpInside)
+        getPriceButton.configuration = getOfferConfig
+        getPriceButton.isEnabled = false
+        getPriceButton.addTarget(self, action: #selector(touchUpGetOffer), for: .touchUpInside)
+        
+        var getShareConfig = UIButton.Configuration.plain()
+        getShareConfig.image = UIImage(systemName: "circle")
+        getShareConfig.titlePadding = 10
+        getShareConfig.imagePadding = 10
+        getShareConfig.baseForegroundColor = .lightGray
+        getShareConfig.attributedTitle = AttributedString("나눔 이벤트 열기", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
+        shareButton.configuration = getShareConfig
+        shareButton.isHidden = true
+        shareButton.addTarget(self, action: #selector(touchUpShare), for: .touchUpInside)
+        
+        shareCategoryButton.isHidden = true
+        shareCategoryButton.addTarget(self, action: #selector(touchUpShareCategory), for: .touchUpInside)
     }
     
     func setTextField() {
@@ -64,9 +84,12 @@ extension PriceTVC {
         toolbar.sizeToFit()
            
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        
+        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(touchUpEdit))
+        let filterButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(touchUpFilter))
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(touchUpDone))
                 
-        toolbar.setItems([flexibleSpace, doneButton], animated: false)
+        toolbar.setItems([editButton, filterButton, flexibleSpace, doneButton], animated: false)
         
         priceTextField.inputAccessoryView = toolbar
     }
@@ -86,16 +109,42 @@ extension PriceTVC: UITextFieldDelegate {
 
 extension PriceTVC {
     @objc
+    func touchUpEdit() {
+        self.contentView.endEditing(true)
+    }
+    
+    @objc
+    func touchUpFilter() {
+        self.contentView.endEditing(true)
+    }
+    
+    @objc
     func touchUpDone() {
         self.contentView.endEditing(true)
     }
     
     @objc
     func textFieldDidChange() {
-        priceButton.isEnabled = true
+        
+        getPriceButton.isEnabled = true
         
         if !priceTextField.hasText {
-            priceButton.isEnabled = false
+            wonLabel.textColor = .lightGray
+            getPriceButton.isEnabled = false
+            getPriceButton.setTitleColor(.lightGray, for: .normal)
+        } else {
+            wonLabel.textColor = .black
+        }
+        
+        if priceTextField.text == "0" {
+            priceTextField.text = ""
+            wonLabel.isHidden = true
+            priceTextField.isHidden = true
+            shareCategoryButton.isHidden = false
+            
+            getPriceButton.isHidden = true
+            shareButton.isHidden = false
+            self.contentView.endEditing(true)
         }
     }
     
@@ -109,7 +158,7 @@ extension PriceTVC {
             configuration.baseForegroundColor = .lightGray
             configuration.attributedTitle = AttributedString("가격제안 받기", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
             
-            priceButton.configuration = configuration
+            getPriceButton.configuration = configuration
         } else {
             var configuration = UIButton.Configuration.plain()
             configuration.image = UIImage(systemName: "circle")
@@ -118,10 +167,47 @@ extension PriceTVC {
             configuration.baseForegroundColor = .lightGray
             configuration.attributedTitle = AttributedString("가격제안 받기", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
             
-            priceButton.configuration = configuration
+            getPriceButton.configuration = configuration
         }
         getOffer.toggle()
         
+    }
+    
+    @objc
+    func touchUpShare() {
+        if !isShare {
+            var configuration = UIButton.Configuration.plain()
+            configuration.image = UIImage(systemName: "checkmark.circle.fill")
+            configuration.titlePadding = 10
+            configuration.imagePadding = 10
+            configuration.baseForegroundColor = .lightGray
+            configuration.attributedTitle = AttributedString("나눔 이벤트 열기", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
+            
+            shareButton.configuration = configuration
+        } else {
+            var configuration = UIButton.Configuration.plain()
+            configuration.image = UIImage(systemName: "circle")
+            configuration.titlePadding = 10
+            configuration.imagePadding = 10
+            configuration.baseForegroundColor = .lightGray
+            configuration.attributedTitle = AttributedString("나눔 이벤트 열기", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
+            
+            shareButton.configuration = configuration
+        }
+        isShare.toggle()
+    }
+    
+    @objc
+    func touchUpShareCategory() {
+        shareCategoryButton.isHidden = true
+        shareButton.isHidden = true
+        
+        wonLabel.textColor = .lightGray
+        wonLabel.isHidden = false
+        priceTextField.isHidden = false
+        getPriceButton.isHidden = false
+        
+        priceTextField.becomeFirstResponder()
     }
     
 }

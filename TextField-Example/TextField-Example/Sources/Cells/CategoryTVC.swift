@@ -14,10 +14,17 @@ class CategoryTVC: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        initUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
+}
+
+extension CategoryTVC {
+    func initUI() {
+        categoryLabel.text = "디지털기기"
+    }
 }
