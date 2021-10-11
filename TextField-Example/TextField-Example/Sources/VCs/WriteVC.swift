@@ -13,6 +13,10 @@ class WriteVC: UIViewController {
     
     @IBOutlet weak var writeTableView: UITableView!
     
+    // MARK: - Properties
+    
+    var selectedCellPath: [IndexPath] = []
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -53,7 +57,10 @@ extension WriteVC: UITableViewDelegate {
         case 0:
             return 100
         case 1:
-            return 80
+            if !selectedCellPath.isEmpty && selectedCellPath.contains(indexPath) {
+                return 280
+            }
+            return UITableView.automaticDimension
         case 2,3:
             return 80
         case 4:
@@ -71,10 +78,22 @@ extension WriteVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 1 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleTVC.identifier) as? TitleTVC else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TitleTVC") as? TitleTVC else {
                 return UITableViewCell()
             }
-            cell.selectionStyle = .none
+            
+            cell.expandHandler = { [weak self] (response) in
+                if response {
+                    self?.selectedCellPath.append(indexPath)
+                }
+                else{
+                    self?.selectedCellPath = self!.selectedCellPath.filter({ (index) -> Bool in
+                        return index != indexPath
+                    })
+                }
+                self?.writeTableView.reloadRows(at: self!.selectedCellPath, with: .none)
+            }
+            
             return cell
         }
         
@@ -97,3 +116,4 @@ extension WriteVC: UITableViewDataSource {
         return UITableViewCell()
     }
 }
+

@@ -25,6 +25,6 @@ class CategoryTVC: UITableViewCell {
 
 extension CategoryTVC {
     func initUI() {
-        categoryLabel.text = "디지털기기"
+        categoryLabel.text = "카테고리 선택"
     }
 }
