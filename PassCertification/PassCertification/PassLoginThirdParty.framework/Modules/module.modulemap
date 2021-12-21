@@ -1,0 +1,6 @@
+framework module PassLoginThirdParty {
+  umbrella header "PassLoginThirdParty.h"
+
+  export *
+  module * { export * }
+}
