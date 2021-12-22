@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aq0-tY-4Tx" customClass="VideoView" customModule="VideoPicker" customModuleProvider="target">
+                                <rect key="frame" x="57" y="303" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="M7v-jy-0Gn"/>
+                                    <constraint firstAttribute="height" constant="300" id="ctK-Ar-xTd"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCO-xV-ufL">
+                                <rect key="frame" x="163" y="633" width="88.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="비디오 선택"/>
+                                <connections>
+                                    <action selector="videoPickerButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qmn-lJ-o5I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aq0-tY-4Tx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="38T-eq-hPM"/>
+                            <constraint firstItem="sCO-xV-ufL" firstAttribute="top" secondItem="aq0-tY-4Tx" secondAttribute="bottom" constant="30" id="QDg-dU-eHq"/>
+                            <constraint firstItem="aq0-tY-4Tx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a7g-Q4-3Mu"/>
+                            <constraint firstItem="sCO-xV-ufL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ttl-UT-223"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoPickerButton" destination="sCO-xV-ufL" id="ABc-L4-O2S"/>
+                        <outlet property="videoView" destination="aq0-tY-4Tx" id="UIv-n8-nYO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
