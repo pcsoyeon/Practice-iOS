@@ -57,12 +57,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loginInstance?.delegate = self
+        
         view.backgroundColor = .systemGray6
         layout()
     }
     
     @objc private func touchUpLoginButton(_ sender: UIButton) {
-        loginInstance?.delegate = self
         loginInstance?.requestThirdPartyLogin()
     }
     
@@ -74,11 +75,12 @@ class LoginViewController: UIViewController {
         guard let isValidAccessToken = loginInstance?.isValidAccessTokenExpireTimeNow() else { return }
         
         if !isValidAccessToken {
-          return
+            return
         }
         
         guard let tokenType = loginInstance?.tokenType else { return }
         guard let accessToken = loginInstance?.accessToken else { return }
+        
         let urlStr = "https://openapi.naver.com/v1/nid/me"
         let url = URL(string: urlStr)!
         
@@ -87,16 +89,19 @@ class LoginViewController: UIViewController {
         let req = AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": authorization])
         
         req.responseJSON { response in
-          guard let result = response.value as? [String: Any] else { return }
-          guard let object = result["response"] as? [String: Any] else { return }
-          guard let name = object["name"] as? String else { return }
-          guard let email = object["email"] as? String else { return }
-          guard let nickname = object["nickname"] as? String else { return }
-          
-          self.nameLabel.text = "\(name)"
-          self.emailLabel.text = "\(email)"
-          self.nicknameLabel.text = "\(nickname)"
+            guard let result = response.value as? [String: Any] else { return }
+            guard let object = result["response"] as? [String: Any] else { return }
+            guard let name = object["name"] as? String else { return }
+            guard let email = object["email"] as? String else { return }
+            guard let id = object["id"] as? String else { return }
+            
+            print(email)
+            
+            self.nameLabel.text = "\(name)"
+            self.emailLabel.text = "\(email)"
+//            self.nicknameLabel.text = "\(id)"
         }
+        
       }
     
     private func layout() {
@@ -132,35 +137,25 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: NaverThirdPartyLoginConnectionDelegate {
-    // 로그인 버튼을 눌렀을 경우 열게 될 브라우저
-    func oauth20ConnectionDidOpenInAppBrowser(forOAuth request: URLRequest!) {
-        //     let naverSignInVC = NLoginThirdPartyOAuth20InAppBrowserViewController(request: request)!
-        //     naverSignInVC.parentOrientation = UIInterfaceOrientation(rawValue: UIDevice.current.orientation.rawValue)!
-        //     present(naverSignInVC, animated: false, completion: nil)
-        
-        // UPDATE: 2019. 10. 11 (금)
-        // UIWebView가 제거되면서 NLoginThirdPartyOAuth20InAppBrowserViewController가 있는 헤더가 삭제되었습니다.
-        // 해당 코드 없이도 로그인 화면이 잘 열리는 것을 확인했습니다.
-    }
-    
-    // 로그인에 성공했을 경우 호출
+    // 로그인에 성공한 경우 호출
     func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
-        print("[Success] : Success Naver Login")
+        print("Success login")
         getNaverInfo()
     }
     
-    // 접근 토큰 갱신
+    // referesh token
     func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
-        
+        loginInstance?.accessToken
     }
     
-    // 로그아웃 할 경우 호출(토큰 삭제)
+    // 로그아웃
     func oauth20ConnectionDidFinishDeleteToken() {
-        loginInstance?.requestDeleteToken()
+        print("log out")
     }
     
-    // 모든 Error
+    // 모든 error
     func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
-        print("[Error] :", error.localizedDescription)
+        print("error = \(error.localizedDescription)")
     }
+        
 }
