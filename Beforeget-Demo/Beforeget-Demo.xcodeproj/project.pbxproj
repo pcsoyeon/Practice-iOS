@@ -16,7 +16,6 @@
 		92853CC22784B61900B473ED /* NaviBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92853CC12784B61900B473ED /* NaviBarView.swift */; };
 		92853CC82784C4B300B473ED /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 92853CC72784C4B300B473ED /* Then */; };
 		92853CCB2784C4C700B473ED /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 92853CCA2784C4C700B473ED /* SnapKit */; };
-		92853CCF2784CC4500B473ED /* ReportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92853CCE2784CC4500B473ED /* ReportCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		92853CAE2784B24F00B473ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92853CB02784B24F00B473ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92853CC12784B61900B473ED /* NaviBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviBarView.swift; sourceTree = "<group>"; };
-		92853CCE2784CC4500B473ED /* ReportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				92853CC12784B61900B473ED /* NaviBarView.swift */,
-				92853CCE2784CC4500B473ED /* ReportCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,7 +193,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92853CCF2784CC4500B473ED /* ReportCollectionViewCell.swift in Sources */,
 				92853CA72784B24C00B473ED /* ViewController.swift in Sources */,
 				92853CA32784B24C00B473ED /* AppDelegate.swift in Sources */,
 				92853CC22784B61900B473ED /* NaviBarView.swift in Sources */,
