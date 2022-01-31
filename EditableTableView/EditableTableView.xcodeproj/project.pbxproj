@@ -19,6 +19,8 @@
 		9265D6FD27707DC200853EB8 /* DateTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9265D6FB27707DC200853EB8 /* DateTVC.xib */; };
 		9265D70027707DCF00853EB8 /* ContentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9265D6FE27707DCF00853EB8 /* ContentTVC.swift */; };
 		9265D70127707DCF00853EB8 /* ContentTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9265D6FF27707DCF00853EB8 /* ContentTVC.xib */; };
+		92C48BA127A77C7E00849A3B /* ExpandableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C48BA027A77C7E00849A3B /* ExpandableTableViewController.swift */; };
+		92C48BA327A77E6F00849A3B /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C48BA227A77E6F00849A3B /* ExpandableTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		9265D6FB27707DC200853EB8 /* DateTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTVC.xib; sourceTree = "<group>"; };
 		9265D6FE27707DCF00853EB8 /* ContentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTVC.swift; sourceTree = "<group>"; };
 		9265D6FF27707DCF00853EB8 /* ContentTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentTVC.xib; sourceTree = "<group>"; };
+		92C48BA027A77C7E00849A3B /* ExpandableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewController.swift; sourceTree = "<group>"; };
+		92C48BA227A77E6F00849A3B /* ExpandableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				9265D6EB27707A1300853EB8 /* Assets.xcassets */,
 				9265D6ED27707A1300853EB8 /* LaunchScreen.storyboard */,
 				9265D6F027707A1300853EB8 /* Info.plist */,
+				92C48BA027A77C7E00849A3B /* ExpandableTableViewController.swift */,
+				92C48BA227A77E6F00849A3B /* ExpandableTableViewCell.swift */,
 			);
 			path = EditableTableView;
 			sourceTree = "<group>";
@@ -167,12 +173,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C48BA127A77C7E00849A3B /* ExpandableTableViewController.swift in Sources */,
 				9265D6E727707A1100853EB8 /* ViewController.swift in Sources */,
 				9265D6E327707A1100853EB8 /* AppDelegate.swift in Sources */,
 				9265D6E527707A1100853EB8 /* SceneDelegate.swift in Sources */,
 				9265D6FC27707DC200853EB8 /* DateTVC.swift in Sources */,
 				9265D6F827707B9F00853EB8 /* TextFieldTVC.swift in Sources */,
 				9265D70027707DCF00853EB8 /* ContentTVC.swift in Sources */,
+				92C48BA327A77E6F00849A3B /* ExpandableTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
