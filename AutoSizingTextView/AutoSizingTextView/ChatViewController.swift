@@ -111,15 +111,29 @@ extension ChatViewController: UITextViewDelegate {
         textView.constraints.forEach { (constraints) in
             if constraints.firstAttribute == .height {
                 constraints.constant = estimatedSize.height
-                
-                self.backgroundView.updateConstraints()
             }
+        }
+        
+        if backgroundView.frame.height >= 100 {
+            NSLayoutConstraint.activate([
+                textView.heightAnchor.constraint(equalToConstant: 100)
+            ])
+            backgroundView.setNeedsLayout()
+            textView.isScrollEnabled = true
+        } else {
+            self.backgroundView.updateConstraints()
         }
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n") {
+        if (backgroundView.frame.height < 100) && (text == "\n") {
             self.backgroundView.updateConstraints()
+        } else if backgroundView.frame.height >= 100 {
+            NSLayoutConstraint.activate([
+                textView.heightAnchor.constraint(equalToConstant: 100)
+            ])
+            backgroundView.setNeedsLayout()
+            textView.isScrollEnabled = true
         }
         
         return true
