@@ -12,7 +12,7 @@ final class ExpandableTableViewController: UIViewController {
     // MARK: - Properties
     
     private var expandableTableView = UITableView()
-    private var answerFilterDatasource =  ExpandableTableViewCellContent()
+    private var expandableDataSource =  ExpandableTableViewCellContent()
     
     // MARK: - Life Cycle
     
@@ -52,7 +52,6 @@ final class ExpandableTableViewController: UIViewController {
         expandableTableView.separatorInset = .zero
         
         expandableTableView.rowHeight = UITableView.automaticDimension
-        
     }
 }
 
@@ -60,7 +59,7 @@ final class ExpandableTableViewController: UIViewController {
 
 extension ExpandableTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let content = answerFilterDatasource
+        let content = expandableDataSource
         
         content.expanded = !content.expanded
         expandableTableView.reloadRows(at: [indexPath], with: .automatic)
@@ -77,6 +76,7 @@ extension ExpandableTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpandableTableViewCell.identifier) as? ExpandableTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
+        cell.config(isSelected: expandableDataSource)
         return cell
     }
 }

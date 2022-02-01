@@ -23,8 +23,6 @@ class ExpandableTableViewCell: UITableViewCell {
     private var dummylabel = UILabel()
     private var dummyImageView = UIImageView()
     
-    private var dummyImageViewHeightConstraints: NSLayoutDimension?
-    
     // MARK: - Initializer
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -57,6 +55,7 @@ class ExpandableTableViewCell: UITableViewCell {
     private func setupLayout() {
         [dummylabel, dummyImageView].forEach {
             addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
         }
         
         NSLayoutConstraint.activate([
@@ -73,7 +72,7 @@ class ExpandableTableViewCell: UITableViewCell {
     // MARK: - Custom Method
     
     private func bind() {
-        dummyImageViewHeightConstraints? = dummyImageView.heightAnchor
+        
     }
     
     // MARK:  - Public Method
@@ -84,10 +83,16 @@ class ExpandableTableViewCell: UITableViewCell {
             dummyImageView.isHidden = false
             dummyImageView.alpha = 1
             
+            dummyImageView.heightAnchor.constraint(equalToConstant: 133).isActive = true
+            dummyImageView.layoutIfNeeded()
+            
         } else {
             dummylabel.text = "누르면 확장됩니다"
             dummyImageView.alpha = 0
             dummyImageView.isHidden = true
+            
+            dummyImageView.heightAnchor.constraint(equalToConstant: 0).isActive = true
+            dummyImageView.layoutIfNeeded()
         }
     }
 }
