@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  PassCertification
+//  Layout
 //
-//  Created by soyeon on 2021/12/21.
+//  Created by soyeon on 2022/02/04.
 //
 
 import UIKit
