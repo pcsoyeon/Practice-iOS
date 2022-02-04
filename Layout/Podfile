@@ -5,6 +5,7 @@ target 'Layout' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 	pod 'PinLayout'
+	pod 'FlexLayout'
   # Pods for Layout
 
 end
