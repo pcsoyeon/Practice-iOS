@@ -14,6 +14,7 @@
 		9229AB6627AC2D6300238B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9229AB6427AC2D6300238B24 /* Main.storyboard */; };
 		9229AB6827AC2D6500238B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9229AB6727AC2D6500238B24 /* Assets.xcassets */; };
 		9229AB6B27AC2D6500238B24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9229AB6927AC2D6500238B24 /* LaunchScreen.storyboard */; };
+		9229AB7327AD1E2600238B24 /* FlexLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9229AB7227AD1E2600238B24 /* FlexLayoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		9229AB6727AC2D6500238B24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9229AB6A27AC2D6500238B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9229AB6C27AC2D6500238B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9229AB7227AD1E2600238B24 /* FlexLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutViewController.swift; sourceTree = "<group>"; };
 		9626A24E5704862ADDEEDDC2 /* Pods_Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11D5903AD1154D653C46741 /* Pods-Layout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Layout.release.xcconfig"; path = "Target Support Files/Pods-Layout/Pods-Layout.release.xcconfig"; sourceTree = "<group>"; };
 		C4B58FD51B5E130BA8BFE70B /* Pods-Layout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Layout.debug.xcconfig"; path = "Target Support Files/Pods-Layout/Pods-Layout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				9229AB6727AC2D6500238B24 /* Assets.xcassets */,
 				9229AB6927AC2D6500238B24 /* LaunchScreen.storyboard */,
 				9229AB6C27AC2D6500238B24 /* Info.plist */,
+				9229AB7227AD1E2600238B24 /* FlexLayoutViewController.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 				C4B58FD51B5E130BA8BFE70B /* Pods-Layout.debug.xcconfig */,
 				C11D5903AD1154D653C46741 /* Pods-Layout.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9229AB6327AC2D6300238B24 /* ViewController.swift in Sources */,
+				9229AB7327AD1E2600238B24 /* FlexLayoutViewController.swift in Sources */,
 				9229AB5F27AC2D6300238B24 /* AppDelegate.swift in Sources */,
 				9229AB6127AC2D6300238B24 /* SceneDelegate.swift in Sources */,
 			);
