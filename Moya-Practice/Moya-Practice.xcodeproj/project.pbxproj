@@ -13,6 +13,19 @@
 		924A3B1927B2CBD2000F5A67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924A3B1727B2CBD2000F5A67 /* Main.storyboard */; };
 		924A3B1B27B2CBD4000F5A67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924A3B1A27B2CBD4000F5A67 /* Assets.xcassets */; };
 		924A3B1E27B2CBD4000F5A67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924A3B1C27B2CBD4000F5A67 /* LaunchScreen.storyboard */; };
+		924A3B2727B2CC51000F5A67 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 924A3B2627B2CC51000F5A67 /* Moya */; };
+		924A3B2A27B2CC66000F5A67 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 924A3B2927B2CC66000F5A67 /* SnapKit */; };
+		924A3B2D27B2CC76000F5A67 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 924A3B2C27B2CC76000F5A67 /* Then */; };
+		924A3B3027B2CD9D000F5A67 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A3B2F27B2CD9D000F5A67 /* BaseTargetType.swift */; };
+		924A3B3227B2CE2A000F5A67 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A3B3127B2CE2A000F5A67 /* NetworkResult.swift */; };
+		924A3B3427B2CE3E000F5A67 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A3B3327B2CE3E000F5A67 /* URLConstant.swift */; };
+		924A3B3627B2CEDB000F5A67 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A3B3527B2CEDB000F5A67 /* GeneralResponse.swift */; };
+		924A3B3827B2CEF8000F5A67 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A3B3727B2CEF8000F5A67 /* NetworkConstant.swift */; };
+		924A3B3A27B2CFE4000F5A67 /* MoyaLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A3B3927B2CFE4000F5A67 /* MoyaLoggingPlugin.swift */; };
+		924A3B3F27B2D1AB000F5A67 /* LikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A3B3E27B2D1AB000F5A67 /* LikeResponse.swift */; };
+		924A3B4127B2D35C000F5A67 /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A3B4027B2D35C000F5A67 /* LikeService.swift */; };
+		924A3B4327B2D39E000F5A67 /* LikeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A3B4227B2D39E000F5A67 /* LikeRequest.swift */; };
+		924A3B4527B2D79F000F5A67 /* LikeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A3B4427B2D79F000F5A67 /* LikeAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,16 @@
 		924A3B1A27B2CBD4000F5A67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		924A3B1D27B2CBD4000F5A67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		924A3B1F27B2CBD4000F5A67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		924A3B2F27B2CD9D000F5A67 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		924A3B3127B2CE2A000F5A67 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		924A3B3327B2CE3E000F5A67 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
+		924A3B3527B2CEDB000F5A67 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		924A3B3727B2CEF8000F5A67 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		924A3B3927B2CFE4000F5A67 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
+		924A3B3E27B2D1AB000F5A67 /* LikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeResponse.swift; sourceTree = "<group>"; };
+		924A3B4027B2D35C000F5A67 /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
+		924A3B4227B2D39E000F5A67 /* LikeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeRequest.swift; sourceTree = "<group>"; };
+		924A3B4427B2D79F000F5A67 /* LikeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924A3B2727B2CC51000F5A67 /* Moya in Frameworks */,
+				924A3B2D27B2CC76000F5A67 /* Then in Frameworks */,
+				924A3B2A27B2CC66000F5A67 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +82,7 @@
 		924A3B1027B2CBD2000F5A67 /* Moya-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				924A3B2E27B2CD2A000F5A67 /* Network */,
 				924A3B1127B2CBD2000F5A67 /* AppDelegate.swift */,
 				924A3B1327B2CBD2000F5A67 /* SceneDelegate.swift */,
 				924A3B1527B2CBD2000F5A67 /* ViewController.swift */,
@@ -65,6 +92,47 @@
 				924A3B1F27B2CBD4000F5A67 /* Info.plist */,
 			);
 			path = "Moya-Practice";
+			sourceTree = "<group>";
+		};
+		924A3B2E27B2CD2A000F5A67 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				924A3B3D27B2D12E000F5A67 /* APIModel */,
+				924A3B3C27B2D0A6000F5A67 /* APIService */,
+				924A3B3B27B2D09C000F5A67 /* Base */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		924A3B3B27B2D09C000F5A67 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				924A3B2F27B2CD9D000F5A67 /* BaseTargetType.swift */,
+				924A3B3127B2CE2A000F5A67 /* NetworkResult.swift */,
+				924A3B3727B2CEF8000F5A67 /* NetworkConstant.swift */,
+				924A3B3327B2CE3E000F5A67 /* URLConstant.swift */,
+				924A3B3527B2CEDB000F5A67 /* GeneralResponse.swift */,
+				924A3B3927B2CFE4000F5A67 /* MoyaLoggingPlugin.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		924A3B3C27B2D0A6000F5A67 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				924A3B4027B2D35C000F5A67 /* LikeService.swift */,
+				924A3B4427B2D79F000F5A67 /* LikeAPI.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		924A3B3D27B2D12E000F5A67 /* APIModel */ = {
+			isa = PBXGroup;
+			children = (
+				924A3B3E27B2D1AB000F5A67 /* LikeResponse.swift */,
+				924A3B4227B2D39E000F5A67 /* LikeRequest.swift */,
+			);
+			path = APIModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +151,11 @@
 			dependencies = (
 			);
 			name = "Moya-Practice";
+			packageProductDependencies = (
+				924A3B2627B2CC51000F5A67 /* Moya */,
+				924A3B2927B2CC66000F5A67 /* SnapKit */,
+				924A3B2C27B2CC76000F5A67 /* Then */,
+			);
 			productName = "Moya-Practice";
 			productReference = 924A3B0E27B2CBD2000F5A67 /* Moya-Practice.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +184,11 @@
 				Base,
 			);
 			mainGroup = 924A3B0527B2CBD2000F5A67;
+			packageReferences = (
+				924A3B2527B2CC51000F5A67 /* XCRemoteSwiftPackageReference "Moya" */,
+				924A3B2827B2CC66000F5A67 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				924A3B2B27B2CC76000F5A67 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 924A3B0F27B2CBD2000F5A67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +216,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924A3B4527B2D79F000F5A67 /* LikeAPI.swift in Sources */,
+				924A3B4327B2D39E000F5A67 /* LikeRequest.swift in Sources */,
+				924A3B3A27B2CFE4000F5A67 /* MoyaLoggingPlugin.swift in Sources */,
 				924A3B1627B2CBD2000F5A67 /* ViewController.swift in Sources */,
+				924A3B4127B2D35C000F5A67 /* LikeService.swift in Sources */,
+				924A3B3627B2CEDB000F5A67 /* GeneralResponse.swift in Sources */,
+				924A3B3F27B2D1AB000F5A67 /* LikeResponse.swift in Sources */,
+				924A3B3227B2CE2A000F5A67 /* NetworkResult.swift in Sources */,
 				924A3B1227B2CBD2000F5A67 /* AppDelegate.swift in Sources */,
+				924A3B3827B2CEF8000F5A67 /* NetworkConstant.swift in Sources */,
 				924A3B1427B2CBD2000F5A67 /* SceneDelegate.swift in Sources */,
+				924A3B3027B2CD9D000F5A67 /* BaseTargetType.swift in Sources */,
+				924A3B3427B2CE3E000F5A67 /* URLConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +448,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		924A3B2527B2CC51000F5A67 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		924A3B2827B2CC66000F5A67 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		924A3B2B27B2CC76000F5A67 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		924A3B2627B2CC51000F5A67 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 924A3B2527B2CC51000F5A67 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		924A3B2927B2CC66000F5A67 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 924A3B2827B2CC66000F5A67 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		924A3B2C27B2CC76000F5A67 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 924A3B2B27B2CC76000F5A67 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 924A3B0627B2CBD2000F5A67 /* Project object */;
 }
